@@ -1,16 +1,17 @@
-import Navbar from "../components/Navbar";
-import HeroSection from "../sections/Hero";
-import AboutSection from "../sections/About";
+import OverviewSection from "../sections/Overview";
+import ClientSection from "../sections/Client";
+import WorkSection from "../sections/Work";
 import Footer from "../components/Footer";
 
 function Home() {
   return (
-    <>
-      <Navbar />
-      {/* <HeroSection />
-      <AboutSection />
-      <Footer /> */}
-    </>
+    <div className="min-h-screen">
+      <OverviewSection />
+      <ClientSection />
+      <WorkSection />
+
+      <Footer />
+    </div>
   );
 }
 

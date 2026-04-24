@@ -1,136 +1,124 @@
-import Button from "./Button";
-import logo from "/logo.svg";
+import arrowUpRight from "../assets/icons/arrow_up_right.svg";
+import globe from "../assets/icons/globe.svg";
 
-function Footer() {
+export default function Footer() {
   return (
-    <footer id="footer" className="w-full bg-secondary px-25 xl:px-120 py-60 max-w-[1440px]">
-        {/* TOP */}
-        <div className="flex flex-col gap-60 text-bw1 xl:flex-row xl:gap-0 xl:justify-between">
-          {/* LEFT — Company Info */}
-          <div className="space-y-25 xl:space-y-60">
+    <div>
 
-            {/* LOGO */}
-            <div className="space-y-10">
-              <a href="#hero" className="flex items-center"> 
-                <img 
-                src={logo}
-                alt="KJP Logo" 
-                className="h-[42px] xl:h-[54px] w-auto"
-                />
-              </a>
-              <p className="text-[#46C097] text-h8 xl:text-h6">
-                PT. Kencana Jaya Persada
+    {/* Divider full width */}
+    <div className="h-px w-full bg-bw5" />
+
+      <footer className="w-full text-bw8">
+        <div className="px-120 py-60 flex flex-col gap-60">
+        
+          {/* Top */}
+          <div className="flex flex-col xl:flex-row gap-[280px]">
+            
+            {/* Left */}
+            <div className="flex flex-col gap-30">
+              <h2 className="font-display text-heading-l1">
+                Jason Jahja.
+              </h2>
+
+              <p className="text-body-b2 text-bw7 flex items-center gap-10">
+                <span>Based in</span>
+                <span><img src={globe} alt="Globe" className="h-20 w-20" /></span>
+                <span>Jakarta, Indonesia</span>
               </p>
             </div>
 
-            {/* INFO */}
-            <div className="space-y-15 text-b5 xl:text-b3 max-w-[325px]">
-              <p>NIB: 9120*****0363</p>
-              <p>Berdiri sejak 2012</p>
-              <p>
-                Alamat: Jln. Dharma Bakti no. 20
-                Sigunggung – Pekanbaru, Riau
-              </p>
-              <p>Terdaftar resmi di Indonesia</p>
-            </div>
-          </div>
-
-          {/* MIDDLE — Informasi */}
-          <div className="space-y-25">
-            <h3 className="text-h8 xl:text-h6">Informasi</h3>
-
-            <nav
-              className="
-                grid grid-cols-2 gap-x-30 gap-y-25
-                xl:grid-cols-1
-                text-b5 xl:text-b3
-              "
-            >
-              <a href="#hero" className="hover:text-primary transition">
-                Overview
-              </a>
-
-              <a href="#about" className="hover:text-primary transition">
-                Tentang
-              </a>
-
-              <a href="#services" className="hover:text-primary transition">
-                Layanan
-              </a>
-
-              <a href="#testimonials" className="hover:text-primary transition">
-                Testimoni
-              </a>
-
-              <a href="#faq" className="hover:text-primary transition">
-                FAQ
-              </a>
-
-              <a href="#location" className="hover:text-primary transition">
-                Lokasi
-              </a>
-            </nav>
-          </div>
-
-          {/* RIGHT — Contact */}
-          <div className="space-y-25">
-            <h3 className="text-h8 xl:text-h6">Hubungi Kami</h3>
-
-            <div className="space-y-15 mb-25 xl:mb-45 text-b5 xl:text-b3">
-              <p className="flex items-center gap-10">
-                <span className="text-s2 xl:text-h8">Telepon</span>
-                <span>(0761) 563829</span>
-              </p>
-
-              <p className="flex items-center gap-10">
-                <span className="text-s2 xl:text-h8">Faks</span>
-                <span>(0761) 563827</span>
-              </p>
-
-              <p className="flex items-center gap-10">
-                <span className="text-s2 xl:text-h8">Email</span>
+            {/* Right */}
+            <div className="flex flex-col xl:flex-row gap-[280px]">
+              
+              {/* Navigation */}
+              <div className="flex flex-col gap-30 text-body-b2">
                 <a
-                    href="mailto:willy@kencanamakmur.com"
-                    className="underline hover:text-primary transition"
+                  href="#overview"
+                  className="relative hover:italic w-fit
+                  after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+                  after:bg-bw8 after:origin-left after:scale-x-0
+                  after:transition-transform after:duration-200
+                  hover:after:scale-x-100"
                 >
-                    willy@kencanamakmur.com
+                  Overview
                 </a>
-              </p>
+                <a
+                  href="#clients"
+                  className="relative hover:italic w-fit
+                  after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+                  after:bg-bw8 after:origin-left after:scale-x-0
+                  after:transition-transform after:duration-200
+                  hover:after:scale-x-100"
+                >
+                  Clients
+                </a>
+                <a
+                  href="#work"
+                  className="relative hover:italic w-fit
+                  after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+                  after:bg-bw8 after:origin-left after:scale-x-0
+                  after:transition-transform after:duration-200
+                  hover:after:scale-x-100"
+                >
+                  Projects
+                </a>
+
+                {/* Resume */}
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex flex-col items-start w-fit group"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="group-hover:italic">Resume</span>
+                    <img src={arrowUpRight} alt="" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+                  <div className="h-px self-stretch bg-bw8" />
+                </a>
+              </div>
+
+              {/* Social */}
+              <div className="flex flex-col gap-30 text-body-b2">
+                {[
+                  { label: "LinkedIn", href: "https://www.linkedin.com/in/jason-jahja/", external: true },
+                  { label: "Behance", href: "https://www.behance.net/jasonjahja1", external: true },
+                  // { label: "Let’s Talk", href: "mailto:jasonjahja@gmail.com", external: false },
+                ].map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target={item.external ? "_blank" : undefined}
+                    rel={item.external ? "noopener noreferrer" : undefined}
+                    className="inline-flex flex-col items-start w-fit group"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="group-hover:italic">{item.label}</span>
+                      <img
+                        src={arrowUpRight}
+                        alt=""
+                        className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      />
+                    </div>
+                    <div className="h-px self-stretch bg-bw8" />
+                  </a>
+                ))}
+              </div>
             </div>
-
-            <Button
-            variant="primary"
-            px="px-30 xl:px-45"
-            py="py-10 xl:py-15"
-            text="text-s2 xl:text-h7"
-            href="#footer"
-            >
-                Konsultasi Proyek
-            </Button>
           </div>
+
+          <div className="flex flex-col gap-15">
+            {/* Divider */}
+            <div className="h-px w-full bg-bw5" />
+
+            {/* Bottom */}
+            <p className="text-body-b4 text-bw7">
+              © 2026 Jason Jahja. All Rights Reserved
+            </p>
+          </div>
+          
         </div>
-
-        {/* DIVIDER */}
-        <div className="mt-60 mb-15 h-[1px] bg-bw5" />
-
-        {/* BOTTOM */}
-        <div className="flex flex-col xl:flex-row gap-15 xl:gap-0 justify-between items-center text-b6 xl:text-b5 text-bw5">
-          <p>
-            © 2012–2026 PT Kencana Jaya Persada. Seluruh hak cipta dilindungi.
-          </p>
-
-          <a
-            href="/company-profile-2022.pdf"
-            className="underline hover:text-primary transition"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Profil Perusahaan (PDF)
-          </a>
-        </div>
-
-    </footer>
+      </footer>
+    </div>
   );
 }
-
-export default Footer

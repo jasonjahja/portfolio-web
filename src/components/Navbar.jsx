@@ -1,122 +1,100 @@
-import { useEffect, useState } from "react";
-import Button from "./Button";
+import arrowUpRight from "../assets/icons/arrow_up_right.svg";
 
-import hamburgerIcon from "../assets/icons/hamburger.svg";
-import closeIcon from "../assets/icons/close.svg";
-import logo from "/logo.svg";
-
-function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+export default function Navbar() {
   return (
-    <>
-      {/* HEADER */}
-      <header
-        className={`
-          fixed top-0 left-0 w-full py-15 z-[999]
-          border-b
-          transition-[background-color,border-color,box-shadow,color]
-          duration-300 ease-in-out
-          ${
-            scrolled
-              ? "bg-bw1 border-bw5 shadow-navbar text-bw8"
-              : "bg-transparent border-transparent shadow-none text-bw1"
-          }
-        `}
-      >
-        <div className="h-full mx-25 xl:mx-120 flex items-center justify-between">
+    <header className="fixed top-0 w-full z-50 bg-bw0 border-b border-bw5">
+      
+      <div className="px-120 py-25 flex items-center justify-between">
+        
+        {/* Logo / Name */}
+        <a href="/#overview" className="font-display text-heading-l2 text-bw8">
+          Jason Jahja.
+        </a>
+
+        {/* Navigation */}
+        <nav className="flex items-center gap-30 text-body-b3 text-bw8">
           
-          {/* Logo */}
-          <a href="#hero" className="flex items-center">
-            <img src={logo} alt="KJP Logo" className="h-[26px] xl:h-[36px] w-auto" />
+          <a
+            href="/#overview"
+            className="relative hover:italic
+            after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+            after:bg-bw8 after:origin-left after:scale-x-0
+            after:transition-transform after:duration-200
+            hover:after:scale-x-100"
+          >
+            Overview
+          </a>
+          
+          <span>/</span>
+
+          <a
+            href="/#clients"
+            className="relative hover:italic
+            after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+            after:bg-bw8 after:origin-left after:scale-x-0
+            after:transition-transform after:duration-200
+            hover:after:scale-x-100"
+          >
+            Clients
+          </a>
+          
+          <span>/</span>
+
+          <a
+            href="/#work"
+            className="relative hover:italic
+            after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+            after:bg-bw8 after:origin-left after:scale-x-0
+            after:transition-transform after:duration-200
+            hover:after:scale-x-100"
+          >
+            Projects
           </a>
 
-          {/* Desktop Nav */}
-          <nav className="hidden xl:flex items-center gap-45">
-            <a href="#hero" className="text-b4 hover:text-primary transition">
-              Overview
-            </a>
-            <a href="#about" className="text-b4 hover:text-primary transition">
-              Tentang
-            </a>
-            <a href="#services" className="text-b4 hover:text-primary transition">
-              Layanan
-            </a>
-            <a href="#faq" className="text-b4 hover:text-primary transition">
-              FAQ
-            </a>
-            <Button href="#footer">Konsultasi Proyek</Button>
-          </nav>
+          <span>/</span>
 
-          {/* Mobile Hamburger */}
-          <button
-            onClick={() => setOpen(true)}
-            className="xl:hidden"
+          {/* External link */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-col items-start w-fit group"
           >
-            <img src={hamburgerIcon} alt="Menu" className="w-30" />
-          </button>
-        </div>
-      </header>
+            <div className="flex items-center gap-5">
+              <span className="text-body-b3 group-hover:italic">Resume</span>
+              <img
+                src={arrowUpRight}
+                alt=""
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </div>
 
-      {/* OVERLAY */}
-      <div
-        onClick={() => setOpen(false)}
-        className={`
-          fixed inset-0 z-[999]
-          bg-black/60 backdrop-blur-[5px]
-          transition-opacity duration-300
-          ${open ? "opacity-100 visible" : "opacity-0 invisible"}
-        `}
-      />
+            <div className="h-px bg-bw8 self-stretch" />
+          </a>
 
-      {/* SIDEBAR */}
-      <aside
-        className={`
-          fixed top-0 right-0 z-[1000]
-          h-screen w-[280px] bg-secondary
-          p-25
-          transition-transform duration-300 ease-in-out
-          ${open ? "translate-x-0" : "translate-x-full"}
-        `}
-      >
-        {/* Close */}
-        <div className="flex justify-end mb-25">
-          <button onClick={() => setOpen(false)}>
-            <img src={closeIcon} alt="Close" className="w-30" />
-          </button>
-        </div>
+          {/* <span>/</span>
 
-        {/* Nav Links */}
-        <nav className="flex flex-col gap-15 text-b4 text-bw1">
-          <a href="#hero" className="p-10 w-full" onClick={() => setOpen(false)}>Overview</a>
-          <a href="#about" className="p-10 w-full" onClick={() => setOpen(false)}>Tentang</a>
-          <a href="#services" className="p-10 w-full" onClick={() => setOpen(false)}>Layanan</a>
-          <a href="#faq" className="p-10 w-full" onClick={() => setOpen(false)}>FAQ</a>
+          <a
+            href="mailto:jasonjahja@gmail.com"
+            className="inline-flex flex-col items-start w-fit group cursor-pointer"
+          >
+            <div className="flex items-center gap-5">
+              <span className="text-body-b3 group-hover:italic">
+                Let’s Talk
+              </span>
 
-          <div className="mt-15">
-            <Button
-              href="#footer"
-              className="w-full"
-              onClick={() => setOpen(false)}
-            >
-              Konsultasi Proyek
-            </Button>
-          </div>
+              <img
+                src={arrowUpRight}
+                alt=""
+                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+              />
+            </div>
+
+            <div className="h-px bg-bw8 self-stretch" />
+          </a> */}
+
         </nav>
-      </aside>
-    </>
+      </div>
+    </header>
   );
 }
-
-export default Navbar;
