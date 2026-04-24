@@ -39,14 +39,14 @@ export default function ClientSection() {
     logo: cpmLogo,
     alt: "CPM",
     description:
-      "Designed the wayfinding and directory interface for Centre Point Medan, helping visitors navigate floors and discover stores through clear structure and intuitive spatial guidance.",
+      "Designed the wayfinding and directory system for Centre Point Medan, helping visitors navigate and discover stores through clear structure and spatial guidance.",
     href: "cpm-wayfinding-system",
   },
   {
     logo: kjpLogo,
     alt: "KJP",
     description:
-      "Led the end-to-end design and frontend engineering of PT. Kencana Jaya Persada’s corporate website, defining its structure and digital presence for a B2B company from 0 to 1.",
+      "Designed and built PT. Kencana Jaya Persada’s corporate website (UI/UX and frontend) from 0 to 1, defining its structure and digital presence for a B2B company.",
     href: "kjp-website",
   },
 //   {
