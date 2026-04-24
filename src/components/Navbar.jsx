@@ -61,7 +61,7 @@ export default function Navbar() {
             className="inline-flex flex-col items-start w-fit group"
           >
             <div className="flex items-center gap-5">
-              <span className="text-body-b3 group-hover:italic">Resume</span>
+              <span className="group-hover:italic">Resume</span>
               <img
                 src={arrowUpRight}
                 alt=""

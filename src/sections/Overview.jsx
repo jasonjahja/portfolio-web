@@ -86,7 +86,7 @@ export default function OverviewSection() {
         </h1>
 
         {/* Right Content */}
-        <div className="flex flex-col gap-30 max-w-[400px]">
+        <div className="flex flex-col gap-25 max-w-[350px]">
           
           <p
             className={`text-body-b2 text-bw7 transition-all duration-700 ${
@@ -96,8 +96,7 @@ export default function OverviewSection() {
             }`}
             style={{ transitionDelay: "150ms" }}
           >
-            Focused on how structure, behavior, and interaction shape meaningful
-            product experiences.
+            Designing how structure, behavior, and interaction shape meaningful experiences.
           </p>
 
           {/* CTA */}

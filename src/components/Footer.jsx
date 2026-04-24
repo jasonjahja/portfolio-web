@@ -12,26 +12,26 @@ export default function Footer() {
         <div className="px-120 py-60 flex flex-col gap-60">
         
           {/* Top */}
-          <div className="flex flex-col xl:flex-row gap-[280px]">
+          <div className="flex flex-col xl:flex-row justify-between">
             
             {/* Left */}
-            <div className="flex flex-col gap-30">
+            <div className="flex flex-col gap-30 shrink-0">
               <h2 className="font-display text-heading-l1">
                 Jason Jahja.
               </h2>
 
-              <p className="text-body-b2 text-bw7 flex items-center gap-10">
+              <p className="text-body-b3 text-bw7 flex items-center gap-10 whitespace-nowrap">
                 <span>Based in</span>
-                <span><img src={globe} alt="Globe" className="h-20 w-20" /></span>
+                <span><img src={globe} alt="Globe" className="h-20" /></span>
                 <span>Jakarta, Indonesia</span>
               </p>
             </div>
 
             {/* Right */}
-            <div className="flex flex-col xl:flex-row gap-[280px]">
+            <div className="flex flex-col xl:flex-row gap-80 xl:gap-120">
               
               {/* Navigation */}
-              <div className="flex flex-col gap-30 text-body-b2">
+              <div className="flex flex-col gap-30 text-body-b3">
                 <a
                   href="#overview"
                   className="relative hover:italic w-fit
@@ -79,7 +79,7 @@ export default function Footer() {
               </div>
 
               {/* Social */}
-              <div className="flex flex-col gap-30 text-body-b2">
+              <div className="flex flex-col gap-30 text-body-b3">
                 {[
                   { label: "LinkedIn", href: "https://www.linkedin.com/in/jason-jahja/", external: true },
                   { label: "Behance", href: "https://www.behance.net/jasonjahja1", external: true },
@@ -112,7 +112,7 @@ export default function Footer() {
             <div className="h-px w-full bg-bw5" />
 
             {/* Bottom */}
-            <p className="text-body-b4 text-bw7">
+            <p className="text-body-b5 text-bw7">
               © 2026 Jason Jahja. All Rights Reserved
             </p>
           </div>

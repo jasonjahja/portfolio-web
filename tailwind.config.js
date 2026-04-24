@@ -34,7 +34,7 @@ module.exports = {
         "body-s1": ["16px", { lineHeight: "26px", fontWeight: "600" }],
 
         "heading-l2": ["24px", { lineHeight: "34px", fontWeight: "600" }],
-        "heading-l1": ["42px", { lineHeight: "52px", fontWeight: "600" }],
+        "heading-l1": ["32px", { lineHeight: "42px", fontWeight: "600" }],
 
         "body-h8": ["18px", { lineHeight: "28px", fontWeight: "400" }],
         "body-h7": ["20px", { lineHeight: "30px", fontWeight: "400" }],
