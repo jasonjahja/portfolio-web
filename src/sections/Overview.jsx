@@ -71,11 +71,11 @@ export default function OverviewSection() {
       id="overview"
     >
       
-      <div className="flex flex-col xl:flex-row justify-between items-center gap-15">
+      <div className="flex flex-col xl:flex-row justify-between items-center">
   
         {/* Heading */}
         <h1
-          className={`font-display text-heading-h1 max-w-[700px] transition-all duration-700 ${
+          className={`font-display text-heading-h1 w-[1600px] transition-all duration-700 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-10"
@@ -86,7 +86,7 @@ export default function OverviewSection() {
         </h1>
 
         {/* Right Content */}
-        <div className="flex flex-col gap-25 max-w-[350px]">
+        <div className="flex flex-col gap-25 ">
           
           <p
             className={`text-body-b2 text-bw7 transition-all duration-700 ${
