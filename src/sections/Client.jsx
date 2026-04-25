@@ -62,26 +62,26 @@ export default function ClientSection() {
   return (
     <section
         ref={sectionRef}
-        className="w-full px-120 pt-120 flex flex-col gap-25 text-bw8"
+        className="w-full px-25 xl:px-120 pt-60 xl:pt-120 flex flex-col gap-25 text-bw8"
         id="clients"
     >
       
       {/* Title */}
       <div
-        className={`flex flex-col gap-10 transition-all duration-700 ${
+        className={`flex flex-col gap-5 xl:gap-10 transition-all duration-700 ${
             isVisible
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-10"
         }`}
       >
-        <h2 className="font-display text-heading-h3">
+        <h2 className="font-display text-heading-h6 xl:text-heading-h3">
           Featured client work
         </h2>
         <div className="h-px w-full bg-bw5" />
       </div>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-60">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-45 xl:gap-60">
         {clients.map((client, index) => (
             <div
             key={index}
