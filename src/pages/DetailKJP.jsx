@@ -9,6 +9,7 @@ import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
 import durationIcon from "../assets/icons/duration_icon.svg";
 import imageHero from "../assets/images/kjp.webp";
+import imagePoster from "../assets/images/kjp_poster.webp";
 import kjpVideo from "../assets/videos/kjp.mp4";
 
 import useScrollExpand from "../hooks/useScrollExpand.jsx";

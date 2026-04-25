@@ -13,6 +13,7 @@ import multiPrevVideo from "../assets/videos/multi_prev_video.mp4";
 import multiAfterVideo from "../assets/videos/multi_after_video.mp4";
 
 import multi1Image1 from "../assets/images/multi1_1.webp";
+import multi1Image0 from "../assets/images/multi1_0.webp";
 
 import useScrollExpand from "../hooks/useScrollExpand.jsx";
 import useRevealOnScroll from "../hooks/useRevealOnScroll.jsx";
@@ -145,7 +146,7 @@ export default function ProjectDetail() {
         </Section>
 
         {/* VIDEO SECTION */}
-        <VideoBlock src={multiPrevVideo} caption="Multi’s previous website design" />
+        <VideoBlock src={multiPrevVideo} caption="Multi’s previous website design" poster={multi1Image0} />
 
         <Divider />
 
@@ -200,7 +201,7 @@ export default function ProjectDetail() {
         </Section>
         
         {/* VIDEO SECTION */}
-        <VideoBlock src={multiAfterVideo} caption="Multi’s redesigned homepage" />
+        <VideoBlock src={multiAfterVideo} caption="Multi’s redesigned homepage" poster={multi1Image1} />
 
         <Divider />
 
