@@ -69,7 +69,7 @@ export default function Navbar() {
 
             {/* External link */}
             <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1mkuXkkHSrulYfjWBZyrit3aVjI58FEDR/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-col items-start w-fit group"
