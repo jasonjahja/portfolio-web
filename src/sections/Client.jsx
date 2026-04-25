@@ -1,7 +1,7 @@
-import multiLogo from "../assets/images/multi_logo.png";
-import kjpLogo from "../assets/images/kjp_logo.png";
-import cpmLogo from "../assets/images/cpm_logo.png";
-import signature from "../assets/images/signature.png";
+import multiLogo from "../assets/images/multi_logo.webp";
+import kjpLogo from "../assets/images/kjp_logo.webp";
+import cpmLogo from "../assets/images/cpm_logo.webp";
+// import signature from "../assets/images/signature.png";
 import ClientCard from "../components/ClientCard"
 
 import { useEffect, useRef, useState } from "react";

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Assets
 import arrowLeft from "../assets/icons/arrow_left.svg";
 import arrowRight from "../assets/icons/arrow_right.svg";
-import multiLogo from "../assets/images/multi_logo.png";
+import multiLogo from "../assets/images/multi_logo.webp";
 import imageHero from "../assets/images/multi_b2c.webp";
 import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";

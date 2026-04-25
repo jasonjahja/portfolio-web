@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 // Assets
 import arrowLeft from "../assets/icons/arrow_left.svg";
 import arrowRight from "../assets/icons/arrow_right.svg";
-import kjpLogo from "../assets/images/kjp_logo.png";
+import kjpLogo from "../assets/images/kjp_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
 import durationIcon from "../assets/icons/duration_icon.svg";
