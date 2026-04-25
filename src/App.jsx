@@ -32,7 +32,7 @@ function App() {
 
         {/* Grain overlay */}
         <div
-          className="pointer-events-none fixed inset-0 z-50 opacity-3"
+          className="pointer-events-none fixed inset-0 z-2000 opacity-3"
           style={{
             backgroundImage: `url(${grain})`,
           }}
