@@ -54,7 +54,7 @@ export default function ProjectDetail() {
             </Link>
 
             {/* Center Title */}
-            <h1 className="mx-auto font-display text-heading-h6 xl:text-heading-h2 text-center max-w-[325px] xl:max-w-none">
+            <h1 className="mx-auto font-display text-heading-h6 xl:text-heading-h2 text-center max-w-[325px] xl:max-w-[950px]">
                 Multi Toys Photobox Interaction Experience
             </h1>
         </div>
