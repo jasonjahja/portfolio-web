@@ -18,7 +18,7 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 w-full z-50 bg-bw0 border-b border-bw5 text-bw8">
         
-        <div className="mx-25 xl:mx-120 my-25 flex items-center justify-between">
+        <div className="mx-25 xl:mx-120 my-15 xl:my-25 flex items-center justify-between">
           
           {/* Logo / Name */}
           <a href="/#overview" className="font-display text-heading-h6 xl:text-heading-h5">
