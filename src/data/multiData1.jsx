@@ -14,10 +14,10 @@ export const decisions = [
     ],
     images: [{
         src: preorderSection,
-        caption: ""
+        caption: "Pre-order items are visually elevated through layout and emphasis, reinforcing their exclusivity and importance."
     },{
         src: availableSection,
-        caption: "Enhanced hierarchy directs attention to key content, improving product visibility and perceived value."
+        caption: "Available products use a structured grid to support easier scanning and comparison across multiple items."
     }]
   },
   {

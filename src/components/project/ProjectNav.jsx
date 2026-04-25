@@ -8,7 +8,7 @@ export default function ProjectNav({
   const Wrapper = isExternal ? "a" : Link;
 
   return (
-    <div className="mt-180 flex items-center justify-end">
+    <div className="mt-120 xl:mt-180 flex items-center justify-end">
       {/* NEXT */}
       <Wrapper
         {...(isExternal
@@ -23,18 +23,18 @@ export default function ProjectNav({
             })}
         className="group cursor-pointer"
       >
-        <p className="font-sans text-body-b4 text-bw6 group-hover:italic">
+        <p className="font-sans text-body-b7 xl:text-body-b4 text-bw6 group-hover:italic">
           Next Project:
         </p>
 
         <div className="flex gap-10 items-center">
-          <p className="text-sans text-body-b2 group-hover:italic">
+          <p className="text-sans text-body-b5 xl:text-body-b2 group-hover:italic">
             {next.title}
           </p>
           <img
             src={arrowRight}
             alt="next project"
-            className="h-25 transition-transform duration-300 group-hover:translate-x-5"
+            className="h-[16px] xl:h-25 transition-transform duration-300 group-hover:translate-x-5"
           />
         </div>
       </Wrapper>

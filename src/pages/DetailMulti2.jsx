@@ -35,9 +35,9 @@ export default function ProjectDetail() {
   const isExpanded = useScrollExpand(imgRef);
 
   return (
-    <section ref={sectionRef} className="flex flex-col items-center mt-[84px] py-60 gap-45">
+    <section ref={sectionRef} className="flex flex-col items-center pt-[92px] xl:pt-[144px] pb-30 xl:pb-60 gap-25 xl:gap-45">
 
-      <div className={`w-full px-120 flex flex-col gap-30 transition-all duration-700 ${
+      <div className={`w-full px-25 xl:px-120 flex flex-col gap-30 transition-all duration-700 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-10"
@@ -47,15 +47,16 @@ export default function ProjectDetail() {
         <div className="flex items-center">
 
             {/* Left Arrow */}
-            <Link to="/" className="absolute left-120 h-30 cursor-pointer">
+            <Link to="/" className="absolute left-25 xl:left-120 cursor-pointer">
                 <img
                     src={arrowLeft}
                     alt="back"
+                    className="h-20 xl:h-30"
                 />
             </Link>
 
             {/* Center Title */}
-            <h1 className="mx-auto font-display text-heading-h2 text-center">
+            <h1 className="mx-auto font-display text-heading-h6 xl:text-heading-h2 text-center max-w-[325px] xl:max-w-none">
             Multi Toys B2B Wholesale Platform
             </h1>
         </div>
@@ -63,9 +64,9 @@ export default function ProjectDetail() {
         <Divider />
 
         {/* Logo + Description */}
-        <div className="flex gap-45 items-center">
-            <img src={multiLogo} alt="multi" className="h-45" />
-            <p className="text-body-b2">
+        <div className="flex flex-col xl:flex-row gap-15 xl:gap-45 xl:items-center items-start">
+            <img src={multiLogo} alt="multi" className="h-30 xl:h-45" />
+            <p className="text-body-b6 xl:text-body-b2">
                 Retail brand specializing in collectible figures, anime merchandise,
                 and hobby products, with a strong offline presence.
             </p>
@@ -74,28 +75,31 @@ export default function ProjectDetail() {
         <Divider />
 
         {/* META */}
-        <div className="flex gap-30">
+        <div className="flex flex-col xl:flex-row gap-15 xl:gap-30">
 
             {/* Item 1 */}
             <Meta
+                className="flex-1 gap-5"
                 icon={productIcon}
                 label="Product"
-                value="Website (B2B Wholesale Platform)"
+                value="Website (B2B Wholesale)"
             />
 
-            <Divider type="vertical" />
+            <Divider type="vertical" className="hidden xl:block" />
 
             {/* Item 2 */}
             <Meta
+                className="flex-1 gap-5"
                 icon={roleIcon}
                 label="Role"
                 value="Product Designer (End-to-end)"
             />
 
-            <Divider type="vertical" />
+            <Divider type="vertical" className="hidden xl:block" />
 
             {/* Item 3 */}
             <Meta
+                className="flex-1 gap-5"
                 icon={durationIcon}
                 label="Timeline"
                 value="Oct 2025 - Nov 2025"
@@ -106,13 +110,13 @@ export default function ProjectDetail() {
       {/* IMAGE HERO SECTION */}
       <div 
         ref={imgRef}
-        className={`w-full overflow-hidden flex flex-col gap-15 transition-[padding] duration-500 ease-out
-        ${isExpanded ? "px-0" : "px-120"}`}
+        className={`w-full overflow-hidden flex flex-col gap-10 xl:gap-15 transition-[padding] duration-500 ease-out
+        ${isExpanded ? "px-0" : "px-25 xl:px-120"}`}
       >
         <img
             src={imageHero}
             alt="project image"
-            className="w-full h-[675px] object-cover transition-all duration-700 "
+            className="w-full h-[245px] xl:h-[675px] object-cover transition-all duration-700"
             style={{
             clipPath: isVisible
                 ? "inset(0% 0% 0% 0%)"
@@ -120,13 +124,13 @@ export default function ProjectDetail() {
             transitionDelay: "650ms",
             }}
         />
-        <p className="text-center text-sans text-body-b4 text-bw6">
+        <p className="text-center text-sans text-body-b7 xl:text-body-b4 text-bw6">
           Multi's B2B wholesale platform design
         </p>
       </div>
 
       {/* CONTENT */}
-      <div className="w-full max-w-[900px] flex flex-col gap-45">
+      <div className="xl:w-full xl:max-w-[900px] mx-25 xl:mx-0 flex flex-col gap-25 xl:gap-45">
 
         <Divider />
         
@@ -168,7 +172,7 @@ export default function ProjectDetail() {
 
         {/* Design Decisions */}
         <Section title="Design Decisions">
-            <div className="flex flex-col gap-60">
+            <div className="flex flex-col gap-45 xl:gap-60">
                 {decisions.map((d, i) => (
                     <DecisionBlock key={i} {...d} />
                 ))}

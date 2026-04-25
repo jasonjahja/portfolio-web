@@ -1,4 +1,4 @@
-export default function Divider({ type = "horizontal" }) {
+export default function Divider({ type = "horizontal", className = "" }) {
   const base = "bg-bw5";
 
   const styles = {
@@ -6,5 +6,5 @@ export default function Divider({ type = "horizontal" }) {
     vertical: "w-px",
   };
 
-  return <div className={`${base} ${styles[type]}`} />;
+  return <div className={`${base} ${styles[type]} ${className}`} />;
 }
