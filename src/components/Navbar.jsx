@@ -7,7 +7,7 @@ export default function Navbar() {
       <div className="px-120 py-25 flex items-center justify-between">
         
         {/* Logo / Name */}
-        <a href="/#overview" className="font-display text-heading-l2 text-bw8">
+        <a href="/#overview" className="font-display text-heading-h5 text-bw8">
           Jason Jahja.
         </a>
 

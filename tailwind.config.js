@@ -46,7 +46,11 @@ module.exports = {
         "body-h2": ["54px", { lineHeight: "64px", fontWeight: "400" }],
         "body-h1": ["58px", { lineHeight: "68px", fontWeight: "400" }],
 
-        "heading-h3": ["34px", { lineHeight: "44px", fontWeight: "600", letterSpacing: "-1px", }],
+        "heading-h8": ["18px", { lineHeight: "28px", fontWeight: "600", letterSpacing: "-1px", }],
+        "heading-h6": ["22px", { lineHeight: "32px", fontWeight: "600", letterSpacing: "-1px", }],
+        "heading-h5": ["24px", { lineHeight: "34px", fontWeight: "600", letterSpacing: "-1px", }],
+        "heading-h4": ["32px", { lineHeight: "42px", fontWeight: "600", letterSpacing: "-1px", }],
+        "heading-h3": ["36px", { lineHeight: "46px", fontWeight: "600", letterSpacing: "-1px", }],
         "heading-h2": ["42px", { lineHeight: "52px", fontWeight: "600", letterSpacing: "-1px", }],
         "heading-h1": ["72px", { lineHeight: "82px", fontWeight: "600", letterSpacing: "-1px", }],
       },

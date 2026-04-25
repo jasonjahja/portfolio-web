@@ -16,7 +16,7 @@ export default function Footer() {
             
             {/* Left */}
             <div className="flex flex-col gap-30 shrink-0">
-              <h2 className="font-display text-heading-l1">
+              <h2 className="font-display text-heading-h2">
                 Jason Jahja.
               </h2>
 
@@ -83,6 +83,7 @@ export default function Footer() {
                 {[
                   { label: "LinkedIn", href: "https://www.linkedin.com/in/jason-jahja/", external: true },
                   { label: "Behance", href: "https://www.behance.net/jasonjahja1", external: true },
+                  { label: "Twitter", href: "https://x.com/juxjournals", external: true },
                   // { label: "Let’s Talk", href: "mailto:jasonjahja@gmail.com", external: false },
                 ].map((item, index) => (
                   <a
