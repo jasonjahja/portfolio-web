@@ -136,7 +136,7 @@ export default function OverviewSection() {
         </div>
 
         {/* ===== IMAGE ===== */}
-        <div className="w-full h-[300px] xl:h-[600px] overflow-hidden">
+        <div className="w-full h-[300px] md:h-auto xl:h-[600px] overflow-hidden">
           <img
             src={hero1}
             alt="Hero Image"

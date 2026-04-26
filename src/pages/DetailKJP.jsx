@@ -114,7 +114,7 @@ export default function ProjectDetail() {
         <img
             src={imageHero}
             alt="project image"
-            className="w-full h-[245px] xl:h-[675px] object-cover transition-all duration-700"
+            className="w-full h-[245px] md:h-auto xl:h-[675px] object-cover transition-all duration-700"
             style={{
             clipPath: isVisible
                 ? "inset(0% 0% 0% 0%)"
