@@ -9,14 +9,14 @@ export default function Footer() {
       <div className="h-px w-full bg-bw5" />
 
       <footer className="w-full text-bw8">
-        <div className="px-25 xl:px-120 py-30 xl:py-60 flex flex-col gap-60">
+        <div className="px-25 md:px-40 xl:px-120 py-30 xl:py-45 xl:py-60 flex flex-col md:gap-45 gap-60">
         
           {/* Top */}
-          <div className="flex flex-col xl:flex-row justify-between gap-45 xl:gap-0 w-full">
+          <div className="flex flex-col md:flex-row justify-between gap-45 md:gap-0 w-full">
             
             {/* Left */}
-            <div className="flex flex-col gap-15 xl:gap-30 shrink-0 items-center xl:items-start">
-              <h2 className="font-display text-heading-h5 xl:text-heading-h2">
+            <div className="flex flex-col gap-15 xl:gap-30 shrink-0 items-center md:items-start">
+              <h2 className="font-display text-heading-h5 md:text-heading-h4 xl:text-heading-h2">
                 Jason Jahja.
               </h2>
 
@@ -28,10 +28,10 @@ export default function Footer() {
             </div>
 
             {/* Right */}
-            <div className="flex flex-row xl:gap-120 w-full xl:w-auto">
+            <div className="flex flex-row md:gap-120 w-full md:w-auto">
               
               {/* Navigation */}
-              <div className="flex-1 xl:flex-none flex flex-col gap-30 xl:gap-30 text-body-b5 xl:text-body-b3 items-center xl:items-start justify-between">
+              <div className="flex-1 xl:flex-none flex flex-col gap-30 text-body-b5 md:text-body-b4 xl:text-body-b3 items-center md:items-start justify-between">
                 <a
                   href="#overview"
                   className="relative hover:italic w-fit
@@ -79,7 +79,7 @@ export default function Footer() {
               </div>
 
               {/* Social */}
-              <div className="flex-1 xl:flex-none flex flex-col gap-30 xl:gap-30 text-body-b5 xl:text-body-b3 items-center xl:items-start">
+              <div className="flex-1 xl:flex-none flex flex-col gap-30 text-body-b5 md:text-body-b4 xl:text-body-b3 items-center md:items-start">
                 {[
                   { label: "LinkedIn", href: "https://www.linkedin.com/in/jason-jahja/", external: true },
                   { label: "Behance", href: "https://www.behance.net/jasonjahja1", external: true },
@@ -108,12 +108,12 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-15 w-full items-center xl:items-start">
+          <div className="flex flex-col gap-15 w-full items-center md:items-start">
             {/* Divider */}
             <div className="h-px w-full bg-bw5" />
 
             {/* Bottom */}
-            <p className="text-body-b6 xl:text-body-b5 text-bw7">
+            <p className="text-body-b6 md:text-body-b5 text-bw7">
               © 2026 Jason Jahja. All Rights Reserved
             </p>
           </div>

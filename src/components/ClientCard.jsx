@@ -14,16 +14,16 @@ export default function ClientCard({
       state={{ fromLink: true }}
       className="cursor-pointer group"
     >
-      <div className="flex flex-col gap-10 xl:gap-25 text-bw8">
-        <img src={logo} alt={alt} className="h-30 xl:h-45 w-fit group-hover:scale-105 transition-transform duration-700 ease-out" />
+      <div className="flex flex-col gap-15 xl:gap-25 text-bw8">
+        <img src={logo} alt={alt} className="h-30 md:h-40 xl:h-45 w-fit group-hover:scale-105 transition-transform duration-700 ease-out" />
 
-        <p className="text-body-b6 xl:text-body-b3 text-bw7 text-justify group-hover:italic">
+        <p className="text-body-b6 md:text-body-b5 xl:text-body-b3 text-bw7 text-justify group-hover:italic">
           {description}
         </p>
 
         <div className="inline-flex flex-col items-start w-fit">
           <div className="flex items-center gap-5">
-            <span className="text-body-b6 xl:text-body-b3 group-hover:italic">{cta}</span>
+            <span className="text-body-b6 md:text-body-b5 xl:text-body-b3 group-hover:italic">{cta}</span>
             <img src={arrowUpRight} alt="" className="h-[12px] xl:h-4 animate-arrowDiagonalLoop" />
           </div>
           <div className="h-px self-stretch bg-bw8 animate-lineLoop" />

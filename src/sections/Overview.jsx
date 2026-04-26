@@ -43,15 +43,15 @@ export default function OverviewSection() {
   return (
     <section
       ref={sectionRef}
-      className="pt-[92px] xl:pt-[144px] w-full px-25 xl:px-120 flex flex-col gap-45 xl:gap-60 text-bw8"
+      className="pt-[92px] md:pt-[107px] xl:pt-[144px] w-full px-25 md:px-40 xl:px-120 flex flex-col gap-45 xl:gap-60 text-bw8"
       id="overview"
     >
       
-      <div className="flex flex-col xl:flex-row gap-15 xl:gap-0 xl:justify-between xl:items-center">
+      <div className="flex flex-col md:flex-row gap-15 md:gap-0 md:justify-between md:items-center">
   
         {/* Heading */}
         <h1
-          className={`font-display text-heading-h3 xl:text-heading-h1 xl:w-[1600px] transition-all duration-700 ${
+          className={`font-display text-heading-h3 md:text-heading-h2 xl:text-heading-h1 md:w-[400px] xl:w-[1600px] transition-all duration-700 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-10"
@@ -62,10 +62,10 @@ export default function OverviewSection() {
         </h1>
 
         {/* Right Content */}
-        <div className="flex flex-col gap-15 xl:gap-25">
+        <div className="flex flex-col gap-15 md:gap-25 md:w-[400px] xl:w-[800px]">
           
           <p
-            className={`text-body-b5 xl:text-body-b2 text-bw7 transition-all duration-700 ${
+            className={`text-body-b5 md:text-body-b4 xl:text-body-b2 text-bw7 transition-all duration-700 ${
               isVisible
                 ? "opacity-100 translate-x-0"
                 : "opacity-0 -translate-x-10"
@@ -86,11 +86,11 @@ export default function OverviewSection() {
             style={{ transitionDelay: "300ms" }}
           >
             <div className="flex items-center gap-5 xl:gap-10">
-              <span className="text-body-b5 xl:text-body-b2 hover:italic">Discover more</span>
+              <span className="text-body-b5 md:text-body-b4 xl:text-body-b2 hover:italic">Discover more</span>
               <img
                 src={arrowDown}
                 alt="arrow_down"
-                className="h-[12px] xl:h-4 animate-arrowBounceLoop"
+                className="h-[12px] md:h-[14px] xl:h-4 animate-arrowBounceLoop"
               />
             </div>
 
@@ -101,11 +101,11 @@ export default function OverviewSection() {
       </div>
 
       {/* ===== FEATURED WORK ===== */}
-      <div className="flex flex-col gap-5 xl:gap-10">
+      <div className="flex flex-col gap-5 md:gap-10">
 
         {/* ===== MOBILE: TOP TITLE ===== */}
         <div
-          className={`xl:hidden text-body-b7 transition-all duration-700 ${
+          className={`xl:hidden text-body-b7 md:text-body-b6 transition-all duration-700 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-10"
@@ -152,7 +152,7 @@ export default function OverviewSection() {
 
         {/* ===== MOBILE: BOTTOM INFO ===== */}
         <div
-          className={`xl:hidden flex justify-between text-body-b7 transition-all duration-700 ${
+          className={`xl:hidden flex justify-between text-body-b7 md:text-body-b6 transition-all duration-700 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-10"
@@ -167,7 +167,7 @@ export default function OverviewSection() {
       {/* Description */}
       <p
         ref={ref}
-        className={`text-body-b2 xl:text-body-h3 text-justify flex flex-wrap gap-x-3 italic transition-all duration-700 ${
+        className={`text-body-b2 md:text-body-h4 xl:text-body-h3 text-justify flex flex-wrap gap-x-3 italic transition-all duration-700 ${
           isVisible
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-10"

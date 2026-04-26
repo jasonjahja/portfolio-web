@@ -63,8 +63,10 @@ module.exports = {
         20: "20px",
         25: "25px",
         30: "30px",
+        40: "40px",
         45: "45px",
         60: "60px",
+        80: "80px",
         82: "82px",
         90: "90px",
         120: "120px",
@@ -121,6 +123,10 @@ module.exports = {
         lineLoop: "lineLoop 2.5s infinite",
         arrowBounceLoop: "arrowBounceLoop 2.5s ease-in-out infinite",
         arrowDiagonalLoop: "arrowDiagonalLoop 2.5s ease-in-out infinite",
+      },
+
+      screens: {
+        md: "992px"
       },
 
     },

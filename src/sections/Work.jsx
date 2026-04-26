@@ -93,17 +93,17 @@ export default function WorkSection() {
   return (
     <section 
         ref={sectionRef}
-        className="w-full px-25 xl:px-120 py-60 xl:py-120 flex flex-col gap-25 text-bw8"
+        className="w-full px-25 md:px-40 xl:px-120 py-60 md:pt-80 xl:py-120 flex flex-col gap-25 text-bw8"
         id="work"
     >
       
       {/* Title */}
-      <div className={`flex flex-col gap-5 xl:gap-10 transition-all duration-700 ${
+      <div className={`flex flex-col gap-5 md:gap-10 transition-all duration-700 ${
             isVisible
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-10"
         }`}>
-        <h2 className="font-display text-heading-h6 xl:text-heading-h3">
+        <h2 className="font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h3">
           Featured projects
         </h2>
 
