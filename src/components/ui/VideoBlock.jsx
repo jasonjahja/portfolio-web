@@ -43,7 +43,7 @@ export default function VideoBlock({ src, caption, poster }) {
       )}
 
       {/* CAPTION */}
-      <p className="text-center text-body-b7 xl:text-body-b4 text-bw6">
+      <p className="text-center text-body-b7 md:text-body-b6 xl:text-body-b4 text-bw6">
         {caption}
       </p>
     </div>

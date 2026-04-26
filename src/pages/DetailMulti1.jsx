@@ -37,9 +37,9 @@ export default function ProjectDetail() {
   const isExpanded = useScrollExpand(imgRef);
 
   return (
-    <section ref={sectionRef} className="flex flex-col items-center pt-[92px] xl:pt-[144px] pb-30 xl:pb-60 gap-25 xl:gap-45">
+    <section ref={sectionRef} className="flex flex-col items-center pt-[92px] md:pt-[107px] xl:pt-[144px] pb-30 md:pb-45 xl:pb-60 gap-25 xl:gap-45">
 
-      <div className={`w-full px-25 xl:px-120 flex flex-col gap-30 transition-all duration-700 ${
+      <div className={`w-full px-25 md:px-40 xl:px-120 flex flex-col gap-30 transition-all duration-700 ${
             isVisible
               ? "opacity-100 translate-x-0"
               : "opacity-0 -translate-x-10"
@@ -49,16 +49,16 @@ export default function ProjectDetail() {
         <div className="flex items-center">
 
             {/* Left Arrow */}
-            <Link to="/" className="absolute left-25 xl:left-120 cursor-pointer">
+            <Link to="/" className="absolute left-25 md:left-40 xl:left-120 cursor-pointer">
                 <img
                     src={arrowLeft}
                     alt="back"
-                    className="h-20 xl:h-30"
+                    className="h-20 md:h-30"
                 />
             </Link>
 
             {/* Center Title */}
-            <h1 className="mx-auto font-display text-heading-h6 xl:text-heading-h2 text-center max-w-[325px] xl:max-w-[950px]">
+            <h1 className="mx-auto font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center max-w-[325px] md:max-w-[750px] xl:max-w-[950px]">
                 Multi Toys Website Redesign
             </h1>
         </div>
@@ -66,9 +66,9 @@ export default function ProjectDetail() {
         <Divider />
 
         {/* Logo + Description */}
-        <div className="flex flex-col xl:flex-row gap-15 xl:gap-45 xl:items-center items-start">
-            <img src={multiLogo} alt="multi" className="h-30 xl:h-45" />
-            <p className="text-body-b6 xl:text-body-b2">
+        <div className="flex flex-col md:flex-row gap-15 md:gap-45 md:items-center items-start">
+            <img src={multiLogo} alt="multi" className="h-30 md:h-40 xl:h-45" />
+            <p className="text-body-b6 md:text-body-b4 xl:text-body-b2">
                 Retail brand specializing in collectible figures, anime merchandise,
                 and hobby products, with a strong offline presence.
             </p>
@@ -77,7 +77,7 @@ export default function ProjectDetail() {
         <Divider />
 
         {/* META */}
-        <div className="flex flex-col xl:flex-row gap-15 xl:gap-30">
+        <div className="flex flex-col md:flex-row gap-15 md:gap-30">
 
             {/* Item 1 */}
             <Meta
@@ -86,7 +86,7 @@ export default function ProjectDetail() {
                 value="Website (E-commerce)"
             />
 
-            <Divider type="vertical" className="hidden xl:block" />
+            <Divider type="vertical" className="hidden md:block" />
 
             {/* Item 2 */}
             <Meta
@@ -95,7 +95,7 @@ export default function ProjectDetail() {
                 value="Product Designer (End-to-end)"
             />
 
-            <Divider type="vertical" className="hidden xl:block" />
+            <Divider type="vertical" className="hidden md:block" />
 
             {/* Item 3 */}
             <Meta
@@ -111,12 +111,12 @@ export default function ProjectDetail() {
       <div 
         ref={imgRef}
         className={`w-full overflow-hidden flex flex-col gap-10 xl:gap-15 transition-[padding] duration-500 ease-out
-        ${isExpanded ? "px-0" : "px-25 xl:px-120"}`}
+        ${isExpanded ? "px-0" : "px-25 md:px-40 xl:px-120"}`}
       >
         <img
             src={imageHero}
             alt="project image"
-            className="w-full h-[245px] md:h-auto xl:h-[675px] object-cover transition-all duration-700"
+            className="w-full xl:h-[675px] object-cover transition-all duration-700"
             style={{
             clipPath: isVisible
                 ? "inset(0% 0% 0% 0%)"
@@ -124,13 +124,13 @@ export default function ProjectDetail() {
             transitionDelay: "650ms",
             }}
         />
-        <p className="text-center text-sans text-body-b7 xl:text-body-b4 text-bw6">
-          Multi's website redesign
+        <p className="text-center text-sans text-body-b7 md:text-body-b6 xl:text-body-b4 text-bw6">
+          Multi's Website Redesign
         </p>
       </div>
 
       {/* CONTENT */}
-      <div className="xl:w-full xl:max-w-[900px] mx-25 xl:mx-0 flex flex-col gap-25 xl:gap-45">
+      <div className="md:max-w-[600px] xl:max-w-[900px] mx-25 xl:mx-0 flex flex-col gap-25 xl:gap-45">
 
         <Divider />
         
@@ -201,7 +201,7 @@ export default function ProjectDetail() {
         </Section>
         
         {/* VIDEO SECTION */}
-        <VideoBlock src={multiAfterVideo} caption="Multi’s redesigned homepage" poster={multi1Image1} />
+        <VideoBlock src={multiAfterVideo} caption="Multi’s redesigned landing page" poster={multi1Image1} />
 
         <Divider />
 
