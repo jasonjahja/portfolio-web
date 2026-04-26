@@ -47,14 +47,14 @@ export default function WorkSection() {
       tags: ["B2B", "Wholesale Experience", "UX Architecture", "Complex Flows"],
       link: "/multi-toys-wholesale",
     },
-    {
-      image: multi3,
-      title: "Multi Toys Photobox Interaction Experience",
-      description:
-        "Designed an in-store photobox interaction experience for generating AI-styled photos, helping first-time users navigate selection and capture through clear, guided flows while reinforcing the brand.",
-      tags: ["Retail Experience", "Photobox", "Interaction Design", "In-store UX"],
-      link: "/multi-toys-photobox",
-    },
+    // {
+    //   image: multi3,
+    //   title: "Multi Toys Photobox Interaction Experience",
+    //   description:
+    //     "Designed an in-store photobox interaction experience for generating AI-styled photos, helping first-time users navigate selection and capture through clear, guided flows while reinforcing the brand.",
+    //   tags: ["Retail Experience", "Photobox", "Interaction Design", "In-store UX"],
+    //   link: "/multi-toys-photobox",
+    // },
     {
       image: makmur,
       title: "Makmur Website & Desktop App Rebranding (Internship)",

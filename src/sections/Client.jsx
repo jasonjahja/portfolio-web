@@ -32,7 +32,8 @@ export default function ClientSection() {
     logo: multiLogo,
     alt: "Multi Toys",
     description:
-      "Independently designed the Multi Toys digital ecosystem across B2C retail, wholesale, and in-store experiences, focusing on clear flows and scalable structure.",
+      // "Independently designed the Multi Toys digital ecosystem across B2C retail, wholesale, and in-store experiences, focusing on clear flows and scalable structure.",
+      "Independently designed the Multi Toys digital ecosystem across B2C retail, wholesale, and internal POS system, focusing on clear flows and scalable structure.",
     href: "multi-toys-website",
   },
   {

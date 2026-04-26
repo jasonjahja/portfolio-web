@@ -216,11 +216,18 @@ export default function ProjectDetail() {
         </Section>
 
         {/* Next Project */}
-        <ProjectNav
+        {/* <ProjectNav
             arrowRight={arrowRight}
             next={{
                 to: "/multi-toys-photobox",
                 title: "Multi Toys Photobox Interaction Experience"
+            }}
+        /> */}
+        <ProjectNav
+            arrowRight={arrowRight}
+            next={{
+                to: "/cpm-wayfinding-system",
+                title: "Centre Point Medan Wayfinding & Directory System"
             }}
         />
       </div>
