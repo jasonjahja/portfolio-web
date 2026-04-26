@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import DetailMulti from "./pages/DetailMulti1";
-import DetailMulti2 from "./pages/DetailMulti2";
-import DetailMulti3 from "./pages/DetailMulti3";
+// import DetailMulti2 from "./pages/DetailMulti2";
+// import DetailMulti3 from "./pages/DetailMulti3";
 import DetailCPM from "./pages/DetailCPM";
 import DetailKJP from "./pages/DetailKJP";
 
@@ -24,8 +24,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/multi-toys-website" element={<DetailMulti />} />
-          <Route path="/multi-toys-wholesale" element={<DetailMulti2 />} />
-          <Route path="/multi-toys-photobox" element={<DetailMulti3 />} />
+          {/* <Route path="/multi-toys-wholesale" element={<DetailMulti2 />} />
+          <Route path="/multi-toys-photobox" element={<DetailMulti3 />} /> */}
           <Route path="/cpm-wayfinding-system" element={<DetailCPM />} />
           <Route path="/kjp-website" element={<DetailKJP />} />
         </Routes>
