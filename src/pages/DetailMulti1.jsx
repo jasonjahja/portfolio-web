@@ -222,11 +222,18 @@ export default function ProjectDetail() {
         </Section>
 
         {/* Next Project */}
-        <ProjectNav
+        {/* <ProjectNav
             arrowRight={arrowRight}
             next={{
                 to: "/multi-toys-wholesale",
                 title: "Multi Toys B2B Wholesale Platform"
+            }}
+        /> */}
+        <ProjectNav
+            arrowRight={arrowRight}
+            next={{
+                to: "/cpm-wayfinding-system",
+                title: "Centre Point Medan Wayfinding & Directory System"
             }}
         />
       </div>
