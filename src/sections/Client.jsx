@@ -78,7 +78,7 @@ export default function ClientSection() {
         <h2 className="font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h3">
           Featured client work
         </h2>
-        <div className="h-px w-full bg-bw5" />
+        <div className="h-[2px] w-full bg-bw5" />
       </div>
 
       {/* Grid */}

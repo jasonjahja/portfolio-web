@@ -67,6 +67,19 @@ export default function Navbar() {
 
             <span>/</span>
 
+            <a
+              href="/#post"
+              className="relative hover:italic
+              after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+              after:bg-bw8 after:origin-left after:scale-x-0
+              after:transition-transform after:duration-200
+              hover:after:scale-x-100"
+            >
+              Posts
+            </a>
+
+            <span>/</span>
+
             {/* External link */}
             <a
               href="https://drive.google.com/file/d/1mkuXkkHSrulYfjWBZyrit3aVjI58FEDR/view?usp=sharing"
@@ -152,6 +165,7 @@ export default function Navbar() {
           <a href="/#overview" className="p-10 w-full" onClick={() => setOpen(false)}>Overview</a>
           <a href="/#clients" className="p-10 w-full" onClick={() => setOpen(false)}>Clients</a>
           <a href="/#work" className="p-10 w-full" onClick={() => setOpen(false)}>Projects</a>
+          <a href="/#post" className="p-10 w-full" onClick={() => setOpen(false)}>Posts</a>
           <a
               href="/resume.pdf"
               target="_blank"

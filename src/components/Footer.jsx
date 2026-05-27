@@ -63,6 +63,17 @@ export default function Footer() {
                   Projects
                 </a>
 
+                <a
+                  href="#post"
+                  className="relative hover:italic w-fit
+                  after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
+                  after:bg-bw8 after:origin-left after:scale-x-0
+                  after:transition-transform after:duration-200
+                  hover:after:scale-x-100"
+                >
+                  Posts
+                </a>
+
                 {/* Resume */}
                 <a
                   href="https://drive.google.com/file/d/1mkuXkkHSrulYfjWBZyrit3aVjI58FEDR/view?usp=sharing"

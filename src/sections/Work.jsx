@@ -125,7 +125,7 @@ export default function WorkSection() {
             </span>
         </div> */}
 
-        <div className="h-px w-full bg-bw5" />
+        <div className="h-[2px] w-full bg-bw5" />
       </div>
 
       {/* List */}
