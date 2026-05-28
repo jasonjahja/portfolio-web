@@ -31,7 +31,7 @@ export default function PostSection() {
   return (
     <section 
       ref={sectionRef}
-      className="w-full px-25 md:px-40 xl:px-120 py-60 md:pt-80 xl:py-120 flex flex-col gap-25 text-bw8"
+      className="w-full px-25 md:px-40 xl:px-120 py-60 md:py-80 xl:py-120 flex flex-col gap-25 text-bw8"
       id="post"  
     >
       {/* Title */}

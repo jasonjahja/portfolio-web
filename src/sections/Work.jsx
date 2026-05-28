@@ -93,7 +93,7 @@ export default function WorkSection() {
   return (
     <section 
         ref={sectionRef}
-        className="w-full px-25 md:px-40 xl:px-120 py-60 md:pt-80 xl:py-120 flex flex-col gap-25 text-bw8"
+        className="w-full px-25 md:px-40 xl:px-120 pt-60 md:pt-80 xl:pt-120 flex flex-col gap-25 text-bw8"
         id="work"
     >
       
