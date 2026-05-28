@@ -43,7 +43,7 @@ export default function OverviewSection() {
   return (
     <section
       ref={sectionRef}
-      className="pt-[92px] md:pt-[107px] xl:pt-[144px] w-full px-25 md:px-40 xl:px-120 flex flex-col gap-45 xl:gap-60 text-bw8"
+      className="pt-[92px] md:pt-[107px] xl:pt-[144px] w-full px-25 md:px-40 xl:px-120 flex flex-col gap-45 xl:gap-60 text-bw8 pb-30 md:pb-40 xl:pb-60"
       id="overview"
     >
       
