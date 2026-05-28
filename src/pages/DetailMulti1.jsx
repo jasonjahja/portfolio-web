@@ -141,7 +141,7 @@ export default function ProjectDetail() {
             </p>
             <Quote children="However, the current website lacked clear hierarchy and structured navigation, making product exploration feel overwhelming and unfocused."/>
             <p>
-                As a result, product value was not effectively communicated, and the experience failed to reflect the curated feel of the physical store..
+                As a result, product value was not effectively communicated, and the experience failed to reflect the curated feel of the physical store.
             </p>
         </Section>
 
