@@ -82,7 +82,7 @@ export default function Navbar() {
 
             {/* External link */}
             <a
-              href="https://drive.google.com/file/d/1mkuXkkHSrulYfjWBZyrit3aVjI58FEDR/view?usp=sharing"
+              href="https://drive.google.com/file/d/1q5zBZOH-WJ9sBQXil4fcW6W7t79tSC3j/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-col items-start w-fit group"
@@ -167,7 +167,7 @@ export default function Navbar() {
           <a href="/#work" className="p-10 w-full" onClick={() => setOpen(false)}>Projects</a>
           <a href="/#post" className="p-10 w-full" onClick={() => setOpen(false)}>Posts</a>
           <a
-              href="/resume.pdf"
+              href="https://drive.google.com/file/d/1q5zBZOH-WJ9sBQXil4fcW6W7t79tSC3j/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-col items-start w-fit group p-10"

@@ -76,7 +76,7 @@ export default function Footer() {
 
                 {/* Resume */}
                 <a
-                  href="https://drive.google.com/file/d/1mkuXkkHSrulYfjWBZyrit3aVjI58FEDR/view?usp=sharing"
+                  href="https://drive.google.com/file/d/1q5zBZOH-WJ9sBQXil4fcW6W7t79tSC3j/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex flex-col items-start w-fit group"
