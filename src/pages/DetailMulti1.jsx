@@ -30,6 +30,7 @@ import wireframe from "../assets/images/multi_b2c/wireframe.webp";
 import solution1 from "../assets/images/multi_b2c/solution1.webp";
 import solution2 from "../assets/images/multi_b2c/solution2.webp";
 import solution3 from "../assets/images/multi_b2c/solution3.webp";
+import mobile from "../assets/images/multi_b2c/mobile.webp";
 import result from "../assets/images/multi_b2c/result.webp";
 
 // ---------------- MAIN ----------------
@@ -259,7 +260,7 @@ export default function ProjectDetail() {
         <div className="flex flex-col md:flex-row gap-15 md:gap-45 xl:gap-60">
             
             {/* Content */}
-            <div className="max-w-none md:max-w-[304px] xl:max-w-[453px]">
+            <div className="w-full md:w-[300px] xl:w-[400px] shrink-0">
                 <Section title="Design Concept">
                     <p>
                     The design concept translates the established strategy into a more focused and structured browsing experience. The wireframes established the foundation of the journey, defining how users discover products, navigate collections, and move toward purchase decisions before the visual design phase.
@@ -319,6 +320,25 @@ export default function ProjectDetail() {
             ]}
         />
 
+        <Divider />
+
+        {/* Responsive Experience */}
+        <div className="flex flex-col md:flex-row gap-15 md:gap-45 xl:gap-60">
+            
+            {/* Content */}
+            <div className="w-full md:w-[300px] xl:w-[400px] shrink-0">
+                <Section title="Responsive Experience">
+                    <p>
+                        The experience was also adapted for mobile devices while preserving the core experience established on desktop.
+                    </p> 
+                </Section>
+            </div>
+
+            {/* Image */}
+            <InsightImageBlock src={mobile} />
+
+        </div>
+        
         <Divider />
 
         {/* Result */}
