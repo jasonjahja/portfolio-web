@@ -7,7 +7,7 @@ export default function InsightImageBlock({
   return (
     <div className="flex flex-col gap-10 md:gap-15 text-bw8">
       
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-5 md:gap-10">
         {/* TITLE */}
         {showTitle && title && (
             <h3 className="text-body-b5b md:text-body-b4b xl:text-body-b3b">
