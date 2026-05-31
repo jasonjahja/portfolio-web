@@ -20,6 +20,10 @@ module.exports = {
       },
 
       fontSize: {
+        "body-b5b": ["14px", { lineHeight: "24px", fontWeight: "700" }],
+        "body-b4b": ["16px", { lineHeight: "26px", fontWeight: "700" }],
+        "body-b3b": ["18px", { lineHeight: "28px", fontWeight: "700" }],
+        
         "body-b7": ["10px", { lineHeight: "20px", fontWeight: "400" }],
         "body-b6": ["12px", { lineHeight: "22px", fontWeight: "400" }],
         "body-b5": ["14px", { lineHeight: "24px", fontWeight: "400" }],
@@ -47,7 +51,7 @@ module.exports = {
         "body-h2": ["54px", { lineHeight: "64px", fontWeight: "400" }],
         "body-h1": ["58px", { lineHeight: "68px", fontWeight: "400" }],
 
-        "heading-h8": ["18px", { lineHeight: "28px", fontWeight: "600", letterSpacing: "-1px", }],
+        "heading-h7": ["18px", { lineHeight: "28px", fontWeight: "600", letterSpacing: "-1px", }],
         "heading-h6": ["22px", { lineHeight: "32px", fontWeight: "600", letterSpacing: "-1px", }],
         "heading-h5": ["24px", { lineHeight: "34px", fontWeight: "600", letterSpacing: "-1px", }],
         "heading-h4": ["32px", { lineHeight: "42px", fontWeight: "600", letterSpacing: "-1px", }],
@@ -71,6 +75,11 @@ module.exports = {
         90: "90px",
         120: "120px",
         180: "180px",
+      },
+
+      borderRadius: {
+        8: "8px",
+        15: "15px",
       },
 
       keyframes: {

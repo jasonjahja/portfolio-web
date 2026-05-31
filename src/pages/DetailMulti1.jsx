@@ -9,8 +9,6 @@ import imageHero from "../assets/images/multi_b2c.webp";
 import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
 import durationIcon from "../assets/icons/duration_icon.svg";
-import multiPrevVideo from "../assets/videos/multi_prev_video.mp4";
-import multiAfterVideo from "../assets/videos/multi_after_video.mp4";
 
 import multi1Image1 from "../assets/images/multi1_1.webp";
 import multi1Image0 from "../assets/images/multi1_0.webp";
@@ -21,12 +19,21 @@ import useRevealOnScroll from "../hooks/useRevealOnScroll.jsx";
 import Divider from "../components/ui/Divider.jsx"
 import Meta from "../components/project/Meta.jsx";
 import Section from "../components/ui/DetailSection.jsx";
+import Subsection from "../components/ui/DetailSubsection.jsx";
 import Quote from "../components/ui/Quote.jsx";
-import VideoBlock from "../components/ui/VideoBlock.jsx";
-import DecisionBlock from "../components/project/DecisionBlock.jsx";
+import InsightImageBlock from "../components/ui/InsightImageBlock.jsx";
 import ProjectNav from "../components/project/ProjectNav.jsx";
 
-import { decisions } from "../data/multiData1.jsx"
+import ecomm from "../assets/images/multi_b2c/context_ecomm.webp";
+import collectibles from "../assets/images/multi_b2c/context_collectibles.webp";
+import problem1 from "../assets/images/multi_b2c/problem1.webp";
+import problem2 from "../assets/images/multi_b2c/problem2.webp";
+import problem3 from "../assets/images/multi_b2c/problem3.webp";
+import wireframe from "../assets/images/multi_b2c/wireframe.webp";
+import solution1 from "../assets/images/multi_b2c/solution1.webp";
+import solution2 from "../assets/images/multi_b2c/solution2.webp";
+import solution3 from "../assets/images/multi_b2c/solution3.webp";
+import result from "../assets/images/multi_b2c/result.webp";
 
 // ---------------- MAIN ----------------
 export default function ProjectDetail() {
@@ -130,94 +137,213 @@ export default function ProjectDetail() {
       </div>
 
       {/* CONTENT */}
-      <div className="md:max-w-[600px] xl:max-w-[900px] mx-25 xl:mx-0 flex flex-col gap-25 xl:gap-45">
+      <div className="mx-25 md:mx-40 flex flex-col gap-45 md:gap-60">
 
         <Divider />
         
-        {/* Background */}
-        <Section title="Background">
+        {/* Context */}
+        <Section title="Context">
             <p>
-                Users rely heavily on visual browsing when purchasing collectible products.
+                Multi Toys requested a website redesign to improve how the brand and its products were presented online. The scope focused on refining the existing experience rather than introducing new functionality, with an emphasis on visual presentation, browsing, and overall structure. 
             </p>
-            <Quote children="However, the current website lacked clear hierarchy and structured navigation, making product exploration feel overwhelming and unfocused."/>
+            <Quote children="Given the limited timeline, the project prioritized high-impact improvements that could better showcase products and strengthen the brand's identity through a more cohesive digital experience." />
+        </Section>
+        
+        <Divider />
+        
+        {/* Understanding the Collectible Shopping Experience */}
+        <div className="flex flex-col gap-30 md:gap-45 xl:gap-60">
+            <Section title="Understanding the Collectible Shopping Experience">
+                <p>
+                    Through market analysis, a clear difference emerged between traditional e-commerce and collectible-focused retail experiences. While marketplaces are often designed around search and comparison, collectible shoppers tend to rely more on visual exploration when discovering products. Product imagery, curated collections, and browsing experience play an important role in attracting attention and helping users evaluate what to explore next.
+                </p>
+                <p>
+                    Benchmarking platforms such as LEGO, Premium Bandai, and similar brands reinforced this behavior. These experiences emphasize visual presentation, curated product grouping, and structured browsing paths that guide exploration and make products feel more engaging to discover.
+                </p>
+            </Section>
+
+            <div className="flex flex-col md:flex-row gap-30 md:gap-15">
+                <InsightImageBlock
+                    title="Discovery-Driven Shopping"
+                    src={collectibles}
+                    items={[
+                        "Large product imagery emphasizes visual appeal and collectibility.",
+                        "Curated sections encourage exploration beyond a specific purchase goal.",
+                        "Distinct product groupings help users understand different product categories at a glance.",
+                        "Structured browsing paths guide users from discovery to deeper exploration.",
+                    ]}
+                />
+                <InsightImageBlock
+                    title="Search-Driven Shopping"
+                    src={ecomm}
+                    items={[
+                        "Dense product listings prioritize efficiency and product quantity.",
+                        "Search and filtering serve as primary navigation methods.",
+                        "Product comparison is emphasized over visual storytelling.",
+                        "Designed to support users who already have a purchase goal in mind.",
+                    ]}
+                />
+            </div>
+        </div>
+        
+        <Divider />
+
+        {/* Key Problems */}
+        <Section title="Key Problems">
             <p>
-                As a result, product value was not effectively communicated, and the experience failed to reflect the curated feel of the physical store.
-            </p>
+              Analysis of the existing Multi Toys’ website revealed several opportunities to better support how collectible shoppers discover and evaluate products. Visual focus was often diluted by competing content, browsing lacked a clear progression, and product presentation did little to emphasize differences in value or availability. As a result, the experience felt less curated and engaging than the in-store experience the brand aimed to provide. These findings were synthesized into three key problems that became the foundation for the redesign.
+            </p> 
         </Section>
 
-        {/* VIDEO SECTION */}
-        <VideoBlock src={multiPrevVideo} caption="Multi’s previous website design" poster={multi1Image0} />
+        <Subsection
+            title="Lack of Visual Focus"
+            children="Too many elements compete for attention, making it difficult to quickly recognize important content and product value."
+            image={problem1}
+            insights={[
+                "Profile and wishlist actions are hidden despite available navigation space.",
+                "Hero section lacks visual prominence.",
+                "Newsletter placement is easily overlooked.",
+                "Product imagery receives less emphasis than secondary information on the product detail page.",
+            ]}
+        />
+
+        <Subsection
+            title="Unstructured Product Discovery"
+            children="Browsing lacks a clear progression, making exploration feel overwhelming and difficult to navigate."
+            image={problem2}
+            insights={[
+                "Products are continuously surfaced through infinite scrolling on the homepage.",
+                "The transition from homepage exploration to the full catalog is difficult to find.",
+                "No recommendation pathways to encourage continued exploration.",
+                "Wishlist are not easily accessible during browsing, making it harder to save and revisit products.",
+            ]}
+        />
+
+        <Subsection
+            title="Limited Decision Support"
+            children="The experience provides limited visual and contextual cues that encourage users to take action and move toward purchase decisions."
+            image={problem3}
+            insights={[
+                "Available and pre-order products are presented similarly despite serving different purchase intents.",
+                "Purchase actions receive limited prominence within the product detail page.",
+            ]}
+        />
 
         <Divider />
 
         {/* Objective */}
         <Section title="Objective">
-            <Quote children="Improve the website’s visual presentation and information 
-              structure to better guide user attention, communicate product value, 
-              and strengthen the brand’s perceived positioning."/>
+            <Quote children="Redesign the browsing experience to create clearer visual focus, more structured product exploration, and stronger decision cues that help users navigate products with greater confidence while reinforcing Multi Toys' collectible-focused brand identity."/>
         </Section>
 
         <Divider />
 
-        {/* Approach */}
-        <Section title="Approach">
-            <p>
-                The exploration focused on analyzing established e-commerce and collectible platforms 
-                (e.g. LEGO, Premium Bandai, BigBadToyStore) to identify effective product structuring and 
-                browsing patterns.
-            </p>
-            <p>
-                Insights were translated into design decisions using principles such as visual hierarchy, 
-                consistency, and recognition over recall.
-            </p>
+        {/* Design Strategy */}
+        <Section title="Design Strategy">
+            <p>Based on the identified problems and recurring patterns observed across collectible-focused platforms, three design principles were established to guide the redesign. Together, they aim to create a more focused browsing experience, support clearer product discovery, and provide stronger cues that help users move confidently toward purchase decisions.</p>
         </Section>
+
+        <Subsection
+            title="Strengthen Visual Hierarchy"
+            children="Create clearer visual priorities by emphasizing products, key content, and primary actions. This helps users focus on what matters most and reduces competition between interface elements."
+        />
+        <Subsection
+            title="Introduce Intentional Browsing Paths"
+            children="Structure product discovery through clearer progression and navigation. Rather than presenting all content at once, the experience guides users from initial discovery to deeper exploration in a more manageable way."
+        />
+        <Subsection
+            title="Support Product Decision-Making"
+            children="Provide clearer signals around availability, urgency, and purchase actions to help users evaluate products and take action with confidence."
+        />
 
         <Divider />
 
-        {/* Design Decisions */}
-        <Section title="Design Decisions">
-            <div className="flex flex-col gap-45 xl:gap-60">
-                {decisions.map((d, i) => (
-                    <DecisionBlock key={i} {...d} />
-                ))}
-          </div>
-        </Section>
+        {/* Design Concept */}
+        <div className="flex flex-col md:flex-row gap-15 md:gap-45 xl:gap-60">
+            
+            {/* Content */}
+            <div className="max-w-none md:max-w-[304px] xl:max-w-[453px]">
+                <Section title="Design Concept">
+                    <p>
+                    The design concept translates the established strategy into a more focused and structured browsing experience. The wireframes established the foundation of the journey, defining how users discover products, navigate collections, and move toward purchase decisions before the visual design phase.
+                    </p> 
+                </Section>
+            </div>
 
-        <Divider />
+            {/* Wireframe */}
+            <InsightImageBlock
+                src={wireframe}
+            />
 
-        {/* Outcome */}
-        <Section title="Outcome">
-            <Quote>
-                <p>
-                    The redesign creates a more cohesive and visually structured experience 
-                    that makes product exploration clearer and more focused.
-
-                </p>
-                <p>
-                    Improved hierarchy and navigation better guide users from browsing to 
-                    evaluation, strengthening how product value is perceived.
-                </p>
-            </Quote>
-        </Section>
+        </div>
         
-        {/* VIDEO SECTION */}
-        <VideoBlock src={multiAfterVideo} caption="Multi’s redesigned landing page" poster={multi1Image1} />
+        <Divider />
 
+        {/* Final Design */}
+        <Section title="Final Design">
+            <p>
+              The final design translates the established strategy into a more focused and structured browsing experience. Each decision was designed to address the identified problems by improving visual focus, guiding product discovery, and supporting purchase decisions throughout the journey.
+            </p> 
+        </Section>
+
+        <Subsection
+            title="Strengthening Visual Focus Around Products"
+            children="The redesign establishes clearer visual priorities by reducing competing elements and placing greater emphasis on products throughout the experience. Key content, imagery, and navigation actions are surfaced more prominently, helping users quickly identify what matters while reinforcing the collectible-focused nature of the brand."
+            image={solution1}
+            insights={[
+                "More visible profile and wishlist actions",
+                "Stronger hero section",
+                "Increased product prominence helps shift attention toward collectibles and featured products.",
+                "Introduced a more prominent subscription experience that highlights the benefits of staying informed about upcoming releases and product drops.",
+                "Product imagery is prioritized over secondary details to better highlight collectible appeal.",
+            ]}
+        />
+
+        <Subsection
+            title="Creating Clearer Paths for Product Discovery"
+            children="Rather than presenting all products at once, the experience introduces a more intentional browsing structure that guides users from discovery toward deeper exploration. Dedicated entry points and clearer navigation help users understand where to go next throughout the journey."
+            image={solution2}
+            insights={[
+                "Separating featured content from the full catalog creates a clearer progression from discovery to exploration.",
+                "A more prominent catalog entry point encourages users to continue exploring beyond featured products.",
+                "Replacing infinite scrolling with pagination reduces browsing fatigue and provides a stronger sense of progression.",
+                "Product recommendations encourage users to continue exploring beyond a single item.",
+                "Wishlist actions remain accessible throughout browsing, making it easier to revisit products later.",
+            ]}
+        />
+
+        <Subsection
+            title="Supporting Purchase Decisions Through Clearer Signals"
+            children="The redesign strengthens purchase intent by making product availability and purchase actions easier to identify. Clear visual distinctions and stronger action areas help communicate purchasing context and encourage more confident decision-making."
+            image={solution3}
+            insights={[
+                "Distinct visual treatments help communicate different purchasing contexts and availability.",
+                "Purchase actions receive greater prominence to support faster and more confident decisions.",
+            ]}
+        />
+
+        <Divider />
+
+        {/* Result */}
+        <div className="flex flex-col gap-30 md:gap-45">
+            {/* Content */}
+            <Section title="Result">
+                <Quote children="The final design creates a more focused and intentional browsing experience tailored to collectible shopping behaviors. By improving visual focus, structuring product discovery, and strengthening purchase cues, the redesign helps guide users from initial exploration to purchase while better reflecting Multi Toys' curated brand identity." />
+            </Section>
+            
+            {/* Image */}
+            <InsightImageBlock src={result} />
+        </div>
+        
         <Divider />
 
         {/* Reflection */}
         <Section title="Reflection">
             <p>
-                This project reinforced the importance of designing clear hierarchy across 
-                the entire user journey, not just individual screens.
+                While the redesign was guided by patterns observed across collectible-focused platforms, incorporating user interviews or usability testing could provide additional validation and uncover behaviors specific to Multi Toys' customers.
             </p>
             <p>
-                While the decisions were grounded in established UX principles, validating 
-                them with real users would provide deeper insight into actual behavior.
-            </p>
-            <p>
-                Next steps include usability testing and iterating on navigation clarity 
-                and recommendation relevance.
+                Given more time, I would evaluate the redesign through usability testing and post-launch behavioral metrics. Areas of focus could include catalog engagement, recommendation interactions, wishlist usage, newsletter subscriptions, and progression from product exploration to purchase. These insights would help identify opportunities for further refinement while ensuring future design decisions remain aligned with both user needs and business goals.
             </p>
         </Section>
 

@@ -9,7 +9,6 @@ import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
 import durationIcon from "../assets/icons/duration_icon.svg";
 import imageHero from "../assets/images/cpm.webp";
-import multiAfterVideo from "../assets/videos/multi_after_video.mp4";
 
 import useScrollExpand from "../hooks/useScrollExpand.jsx";
 import useRevealOnScroll from "../hooks/useRevealOnScroll.jsx";
