@@ -137,7 +137,7 @@ export default function ProjectDetail() {
       </div>
 
       {/* CONTENT */}
-      <div className="mx-25 md:mx-40 flex flex-col gap-45 md:gap-60">
+      <div className="mx-25 md:mx-40 xl:mx-120 flex flex-col gap-45 md:gap-60">
 
         <Divider />
         

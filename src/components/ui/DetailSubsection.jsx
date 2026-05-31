@@ -11,8 +11,8 @@ export default function Subsection({
 
   const titleColor = hasImage ? "text-bw7" : "text-bw8";
   const contentWidth = hasImage
-    ? "w-full md:w-[304px] xl:w-[453px] shrink-0"
-    : "w-full md:w-[608px] xl:w-[907px] shrink-0";
+    ? "w-full md:w-[300px] xl:w-[400px] shrink-0"
+    : "w-full md:w-[600px] xl:w-[800px] shrink-0";
 
   return (
     <div className="flex flex-col md:flex-row gap-15 md:gap-45 xl:gap-60">
