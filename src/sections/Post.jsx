@@ -47,7 +47,7 @@ export default function PostSection() {
         <div className="h-[2px] w-full bg-bw5" />
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-30 md:gap-15">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-15">
         
         {/* LEFT LARGE POST */}
         <div
