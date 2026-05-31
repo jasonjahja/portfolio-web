@@ -1,4 +1,4 @@
-import multi1 from "../assets/images/multi_b2c.webp";
+import multi1 from "../assets/images/multi_b2c/hero.webp";
 import multi2 from "../assets/images/multi-wholesale-confidential.webp";
 import multi3 from "../assets/images/multi_photobox.webp";
 import makmur from "../assets/images/makmur.webp";

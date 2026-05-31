@@ -5,13 +5,9 @@ import { Link } from "react-router-dom";
 import arrowLeft from "../assets/icons/arrow_left.svg";
 import arrowRight from "../assets/icons/arrow_right.svg";
 import multiLogo from "../assets/images/multi_logo.webp";
-import imageHero from "../assets/images/multi_b2c.webp";
 import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
 import durationIcon from "../assets/icons/duration_icon.svg";
-
-import multi1Image1 from "../assets/images/multi1_1.webp";
-import multi1Image0 from "../assets/images/multi1_0.webp";
 
 import useScrollExpand from "../hooks/useScrollExpand.jsx";
 import useRevealOnScroll from "../hooks/useRevealOnScroll.jsx";
@@ -24,6 +20,7 @@ import Quote from "../components/ui/Quote.jsx";
 import InsightImageBlock from "../components/ui/InsightImageBlock.jsx";
 import ProjectNav from "../components/project/ProjectNav.jsx";
 
+import imageHero from "../assets/images/multi_b2c/hero.webp";
 import ecomm from "../assets/images/multi_b2c/context_ecomm.webp";
 import collectibles from "../assets/images/multi_b2c/context_collectibles.webp";
 import problem1 from "../assets/images/multi_b2c/problem1.webp";
