@@ -123,12 +123,12 @@ export default function ProjectDetail() {
             }}
         />
         <p className="text-center text-sans text-body-b7 md:text-body-b6 xl:text-body-b4 text-bw6">
-          Centre Point Medan's Directory and Wayfinding Design
+          KJP's Website
         </p>
       </div>
 
       {/* CONTENT */}
-      <div className="md:max-w-[600px] xl:max-w-[900px] mx-25 xl:mx-0 flex flex-col gap-25 xl:gap-45">
+      <div className="mx-25 md:mx-40 xl:mx-120 flex flex-col gap-25 md:gap-45">
 
         <Divider />
         
