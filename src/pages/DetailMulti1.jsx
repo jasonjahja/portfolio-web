@@ -238,16 +238,16 @@ export default function ProjectDetail() {
 
         {/* Design Strategy */}
         <Section title="Design Strategy">
-            <p>Based on the identified problems and recurring patterns observed across collectible-focused platforms, three design principles were established to guide the redesign. Together, they aim to create a more focused browsing experience, support clearer product discovery, and provide stronger cues that help users move confidently toward purchase decisions.</p>
+            <p>Based on the identified problems and recurring patterns observed across collectible-focused platforms, three design principles were defined to guide the redesign. Together, they aim to create a more focused browsing experience, improve product discoverability, and support clearer decision-making throughout the journey.</p>
         </Section>
 
         <Subsection
             title="Strengthen Visual Hierarchy"
-            children="Create clearer visual priorities by emphasizing products, key content, and primary actions. This helps users focus on what matters most and reduces competition between interface elements."
+            children="Create clearer visual priorities by emphasizing products, key content, and primary actions. This reduces visual competition and helps users focus on what matters most."
         />
         <Subsection
             title="Introduce Intentional Browsing Paths"
-            children="Structure product discovery through clearer progression and navigation. Rather than presenting all content at once, the experience guides users from initial discovery to deeper exploration in a more manageable way."
+            children="Structure product discovery into a clearer progression, allowing users to move from initial exploration to deeper browsing in a more guided and manageable way."
         />
         <Subsection
             title="Support Product Decision-Making"
@@ -263,7 +263,7 @@ export default function ProjectDetail() {
             <div className="w-full md:w-[300px] xl:w-[400px] shrink-0">
                 <Section title="Design Concept">
                     <p>
-                    The design concept translates the established strategy into a more focused and structured browsing experience. The wireframes established the foundation of the journey, defining how users discover products, navigate collections, and move toward purchase decisions before the visual design phase.
+                        The concept explores a more guided browsing experience where product discovery, navigation, and evaluation are connected through a clearer journey structure. Wireframes were used to define layout hierarchy and interaction flow before visual design decisions were applied.
                     </p> 
                 </Section>
             </div>
@@ -280,7 +280,7 @@ export default function ProjectDetail() {
         {/* Final Design */}
         <Section title="Final Design">
             <p>
-              The final design translates the established strategy into a more focused and structured browsing experience. Each decision was designed to address the identified problems by improving visual focus, guiding product discovery, and supporting purchase decisions throughout the journey.
+              The final design translates the defined structure into a refined browsing experience, improving visual hierarchy, clarifying product information, and strengthening decision-making cues throughout the journey.
             </p> 
         </Section>
 
