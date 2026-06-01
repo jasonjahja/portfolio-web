@@ -145,7 +145,7 @@ export default function ProjectDetail() {
         {/* Key Contributions */}
         <Section title="Key Contributions">
             <p>
-              Throughout the internship, my work spanned several initiatives aimed at improving the consistency, maintainability, and adaptability of the product experience. The following highlights showcase selected contributions that supported both the design workflow and the broader product development process.
+              Throughout the internship, my work spanned several initiatives aimed at improving the consistency, maintainability, and adaptability of the product experience. The following highlights showcase selected contributions that supported both the design workflow and the broader product development process. Some visuals have been partially obscured for confidentiality reasons.
             </p> 
         </Section>
 
