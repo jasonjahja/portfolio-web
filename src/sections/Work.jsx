@@ -1,7 +1,7 @@
 import multi1 from "../assets/images/multi_b2c/hero.webp";
 import multi2 from "../assets/images/multi-wholesale-confidential.webp";
 import multi3 from "../assets/images/multi_photobox.webp";
-import makmur from "../assets/images/makmur.webp";
+import makmur from "../assets/images/makmur/hero.webp";
 import cpm from "../assets/images/cpm.webp";
 import kjp from "../assets/images/kjp.webp";
 import navika from "../assets/images/navika.webp";
@@ -58,11 +58,11 @@ export default function WorkSection() {
     // },
     {
       image: makmur,
-      title: "Makmur Website & Desktop App Rebranding (Internship)",
+      title: "Makmur Design Systems & Responsive Experiences",
       description:
         "Contributed to the rebranding of a website and desktop application by redesigning key interfaces to align product experiences with a refreshed visual and brand direction.",
       tags: ["Rebranding", "Multi-surface", "Product UI", "Internship"],
-      disabled: true,
+      link: "/makmur-intern",
     },
     {
       image: cpm,

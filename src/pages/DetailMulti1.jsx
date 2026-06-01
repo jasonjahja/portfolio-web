@@ -375,8 +375,8 @@ export default function ProjectDetail() {
         <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/cpm-wayfinding-system",
-                title: "Centre Point Medan Wayfinding & Directory System"
+                to: "/makmur-intern",
+                title: "Makmur Design Systems & Responsive Experiences"
             }}
         />
       </div>
