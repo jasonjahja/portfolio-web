@@ -1,11 +1,3 @@
-import multi1Image1 from "../assets/images/multi1_1.webp";
-import multi1Image2 from "../assets/images/multi1_2.webp";
-import multi1Image3 from "../assets/images/multi1_3.webp";
-import multi1Image4 from "../assets/images/multi1_4.webp";
-import multi1Image5 from "../assets/images/multi1_5.webp";
-import multi1Image6 from "../assets/images/multi1_6.webp";
-import multi1Image7 from "../assets/images/multi1_7.webp";
-
 export const decisions = [
   {
     title: "Structuring Information to Communicate Value Clearly",

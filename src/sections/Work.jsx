@@ -2,7 +2,7 @@ import multi1 from "../assets/images/multi_b2c/hero.webp";
 import multi2 from "../assets/images/multi-wholesale-confidential.webp";
 import multi3 from "../assets/images/multi_photobox.webp";
 import makmur from "../assets/images/makmur/hero.webp";
-import cpm from "../assets/images/cpm.webp";
+import cpm from "../assets/images/cpm/hero.webp";
 import kjp from "../assets/images/kjp.webp";
 import navika from "../assets/images/navika.webp";
 import WorkCard from "../components/WorkCard";
