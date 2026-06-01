@@ -341,10 +341,10 @@ export default function ProjectDetail() {
         
         <Divider />
 
-        {/* Result */}
+        {/* Outcome */}
         <div className="flex flex-col gap-30 md:gap-45">
             {/* Content */}
-            <Section title="Result">
+            <Section title="Outcome">
                 <Quote children="The final design creates a more focused and intentional browsing experience tailored to collectible shopping behaviors. By improving visual focus, structuring product discovery, and strengthening purchase cues, the redesign helps guide users from initial exploration to purchase while better reflecting Multi Toys' curated brand identity." />
             </Section>
             
