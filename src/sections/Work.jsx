@@ -60,8 +60,8 @@ export default function WorkSection() {
       image: makmur,
       title: "Makmur Design Systems & Responsive Experiences",
       description:
-        "Contributed to the rebranding of a website and desktop application by redesigning key interfaces to align product experiences with a refreshed visual and brand direction.",
-      tags: ["Rebranding", "Multi-surface", "Product UI", "Internship"],
+        "Contributed to multiple product initiatives across web and desktop experiences, focusing on design systems, responsive design, and interface consistency.",
+      tags: ["Design Systems", "Responsive Design", "Product UI", "Internship"],
       link: "/makmur-intern",
     },
     {
