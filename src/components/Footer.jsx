@@ -42,7 +42,7 @@ export default function Footer() {
                 >
                   Overview
                 </a>
-                <a
+                {/* <a
                   href="#clients"
                   className="relative hover:italic w-fit
                   after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
@@ -51,7 +51,7 @@ export default function Footer() {
                   hover:after:scale-x-100"
                 >
                   Clients
-                </a>
+                </a> */}
                 <a
                   href="#work"
                   className="relative hover:italic w-fit

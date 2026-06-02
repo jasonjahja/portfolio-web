@@ -39,7 +39,7 @@ export default function Navbar() {
               Overview
             </a>
             
-            <span>/</span>
+            {/* <span>/</span>
 
             <a
               href="/#clients"
@@ -50,7 +50,7 @@ export default function Navbar() {
               hover:after:scale-x-100"
             >
               Clients
-            </a>
+            </a> */}
             
             <span>/</span>
 
@@ -163,7 +163,7 @@ export default function Navbar() {
         {/* Nav Links */}
         <nav className="flex flex-col gap-25 text-b4 text-bw8">
           <a href="/#overview" className="p-10 w-full" onClick={() => setOpen(false)}>Overview</a>
-          <a href="/#clients" className="p-10 w-full" onClick={() => setOpen(false)}>Clients</a>
+          {/* <a href="/#clients" className="p-10 w-full" onClick={() => setOpen(false)}>Clients</a> */}
           <a href="/#work" className="p-10 w-full" onClick={() => setOpen(false)}>Projects</a>
           <a href="/#post" className="p-10 w-full" onClick={() => setOpen(false)}>Posts</a>
           <a

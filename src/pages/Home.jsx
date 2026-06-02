@@ -1,15 +1,17 @@
 import OverviewSection from "../sections/Overview";
 import ClientSection from "../sections/Client";
 import WorkSection from "../sections/Work";
-import Footer from "../components/Footer";
+import ExplorationSection from "../sections/Exploration";
 import PostSection from "../sections/Post";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
     <div className="min-h-screen">
       <OverviewSection />
-      <ClientSection />
+      {/* <ClientSection /> */}
       <WorkSection />
+      {/* <ExplorationSection /> */}
       <PostSection />
       <Footer />
     </div>
