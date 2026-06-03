@@ -200,8 +200,10 @@ export default function ProjectDetail() {
             insights={[
                 "Profile and wishlist actions are hidden despite available navigation space.",
                 "Hero section lacks visual prominence.",
+                "Product cards receive limited attention due to their size and density.",
                 "Newsletter placement is easily overlooked.",
                 "Product imagery receives less emphasis than secondary information on the product detail page.",
+                "Strong background colors reduce emphasis on products and key content.",
             ]}
         />
 
@@ -294,6 +296,7 @@ export default function ProjectDetail() {
                 "Increased product prominence helps shift attention toward collectibles and featured products.",
                 "Introduced a more prominent subscription experience that highlights the benefits of staying informed about upcoming releases and product drops.",
                 "Product imagery is prioritized over secondary details to better highlight collectible appeal.",
+                "Brand colors are applied more selectively to reduce visual competition and strengthen product visibility.",
             ]}
         />
 
