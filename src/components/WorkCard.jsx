@@ -52,7 +52,7 @@ export default function WorkCard({
           </h3>
 
           {/* Description */}
-          <p className="text-body-b6 md:text-body-b5 xl:text-body-b3 text-bw7 line-clamp-2">
+          <p className="text-body-b5 xl:text-body-b3 text-bw7 line-clamp-2">
             {description}
           </p>
 

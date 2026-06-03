@@ -359,9 +359,9 @@ export default function ProjectDetail() {
             <p>
                 While the redesign was guided by patterns observed across collectible-focused platforms, incorporating user interviews or usability testing could provide additional validation and uncover behaviors specific to Multi Toys' customers.
             </p>
-            <p>
+            <Quote>
                 Given more time, I would evaluate the redesign through usability testing and post-launch behavioral metrics. Areas of focus could include catalog engagement, recommendation interactions, wishlist usage, newsletter subscriptions, and progression from product exploration to purchase. These insights would help identify opportunities for further refinement while ensuring future design decisions remain aligned with both user needs and business goals.
-            </p>
+            </Quote>
         </Section>
 
         {/* Next Project */}

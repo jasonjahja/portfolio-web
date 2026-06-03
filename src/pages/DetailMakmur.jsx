@@ -135,9 +135,9 @@ export default function ProjectDetail() {
         {/* Context */}
         <Section title="Context">
             <p>
-                During my Product Design Internship at Makmur, I worked within an established product team responsible for continuously improving the platform experience across web and desktop products. Rather than working on a single end-to-end project, I supported feature development, responsive design improvements, and design system expansion to help create more scalable and consistent product experiences.
+                During my Product Design Internship at Makmur, I worked within an established product team supporting web and desktop experiences. My contributions spanned feature development, responsive design, and design system initiatives aimed at maintaining consistency across the product.
             </p>
-            <Quote children="Working within an existing product ecosystem required balancing new feature requirements with established design patterns, component systems, and implementation considerations. This experience provided exposure to how product designers collaborate with engineers to maintain consistency while supporting product growth." />
+            <Quote children="The experience provided exposure to working within an existing product ecosystem, balancing new requirements with established design patterns and implementation considerations." />
         </Section>
         
         <Divider />
@@ -145,13 +145,13 @@ export default function ProjectDetail() {
         {/* Key Contributions */}
         <Section title="Key Contributions">
             <p>
-              Throughout the internship, my work spanned several initiatives aimed at improving the consistency, maintainability, and adaptability of the product experience. The following highlights showcase selected contributions that supported both the design workflow and the broader product development process. Some visuals have been partially obscured for confidentiality reasons.
+              The following highlights showcase selected contributions across design systems, responsive design, and product interface development. Some visuals have been partially obscured for confidentiality reasons.
             </p> 
         </Section>
 
         <Subsection
             title="Design System Structuring"
-            children="As the product evolved, maintaining consistency across interfaces became increasingly important. I contributed to organizing the design system into a more structured component library, grouping elements by atomic design principles and connecting existing screens to reusable components. This created a stronger foundation for future updates while improving consistency across the product."
+            children="I helped organize the design system into a more structured component library, grouping elements by atomic design principles and connecting existing screens to reusable components. This improved consistency across interfaces and created a stronger foundation for future updates."
             image={contribution1}
             insights={[
                 "Components are organized into a structured atomic design hierarchy.",
@@ -161,7 +161,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Component State Definition"
-            children="To support real product scenarios beyond default screens, I defined interaction and system states for reusable components. These states helped ensure interfaces remained predictable and consistent across different user actions and conditions while providing clearer implementation guidance for development."
+            children="I defined interaction and system states for reusable components to support different user scenarios beyond default screens. This helped maintain consistent behavior across the product while providing clearer implementation guidance for development."
             image={contribution2}
             insights={[
                 "Interaction states are defined to support different user scenarios while maintaining consistent behavior across interfaces.",
@@ -170,7 +170,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Responsive Design Implementation"
-            children="The platform was designed to support multiple screen sizes, requiring interfaces to adapt while maintaining consistency and usability. I applied established responsive guidelines across five breakpoints, adjusting layouts, spacing, typography, and component behavior to create a cohesive experience across devices."
+            children="I applied established responsive guidelines across five breakpoints, adapting layouts, spacing, typography, and component behavior to create a consistent experience across screen sizes."
             image={contribution3}
             insights={[
                 "Interfaces are adapted across five responsive breakpoints while preserving usability and consistency across screen sizes.",
@@ -179,7 +179,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Prototype Environment Preparation"
-            children="To support design reviews and prototyping workflows, I prepared dedicated prototype environments using consistent layouts, realistic data, and organized screen flows. This helped create more representative product simulations while making prototypes easier to navigate and maintain."
+            children="I prepared dedicated prototype environments using realistic data and organized screen flows to support design reviews, demonstrations, and prototyping workflows."
             image={contribution4}
             insights={[
                 "Prototype environments are organized with consistent data and screen flows to support reviews and demonstrations",
@@ -192,9 +192,8 @@ export default function ProjectDetail() {
         <div className="flex flex-col gap-30 md:gap-45">
             {/* Content */}
             <Section title="Reflection">
-                <p>This experience provided valuable exposure to working within an established product ecosystem, where design decisions extend beyond individual screens and features. Contributing to design systems, responsive implementations, and shared product assets highlighted the importance of consistency, maintainability, and collaboration when supporting products at scale.</p>
-                <p>It also strengthened my understanding of how designers work alongside engineers within real product development cycles. Small decisions around component structure, documentation, and responsiveness can significantly influence implementation efficiency and the long-term sustainability of a product.</p>
-                <Quote children="Moving forward, I aim to approach design challenges with a stronger systems perspective, considering not only the immediate user experience but also how decisions contribute to the long-term evolution and maintainability of a product." />
+                <p>This experience provided valuable exposure to working within an established product ecosystem, where design decisions extend beyond individual screens and features. Contributing to design systems, responsive implementations, and shared product assets reinforced the importance of consistency, maintainability, and collaboration when supporting products at scale.</p>
+                <Quote children="Moving forward, I aim to approach design challenges with a stronger systems perspective, considering how individual decisions contribute not only to the user experience but also to the long-term evolution and maintainability of a product." />
             </Section>
             
             {/* Image */}
