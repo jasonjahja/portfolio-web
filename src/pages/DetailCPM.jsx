@@ -149,7 +149,7 @@ export default function ProjectDetail() {
             <div className="w-full md:w-[300px] xl:w-[400px] shrink-0">
                 <Section title="Understanding Directory Systems">
                     <p>
-                        Before developing the solution, an existing mall directory experience was reviewed to understand how information is organized and presented within a public kiosk environment. The exploration highlighted several approaches for helping visitors discover destinations, understand their location, and navigate large amounts of information more efficiently. These observations helped inform the design direction of the final solution.
+                        Existing mall directory experiences were reviewed to understand how information is organized within public kiosk environments. The observations highlighted common approaches for destination discovery, location awareness, and navigation, helping inform the direction of the final solution.
                     </p> 
                 </Section>
             </div>
@@ -188,7 +188,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Improving Spatial Understanding"
-            children="Maps are only useful when users can quickly understand their current position and how destinations relate to the surrounding environment. Clear visual hierarchy and orientation cues play an important role in supporting spatial awareness."
+            children="Effective maps rely on clear hierarchy and orientation cues that help visitors understand their location and navigate the surrounding environment."
             image={solution2}
             insights={[
                 "A clear “You Are Here” indicator helps visitors quickly understand their position within the mall.",
@@ -210,7 +210,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Integrating Promotional Content Seamlessly"
-            children="Promotional content should remain visible without competing with core navigation tasks. Providing a dedicated space for advertisements and mall promotions helps support business needs while maintaining a clear and focused directory experience, aligning with the project requirements outlined in the original brief."
+            children="Promotional content should remain visible without disrupting navigation. A dedicated space for advertisements helps support business needs while maintaining a clear and focused directory experience, in line with the project requirements."
             image={solution4}
             insights={[
                 "A dedicated promotions section supports business needs without competing with navigation.",
