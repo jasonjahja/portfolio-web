@@ -153,10 +153,10 @@ export default function ProjectDetail() {
         <div className="flex flex-col gap-30 md:gap-45 xl:gap-60">
             <Section title="Understanding the Collectible Shopping Experience">
                 <p>
-                    Through market analysis, a clear difference emerged between traditional e-commerce and collectible-focused retail experiences. While marketplaces are often designed around search and comparison, collectible shoppers tend to rely more on visual exploration when discovering products. Product imagery, curated collections, and browsing experience play an important role in attracting attention and helping users evaluate what to explore next.
+                    Market analysis revealed that collectible shopping differs from traditional e-commerce experiences. Rather than relying primarily on search and comparison, collectible shoppers often discover products through visual exploration, making product presentation, curated collections, and browsing experience important parts of the journey.
                 </p>
                 <p>
-                    Benchmarking platforms such as LEGO, Premium Bandai, and similar brands reinforced this behavior. These experiences emphasize visual presentation, curated product grouping, and structured browsing paths that guide exploration and make products feel more engaging to discover.
+                    Benchmarking platforms such as LEGO and Premium Bandai reinforced these patterns, highlighting the role of visual presentation, curated grouping, and guided exploration in supporting product discovery.
                 </p>
             </Section>
 
@@ -189,7 +189,7 @@ export default function ProjectDetail() {
         {/* Key Problems */}
         <Section title="Key Problems">
             <p>
-              Analysis of the existing Multi Toys’ website revealed several opportunities to better support how collectible shoppers discover and evaluate products. Visual focus was often diluted by competing content, browsing lacked a clear progression, and product presentation did little to emphasize differences in value or availability. As a result, the experience felt less curated and engaging than the in-store experience the brand aimed to provide. These findings were synthesized into three key problems that became the foundation for the redesign.
+              Analysis of the existing website revealed opportunities to improve how products are presented, explored, and evaluated. These findings were synthesized into three key problems that became the foundation for the redesign.
             </p> 
         </Section>
 
@@ -286,7 +286,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Strengthening Visual Focus Around Products"
-            children="The redesign establishes clearer visual priorities by reducing competing elements and placing greater emphasis on products throughout the experience. Key content, imagery, and navigation actions are surfaced more prominently, helping users quickly identify what matters while reinforcing the collectible-focused nature of the brand."
+            children="Clearer visual priorities place greater emphasis on products, imagery, and key actions, helping users focus on what matters most throughout the browsing experience."
             image={solution1}
             insights={[
                 "More visible profile and wishlist actions",
@@ -299,7 +299,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Creating Clearer Paths for Product Discovery"
-            children="Rather than presenting all products at once, the experience introduces a more intentional browsing structure that guides users from discovery toward deeper exploration. Dedicated entry points and clearer navigation help users understand where to go next throughout the journey."
+            children="A more structured browsing flow guides users from initial discovery toward deeper exploration through dedicated entry points and clearer navigation."
             image={solution2}
             insights={[
                 "Separating featured content from the full catalog creates a clearer progression from discovery to exploration.",
@@ -312,7 +312,7 @@ export default function ProjectDetail() {
 
         <Subsection
             title="Supporting Purchase Decisions Through Clearer Signals"
-            children="The redesign strengthens purchase intent by making product availability and purchase actions easier to identify. Clear visual distinctions and stronger action areas help communicate purchasing context and encourage more confident decision-making."
+            children="Product availability and purchase actions are surfaced more prominently, helping users evaluate products and act with greater confidence."
             image={solution3}
             insights={[
                 "Distinct visual treatments help communicate different purchasing contexts and availability.",
@@ -360,7 +360,7 @@ export default function ProjectDetail() {
                 While the redesign was guided by patterns observed across collectible-focused platforms, incorporating user interviews or usability testing could provide additional validation and uncover behaviors specific to Multi Toys' customers.
             </p>
             <Quote>
-                Given more time, I would evaluate the redesign through usability testing and post-launch behavioral metrics. Areas of focus could include catalog engagement, recommendation interactions, wishlist usage, newsletter subscriptions, and progression from product exploration to purchase. These insights would help identify opportunities for further refinement while ensuring future design decisions remain aligned with both user needs and business goals.
+                Given more time, I would evaluate the redesign through usability testing and post-launch behavioral metrics such as catalog engagement, recommendation interactions, wishlist usage, newsletter subscriptions, and progression from exploration to purchase. These insights could help guide future refinements while ensuring design decisions remain aligned with both user needs and business goals.
             </Quote>
         </Section>
 
