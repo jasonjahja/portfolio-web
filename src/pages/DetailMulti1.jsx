@@ -378,8 +378,8 @@ export default function ProjectDetail() {
         <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/makmur-intern",
-                title: "Makmur Design Systems & Responsive Experiences"
+                to: "/multi-toys-wholesale",
+                title: "Multi Toys B2B Wholesale Platform"
             }}
         />
       </div>

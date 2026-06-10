@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import DetailMulti from "./pages/DetailMulti1";
-// import DetailMulti2 from "./pages/DetailMulti2";
+import DetailMulti2 from "./pages/DetailMulti22";
 // import DetailMulti3 from "./pages/DetailMulti3";
 import DetailMakmur from "./pages/DetailMakmur";
 import DetailCPM from "./pages/DetailCPM";
@@ -25,8 +25,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/multi-toys-website" element={<DetailMulti />} />
-          {/* <Route path="/multi-toys-wholesale" element={<DetailMulti2 />} />
-          <Route path="/multi-toys-photobox" element={<DetailMulti3 />} /> */}
+          <Route path="/multi-toys-wholesale" element={<DetailMulti2 />} />
+          {/* <Route path="/multi-toys-photobox" element={<DetailMulti3 />} /> */}
           <Route path="/makmur-intern" element={<DetailMakmur />} />
           <Route path="/cpm-wayfinding-system" element={<DetailCPM />} />
           <Route path="/kjp-website" element={<DetailKJP />} />

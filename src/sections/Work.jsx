@@ -1,5 +1,5 @@
 import multi1 from "../assets/images/multi_b2c/hero.webp";
-import multi2 from "../assets/images/multi-wholesale-confidential.webp";
+import multi2 from "../assets/images/multi_b2b/hero.webp";
 import multi3 from "../assets/images/multi_photobox.webp";
 import makmur from "../assets/images/makmur/hero.webp";
 import cpm from "../assets/images/cpm/hero.webp";
@@ -45,8 +45,8 @@ export default function WorkSection() {
       description:
         "Designed a B2B wholesale system to support bulk ordering, tiered pricing, and operational purchasing workflows, focusing on clarity and efficiency for repeat business users.",
       tags: ["B2B", "Wholesale Experience", "UX Architecture", "Complex Flows"],
-      // link: "/multi-toys-wholesale",
-      disabled: true,
+      link: "/multi-toys-wholesale",
+      // disabled: true,
     },
     // {
     //   image: multi3,
