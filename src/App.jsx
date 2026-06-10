@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
 import DetailMulti from "./pages/DetailMulti1";
-import DetailMulti2 from "./pages/DetailMulti22";
+import DetailMulti2 from "./pages/DetailMulti2";
 // import DetailMulti3 from "./pages/DetailMulti3";
 import DetailMakmur from "./pages/DetailMakmur";
 import DetailCPM from "./pages/DetailCPM";
