@@ -25,7 +25,7 @@ import existing from "../assets/images/cpm/existing.webp";
 import solution1 from "../assets/images/cpm/solution1.webp";
 import solution2 from "../assets/images/cpm/solution2.webp";
 import solution3 from "../assets/images/cpm/solution3.webp";
-import solution4 from "../assets/images/cpm/solution3.webp";
+import solution4 from "../assets/images/cpm/solution4.webp";
 import outcome from "../assets/images/cpm/outcome.webp";
 
 // ---------------- MAIN ----------------

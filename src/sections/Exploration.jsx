@@ -29,40 +29,40 @@ export default function WorkSection() {
   const explorations = [
     {
       animation: searchbar,
-      title: "Search Bar (Idle)",
-      description: "Micro interaction exploration",
+      title: "Contextual Search Bar Interaction",
+      description: "How different search bar idle states drive user intent and manage cognitive load.",
     },
     {
       animation: searchbar2,
-      title: "Search Bar (Idle)",
-      description: "Micro interaction exploration",
+      title: "Contextual Search Bar Interaction",
+      description: "How different search bar idle states drive user intent and manage cognitive load.",
       size: "large",
     },
     {
       animation: searchbar2,
-      title: "Search Bar (Idle)",
-      description: "Micro interaction exploration",
+      title: "Contextual Search Bar Interaction",
+      description: "How different search bar idle states drive user intent and manage cognitive load.",
       size: "large",
     },
     {
       animation: searchbar,
-      title: "Search Bar (Idle)",
-      description: "Micro interaction exploration",
+      title: "Contextual Search Bar Interaction",
+      description: "How different search bar idle states drive user intent and manage cognitive load.",
     },
     {
       animation: searchbar,
-      title: "Search Bar (Idle)",
-      description: "Micro interaction exploration",
+      title: "Contextual Search Bar Interaction",
+      description: "How different search bar idle states drive user intent and manage cognitive load.",
     },
     {
       animation: searchbar,
-      title: "Search Bar (Idle)",
-      description: "Micro interaction exploration",
+      title: "Contextual Search Bar Interaction",
+      description: "How different search bar idle states drive user intent and manage cognitive load.",
     },
     {
       animation: searchbar,
-      title: "Search Bar (Idle)",
-      description: "Micro interaction exploration",
+      title: "Contextual Search Bar Interaction",
+      description: "How different search bar idle states drive user intent and manage cognitive load.",
     },
   ];
 
