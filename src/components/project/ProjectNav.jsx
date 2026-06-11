@@ -28,7 +28,7 @@ export default function ProjectNav({
         </p>
 
         <div className="flex gap-5 md:gap-10 items-center">
-          <p className="text-sans text-body-b6 md:text-body-b4 xl:text-body-b2 group-hover:italic">
+          <p className="text-sans text-body-b5 md:text-body-b4 xl:text-body-b2 group-hover:italic">
             {next.title}
           </p>
           <img

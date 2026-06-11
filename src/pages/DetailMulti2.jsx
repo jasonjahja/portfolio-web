@@ -67,7 +67,7 @@ export default function ProjectDetail() {
 
         {/* Logo + Description */}
         <div className="flex flex-col md:flex-row gap-15 md:gap-45 md:items-center items-start">
-            <img src={multiLogo} alt="makmur" className="h-15 md:h-20" />
+            <img src={multiLogo} alt="makmur" className="h-30 md:h-40 xl:h-45" />
             <p className="text-body-b6 md:text-body-b4 xl:text-body-b2">
                 Retail brand specializing in collectible figures, anime merchandise, and hobby products, with a strong offline presence.
             </p>
