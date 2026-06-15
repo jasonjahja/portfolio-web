@@ -101,7 +101,7 @@ export default function ProjectDetail() {
                 className="flex-1 xl:gap-5"
                 icon={durationIcon}
                 label="Timeline"
-                value="Jun 2025 - Dec 2025"
+                value="Sep 2025 - Oct 2025"
             />
         </div>
       </div>
