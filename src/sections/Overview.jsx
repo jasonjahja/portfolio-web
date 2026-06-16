@@ -77,7 +77,7 @@ export default function OverviewSection() {
 
           {/* CTA */}
           <a
-            href="#clients"
+            href="#work"
             className={`inline-flex flex-col items-start w-fit group transition-all duration-700 ${
               isVisible
                 ? "opacity-100 translate-x-0"
