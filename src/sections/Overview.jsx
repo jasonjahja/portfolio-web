@@ -1,5 +1,5 @@
 import arrowDown from "../assets/icons/arrow_down.svg";
-import hero1 from "../assets/images/hero1.webp";
+import hero1 from "../assets/images/mainHero.webp";
 
 import { useEffect, useRef, useState } from "react";
 
