@@ -1,5 +1,7 @@
 import arrowUpRight from "../assets/icons/arrow_up_right.svg";
-import { Link } from "react-router-dom";
+import Image from "next/image";
+import Link from "next/link";
+import { assetUrl } from "@/lib/assetUrl";
 
 export default function WorkCard({
   image,
@@ -23,8 +25,7 @@ export default function WorkCard({
             rel: "noopener noreferrer",
           }
         : {
-            to: link,
-            state: { fromLink: true },
+            href: link,
           })}
       className={`block ${disabled ? "pointer-events-none" : ""}`}
     >
@@ -32,9 +33,10 @@ export default function WorkCard({
       
         {/* Image */}
         <div className="w-full md:w-[350px] xl:w-[400px] overflow-hidden">
-          <img
+          <Image
             src={image}
             alt={title}
+            sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) 350px, 400px"
             className="
               w-full h-full object-cover
               transition-transform duration-700 ease-out
@@ -74,7 +76,7 @@ export default function WorkCard({
               <div className="flex items-center gap-5">
                 <span className="text-body-b6 md:text-body-b5 xl:text-body-b3 group-hover:italic">{cta}</span>
                 <img
-                  src={arrowUpRight}
+                  src={assetUrl(arrowUpRight)}
                   alt=""
                   className="h-[12px] xl:h-4 animate-arrowDiagonalLoop"
                 />

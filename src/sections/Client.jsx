@@ -1,3 +1,5 @@
+"use client";
+
 import multiLogo from "../assets/images/multi_logo.webp";
 import kjpLogo from "../assets/images/kjp_logo.webp";
 import cpmLogo from "../assets/images/cpm_logo.webp";

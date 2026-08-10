@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function InsightImageBlock({
   src,
   title,
@@ -16,10 +18,10 @@ export default function InsightImageBlock({
         )}
 
         {/* IMAGE */}
-        <img
+        <Image
             src={src}
             alt={title || "insight"}
-            loading="lazy"
+            sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(100vw - 80px), calc(100vw - 240px)"
             decoding="async"
             className="w-full object-cover border border-bw8 rounded-15"
         />

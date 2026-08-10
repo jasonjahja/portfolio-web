@@ -30,9 +30,9 @@ for update
 to authenticated
 using (
   key = 'resume_url'
-  and lower(auth.jwt() ->> 'email') = lower('YOUR_ADMIN_EMAIL')
+  and lower(auth.jwt() ->> 'email') = lower('jasonjahja@gmail.com')
 )
 with check (
   key = 'resume_url'
-  and lower(auth.jwt() ->> 'email') = lower('YOUR_ADMIN_EMAIL')
+  and lower(auth.jwt() ->> 'email') = lower('jasonjahja@gmail.com')
 );

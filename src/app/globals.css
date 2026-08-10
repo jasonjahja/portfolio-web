@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@font-face {
+  font-family: "Open Sauce One";
+  src: url("/fonts/OpenSauceOne-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sauce One";
+  src: url("/fonts/OpenSauceOne-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Rose";
+  src: url("/fonts/RedRose-VariableFont_wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}

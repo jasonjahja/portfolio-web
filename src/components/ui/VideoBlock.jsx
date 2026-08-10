@@ -1,4 +1,7 @@
+"use client";
+
 import { useEffect, useRef, useState } from "react";
+import { assetUrl } from "@/lib/assetUrl";
 
 export default function VideoBlock({ src, caption, poster }) {
   const ref = useRef(null);
@@ -24,15 +27,15 @@ export default function VideoBlock({ src, caption, poster }) {
       {!isVisible ? (
         poster && (
           <img
-            src={poster}
+            src={assetUrl(poster)}
             alt="video preview"
             className="w-full object-cover"
           />
         )
       ) : (
         <video
-          src={src}
-          poster={poster}
+          src={assetUrl(src)}
+          poster={assetUrl(poster)}
           preload="metadata"
           autoPlay
           loop

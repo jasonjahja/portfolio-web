@@ -1,3 +1,5 @@
+"use client";
+
 import PostCard from "../components/PostCard";
 
 import workshopImage from "../assets/images/workshop.webp";
