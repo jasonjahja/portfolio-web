@@ -8,6 +8,7 @@ import DetailMulti2 from "./pages/DetailMulti2";
 import DetailMakmur from "./pages/DetailMakmur";
 import DetailCPM from "./pages/DetailCPM";
 import DetailKJP from "./pages/DetailKJP";
+import AdminResume from "./pages/AdminResume";
 
 import grain from "./assets/images/grain.webp";
 import Navbar from "./components/Navbar";
@@ -30,6 +31,7 @@ function App() {
           <Route path="/makmur-intern" element={<DetailMakmur />} />
           <Route path="/cpm-wayfinding-system" element={<DetailCPM />} />
           <Route path="/kjp-website" element={<DetailKJP />} />
+          <Route path="/admin/resume" element={<AdminResume />} />
         </Routes>
 
         {/* Grain overlay */}

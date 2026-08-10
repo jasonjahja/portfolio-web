@@ -1,7 +1,10 @@
 import arrowUpRight from "../assets/icons/arrow_up_right.svg";
 import globe from "../assets/icons/globe.svg";
+import useResumeUrl from "../hooks/useResumeUrl.jsx";
 
 export default function Footer() {
+  const resumeUrl = useResumeUrl();
+
   return (
     <div>
 
@@ -76,7 +79,7 @@ export default function Footer() {
 
                 {/* Resume */}
                 <a
-                  href="https://drive.google.com/file/d/1q5zBZOH-WJ9sBQXil4fcW6W7t79tSC3j/view?usp=drive_link"
+                  href={resumeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex flex-col items-start w-fit group"

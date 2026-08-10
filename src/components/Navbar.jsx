@@ -5,10 +5,12 @@ import hamburgerIcon from "../assets/icons/hamburger.svg";
 import closeIcon from "../assets/icons/close.svg";
 
 import Divider from "../components/ui/Divider.jsx"
+import useResumeUrl from "../hooks/useResumeUrl.jsx";
 
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const resumeUrl = useResumeUrl();
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
@@ -82,7 +84,7 @@ export default function Navbar() {
 
             {/* External link */}
             <a
-              href="https://drive.google.com/file/d/1q5zBZOH-WJ9sBQXil4fcW6W7t79tSC3j/view?usp=drive_link"
+              href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-col items-start w-fit group"
@@ -167,7 +169,7 @@ export default function Navbar() {
           <a href="/#work" className="p-10 w-full" onClick={() => setOpen(false)}>Projects</a>
           <a href="/#post" className="p-10 w-full" onClick={() => setOpen(false)}>Posts</a>
           <a
-              href="https://drive.google.com/file/d/1q5zBZOH-WJ9sBQXil4fcW6W7t79tSC3j/view?usp=drive_link"
+              href={resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex flex-col items-start w-fit group p-10"
