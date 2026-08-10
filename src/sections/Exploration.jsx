@@ -1,3 +1,5 @@
+"use client";
+
 import ExplorationCard from "../components/ExplorationCard";
 
 import searchbar from "../assets/lottie/searchbar.json";

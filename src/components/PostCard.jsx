@@ -1,4 +1,4 @@
-// src/components/PostCard.jsx
+import Image from "next/image";
 
 export default function PostCard({
   image,
@@ -30,9 +30,14 @@ export default function PostCard({
           }
         `}
       >
-        <img
+        <Image
           src={image}
           alt={title}
+          sizes={
+            large
+              ? "(max-width: 767px) calc(100vw - 50px), 50vw"
+              : "(max-width: 767px) 140px, 270px"
+          }
           className="
             w-full h-full object-cover
           "

@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
+import { assetUrl } from "@/lib/assetUrl";
 
 export default function ProjectNav({
   next,
@@ -18,8 +19,7 @@ export default function ProjectNav({
               rel: "noopener noreferrer",
             }
           : {
-              to: next.to,
-              state: { fromLink: true },
+              href: next.to,
             })}
         className="group cursor-pointer"
       >
@@ -32,7 +32,7 @@ export default function ProjectNav({
             {next.title}
           </p>
           <img
-            src={arrowRight}
+            src={assetUrl(arrowRight)}
             alt="next project"
             className="h-[14px] md:h-25 transition-transform duration-300 group-hover:translate-x-5"
           />

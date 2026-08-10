@@ -1,10 +1,12 @@
+import Image from "next/image";
+
 export default function ImageBlock({ src, caption }) {
   return (
     <div className="flex flex-col gap-10 xl:gap-15">
-      <img 
-        src={src} 
+      <Image
+        src={src}
         alt={caption}
-        loading="lazy"
+        sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(100vw - 80px), calc(100vw - 240px)"
         decoding="async"
         className="w-full object-cover" 
       />

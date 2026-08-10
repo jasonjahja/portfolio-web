@@ -1,5 +1,9 @@
+"use client";
+
 import arrowDown from "../assets/icons/arrow_down.svg";
 import hero1 from "../assets/images/mainHero.webp";
+import Image from "next/image";
+import { assetUrl } from "@/lib/assetUrl";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -88,7 +92,7 @@ export default function OverviewSection() {
             <div className="flex items-center gap-5 xl:gap-10">
               <span className="text-body-b5 md:text-body-b4 xl:text-body-b2 hover:italic">Discover more</span>
               <img
-                src={arrowDown}
+                src={assetUrl(arrowDown)}
                 alt="arrow_down"
                 className="h-[12px] md:h-[14px] xl:h-4 animate-arrowBounceLoop"
               />
@@ -137,9 +141,11 @@ export default function OverviewSection() {
 
         {/* ===== IMAGE ===== */}
         <div className="w-full h-[300px] md:h-auto xl:h-[600px] overflow-hidden">
-          <img
+          <Image
             src={hero1}
             alt="Hero Image"
+            preload
+            sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(100vw - 80px), calc(100vw - 240px)"
             className="w-full h-full object-cover transition-all duration-700"
             style={{
               clipPath: isVisible

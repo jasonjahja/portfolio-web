@@ -1,11 +1,14 @@
+"use client";
+
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 import arrowUpRight from "../assets/icons/arrow_up_right.svg";
 import hamburgerIcon from "../assets/icons/hamburger.svg";
 import closeIcon from "../assets/icons/close.svg";
 
-import Divider from "../components/ui/Divider.jsx"
 import useResumeUrl from "../hooks/useResumeUrl.jsx";
+import { assetUrl } from "@/lib/assetUrl";
 
 
 export default function Navbar() {
@@ -14,6 +17,9 @@ export default function Navbar() {
 
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "auto";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
   }, [open]);
 
   return (
@@ -23,14 +29,14 @@ export default function Navbar() {
         <div className="mx-25 md:mx-40 xl:mx-120 my-15 xl:my-25 flex items-center justify-between">
           
           {/* Logo / Name */}
-          <a href="/#overview" className="font-display text-heading-h6 xl:text-heading-h5">
+          <Link href="/#overview" className="font-display text-heading-h6 xl:text-heading-h5">
             Jason Jahja.
-          </a>
+          </Link>
 
           {/* Navigation */}
           <nav className="hidden xl:flex items-center gap-30 text-body-b3">
             
-            <a
+            <Link
               href="/#overview"
               className="relative hover:italic
               after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
@@ -39,7 +45,7 @@ export default function Navbar() {
               hover:after:scale-x-100"
             >
               Overview
-            </a>
+            </Link>
             
             {/* <span>/</span>
 
@@ -56,7 +62,7 @@ export default function Navbar() {
             
             <span>/</span>
 
-            <a
+            <Link
               href="/#work"
               className="relative hover:italic
               after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
@@ -65,11 +71,11 @@ export default function Navbar() {
               hover:after:scale-x-100"
             >
               Projects
-            </a>
+            </Link>
 
             <span>/</span>
 
-            <a
+            <Link
               href="/#post"
               className="relative hover:italic
               after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
@@ -78,7 +84,7 @@ export default function Navbar() {
               hover:after:scale-x-100"
             >
               Posts
-            </a>
+            </Link>
 
             <span>/</span>
 
@@ -92,7 +98,7 @@ export default function Navbar() {
               <div className="flex items-center gap-5">
                 <span className="group-hover:italic">Resume</span>
                 <img
-                  src={arrowUpRight}
+                  src={assetUrl(arrowUpRight)}
                   alt=""
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
@@ -113,7 +119,7 @@ export default function Navbar() {
                 </span>
 
                 <img
-                  src={arrowUpRight}
+                  src={assetUrl(arrowUpRight)}
                   alt=""
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
@@ -129,7 +135,7 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             className="xl:hidden"
           >
-            <img src={hamburgerIcon} alt="Menu" className="w-30 cursor-pointer" />
+            <img src={assetUrl(hamburgerIcon)} alt="Menu" className="w-30 cursor-pointer" />
           </button>
         </div>
       </header>
@@ -158,16 +164,16 @@ export default function Navbar() {
         {/* Close */}
         <div className="flex justify-end mb-25 mr-10">
           <button onClick={() => setOpen(false)}>
-            <img src={closeIcon} alt="Close" className="w-30 cursor-pointer" />
+            <img src={assetUrl(closeIcon)} alt="Close" className="w-30 cursor-pointer" />
           </button>
         </div>
 
         {/* Nav Links */}
         <nav className="flex flex-col gap-25 text-b4 text-bw8">
-          <a href="/#overview" className="p-10 w-full" onClick={() => setOpen(false)}>Overview</a>
+          <Link href="/#overview" className="p-10 w-full" onClick={() => setOpen(false)}>Overview</Link>
           {/* <a href="/#clients" className="p-10 w-full" onClick={() => setOpen(false)}>Clients</a> */}
-          <a href="/#work" className="p-10 w-full" onClick={() => setOpen(false)}>Projects</a>
-          <a href="/#post" className="p-10 w-full" onClick={() => setOpen(false)}>Posts</a>
+          <Link href="/#work" className="p-10 w-full" onClick={() => setOpen(false)}>Projects</Link>
+          <Link href="/#post" className="p-10 w-full" onClick={() => setOpen(false)}>Posts</Link>
           <a
               href={resumeUrl}
               target="_blank"
@@ -178,7 +184,7 @@ export default function Navbar() {
               <div className="flex items-center gap-5">
                 <span className="group-hover:italic">Resume</span>
                 <img
-                  src={arrowUpRight}
+                  src={assetUrl(arrowUpRight)}
                   alt=""
                   className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />

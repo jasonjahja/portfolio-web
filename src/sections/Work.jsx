@@ -1,6 +1,7 @@
+"use client";
+
 import multi1 from "../assets/images/multi_b2c/hero.webp";
 import multi2 from "../assets/images/multi_b2b/hero.webp";
-import multi3 from "../assets/images/multi_photobox.webp";
 import makmur from "../assets/images/makmur/hero.webp";
 import cpm from "../assets/images/cpm/hero.webp";
 import kjp from "../assets/images/kjp.webp";

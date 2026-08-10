@@ -1,6 +1,9 @@
+"use client";
+
 import arrowUpRight from "../assets/icons/arrow_up_right.svg";
 import globe from "../assets/icons/globe.svg";
 import useResumeUrl from "../hooks/useResumeUrl.jsx";
+import { assetUrl } from "@/lib/assetUrl";
 
 export default function Footer() {
   const resumeUrl = useResumeUrl();
@@ -25,7 +28,7 @@ export default function Footer() {
 
               <p className="text-body-b5 xl:text-body-b3 text-bw7 flex items-center gap-10 whitespace-nowrap">
                 <span>Based in</span>
-                <span><img src={globe} alt="Globe" className="h-[16px]" /></span>
+                <span><img src={assetUrl(globe)} alt="Globe" className="h-[16px]" /></span>
                 <span>Jakarta, Indonesia</span>
               </p>
             </div>
@@ -86,7 +89,7 @@ export default function Footer() {
                 >
                   <div className="flex items-center gap-2">
                     <span className="group-hover:italic">Resume</span>
-                    <img src={arrowUpRight} alt="" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                    <img src={assetUrl(arrowUpRight)} alt="" className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
                   <div className="h-px self-stretch bg-bw8" />
                 </a>
@@ -110,7 +113,7 @@ export default function Footer() {
                     <div className="flex items-center gap-2">
                       <span className="group-hover:italic">{item.label}</span>
                       <img
-                        src={arrowUpRight}
+                        src={assetUrl(arrowUpRight)}
                         alt=""
                         className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                       />
