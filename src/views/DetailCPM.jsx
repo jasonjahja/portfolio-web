@@ -7,7 +7,7 @@ import { assetUrl } from "@/lib/assetUrl";
 
 // Assets
 import arrowLeft from "../assets/icons/arrow_left.svg";
-import arrowRight from "../assets/icons/arrow_right.svg";
+// import arrowRight from "../assets/icons/arrow_right.svg";
 import cpmLogo from "../assets/images/cpm_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
@@ -22,7 +22,7 @@ import Section from "../components/ui/DetailSection.jsx";
 import Subsection from "../components/ui/DetailSubsection.jsx";
 import Quote from "../components/ui/Quote.jsx";
 import InsightImageBlock from "../components/ui/InsightImageBlock.jsx";
-import ProjectNav from "../components/project/ProjectNav.jsx";
+// import ProjectNav from "../components/project/ProjectNav.jsx";
 
 import imageHero from "../assets/images/cpm/hero.webp";
 import existing from "../assets/images/cpm/existing.webp";
@@ -63,7 +63,7 @@ export default function ProjectDetail() {
 
             {/* Center Title */}
             <h1 className="mx-auto font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center max-w-[325px] md:max-w-[750px] xl:max-w-[950px]">
-                Centre Point Medan Wayfinding & Directory System
+                Centre Point Medan — Designing Digital Wayfinding for Mall Navigation and Tenant Discovery
             </h1>
         </div>
 
@@ -244,21 +244,27 @@ export default function ProjectDetail() {
             <Quote children="One of the key lessons from this project was recognizing that navigation extends beyond maps and directions. Effective wayfinding depends on how clearly users can understand their surroundings, interpret information, and transition from exploration to movement. Future iterations would focus on validating these design decisions through real-world observation and user testing." />
         </Section>
 
+        <Divider />
+
         {/* Next Project */}
         {/* <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/multi-toys-wholesale",
+                to: "/multi-toys-b2b-wholesale",
                 title: "Multi Toys B2B Wholesale Platform"
             }}
         /> */}
-        <ProjectNav
+        {/* <ProjectNav
             arrowRight={arrowRight}
-            next={{
-                to: "/kjp-website",
-                title: "PT. Kencana Jaya Persada Corporate Website (0–1)"
+            previous={{
+                to: "/makmur-design-systems",
+                title: "Makmur — Building Consistency Across Design Systems and Responsive Product Experiences"
             }}
-        />
+            next={{
+                to: "https://www.behance.net/gallery/235771253/Navika-Job-Portal-for-Sustainable-Careers",
+                title: "Navika — Designing a More Transparent Job Discovery Experience"
+            }}
+        /> */}
       </div>
     </section>
   );

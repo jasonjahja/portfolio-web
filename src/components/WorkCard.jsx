@@ -46,7 +46,7 @@ export default function WorkCard({
         </div>
 
         {/* Content */}
-        <div className="flex flex-col gap-15 xl:gap-20 flex-1 text-bw8 group-hover:italic transition-transform duration-700 ease-out">
+        <div className="flex flex-col gap-15 flex-1 text-bw8 group-hover:italic transition-transform duration-700 ease-out">
           
           {/* Title */}
           <h3 className="text-body-b2 md:text-body-b1 xl:text-body-h6">

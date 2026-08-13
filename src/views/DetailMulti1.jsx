@@ -377,14 +377,14 @@ export default function ProjectDetail() {
         {/* <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/multi-toys-wholesale",
+                to: "/multi-toys-b2b-wholesale",
                 title: "Multi Toys B2B Wholesale Platform"
             }}
         /> */}
         <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/multi-toys-wholesale",
+                to: "/multi-toys-b2b-wholesale",
                 title: "Multi Toys B2B Wholesale Platform"
             }}
         />

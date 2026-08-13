@@ -1,12 +1,7 @@
 "use client";
 
-import multi1 from "../assets/images/multi_b2c/hero.webp";
-import multi2 from "../assets/images/multi_b2b/hero.webp";
-import makmur from "../assets/images/makmur/hero.webp";
-import cpm from "../assets/images/cpm/hero.webp";
-import kjp from "../assets/images/kjp.webp";
-import navika from "../assets/images/navika.webp";
 import WorkCard from "../components/WorkCard";
+import { featuredProjects } from "../data/projects.js";
 
 import { useEffect, useRef, useState } from "react";
 
@@ -31,65 +26,7 @@ export default function WorkSection() {
     return () => observer.disconnect();
   }, []);
 
-  const works = [
-    {
-      image: multi1,
-      title: "Multi Toys Website Redesign",
-      description:
-        "Redesigned the public-facing website to improve clarity, visual consistency, and product discoverability for a growing retail brand, while aligning the interface with updated business needs.",
-      tags: ["B2C", "Website Redesign", "UX Design", "Content Strategy"],
-      link: "/multi-toys-website",
-    },
-    {
-      image: multi2,
-      title: "Multi Toys B2B Wholesale Platform",
-      description:
-        "Designed a B2B wholesale system to support bulk ordering, tiered pricing, and operational purchasing workflows, focusing on clarity and efficiency for repeat business users.",
-      tags: ["B2B", "Wholesale Experience", "UX Architecture", "Complex Flows"],
-      link: "/multi-toys-wholesale",
-      // disabled: true,
-    },
-    // {
-    //   image: multi3,
-    //   title: "Multi Toys Photobox Interaction Experience",
-    //   description:
-    //     "Designed an in-store photobox interaction experience for generating AI-styled photos, helping first-time users navigate selection and capture through clear, guided flows while reinforcing the brand.",
-    //   tags: ["Retail Experience", "Photobox", "Interaction Design", "In-store UX"],
-    //   link: "/multi-toys-photobox",
-    // },
-    {
-      image: makmur,
-      title: "Makmur Design Systems & Responsive Experiences",
-      description:
-        "Contributed to multiple product initiatives across web and desktop experiences, focusing on design systems, responsive design, and interface consistency.",
-      tags: ["Design Systems", "Responsive Design", "Product UI", "Internship"],
-      link: "/makmur-intern",
-    },
-    {
-      image: cpm,
-      title: "Centre Point Medan Wayfinding & Directory System",
-      description:
-        "Led the end-to-end design of a mall directory and wayfinding system to improve visitor navigation, reduce confusion, and create a more intuitive spatial experience across floors and tenant zones.",
-      tags: ["Public Space Experience", "UX/UI Design", "Wayfinding System"],
-      link: "/cpm-wayfinding-system",
-    },
-    {
-      image: kjp,
-      title: "PT. Kencana Jaya Persada Corporate Website (0–1)",
-      description:
-        "Designed and built a corporate website from the ground up to establish business credibility, structure complex content, and support long-term maintainability.",
-      tags: ["0–1", "Corporate Product", "End-to-end", "Frontend Engineering"],
-      link: "/kjp-website",
-    },
-    {
-      image: navika,
-      title: "Navika, Job Discovery Product",
-      description:
-        "Designed a job discovery product concept that explores clearer structure and transparency in the recruitment experience, developed as part of a national design competition.",
-      tags: ["Product Thinking", "Award-Winning", "Competition"],
-      link: "https://www.behance.net/gallery/235771253/Navika-Job-Portal-for-Sustainable-Careers",
-    },
-  ];
+  const works = featuredProjects;
 
   return (
     <section 

@@ -7,7 +7,7 @@ import { assetUrl } from "@/lib/assetUrl";
 
 // Assets
 import arrowLeft from "../assets/icons/arrow_left.svg";
-import arrowRight from "../assets/icons/arrow_right.svg";
+// import arrowRight from "../assets/icons/arrow_right.svg";
 import makmurLogo from "../assets/images/makmur/makmur_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
@@ -22,7 +22,7 @@ import Section from "../components/ui/DetailSection.jsx";
 import Subsection from "../components/ui/DetailSubsection.jsx";
 import Quote from "../components/ui/Quote.jsx";
 import InsightImageBlock from "../components/ui/InsightImageBlock.jsx";
-import ProjectNav from "../components/project/ProjectNav.jsx";
+// import ProjectNav from "../components/project/ProjectNav.jsx";
 
 import imageHero from "../assets/images/makmur/hero.webp";
 import contribution1 from "../assets/images/makmur/contribution1.webp";
@@ -62,7 +62,7 @@ export default function ProjectDetail() {
 
             {/* Center Title */}
             <h1 className="mx-auto font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center max-w-[325px] md:max-w-[750px] xl:max-w-[950px]">
-                Makmur Design Systems & Responsive Experiences
+                Makmur — Building Consistency Across Design Systems and Responsive Product Experiences
             </h1>
         </div>
 
@@ -206,21 +206,27 @@ export default function ProjectDetail() {
             <InsightImageBlock src={documentation} />
         </div>
 
+        <Divider />
+
         {/* Next Project */}
         {/* <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/multi-toys-wholesale",
+                to: "/multi-toys-b2b-wholesale",
                 title: "Multi Toys B2B Wholesale Platform"
             }}
         /> */}
-        <ProjectNav
+        {/* <ProjectNav
             arrowRight={arrowRight}
-            next={{
-                to: "/cpm-wayfinding-system",
-                title: "Centre Point Medan Wayfinding & Directory System"
+            previous={{
+                to: "/multi-toys-b2b-wholesale",
+                title: "MULTI Toys B2B — Designing Wholesale Ordering for Bulk and Repeat Purchases"
             }}
-        />
+            next={{
+                to: "/centre-point-medan-wayfinding",
+                title: "Centre Point Medan — Designing Digital Wayfinding for Mall Navigation and Tenant Discovery"
+            }}
+        /> */}
       </div>
     </section>
   );

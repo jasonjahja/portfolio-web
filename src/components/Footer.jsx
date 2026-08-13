@@ -5,7 +5,7 @@ import globe from "../assets/icons/globe.svg";
 import useResumeUrl from "../hooks/useResumeUrl.jsx";
 import { assetUrl } from "@/lib/assetUrl";
 
-export default function Footer() {
+export default function Footer({ navigationBase = "" }) {
   const resumeUrl = useResumeUrl();
 
   return (
@@ -39,7 +39,7 @@ export default function Footer() {
               {/* Navigation */}
               <div className="flex-1 xl:flex-none flex flex-col gap-30 text-body-b5 md:text-body-b4 xl:text-body-b3 items-center md:items-start justify-between">
                 <a
-                  href="#overview"
+                  href={`${navigationBase}#overview`}
                   className="relative hover:italic w-fit
                   after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
                   after:bg-bw8 after:origin-left after:scale-x-0
@@ -59,7 +59,7 @@ export default function Footer() {
                   Clients
                 </a> */}
                 <a
-                  href="#work"
+                  href={`${navigationBase}#work`}
                   className="relative hover:italic w-fit
                   after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
                   after:bg-bw8 after:origin-left after:scale-x-0
@@ -70,7 +70,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="#post"
+                  href={`${navigationBase}#post`}
                   className="relative hover:italic w-fit
                   after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
                   after:bg-bw8 after:origin-left after:scale-x-0

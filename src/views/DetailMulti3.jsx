@@ -224,7 +224,7 @@ export default function ProjectDetail() {
         <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/cpm-wayfinding-system",
+                to: "/centre-point-medan-wayfinding",
                 title: "Centre Point Medan Wayfinding & Directory System"
             }}
         />
