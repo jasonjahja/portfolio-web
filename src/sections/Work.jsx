@@ -6,6 +6,7 @@ import makmur from "../assets/images/makmur/hero.webp";
 import cpm from "../assets/images/cpm/hero.webp";
 import kjp from "../assets/images/kjp.webp";
 import navika from "../assets/images/navika.webp";
+import temukerja from "../assets/images/temukerja/hero.webp";
 import WorkCard from "../components/WorkCard";
 
 import { useEffect, useRef, useState } from "react";
@@ -32,6 +33,14 @@ export default function WorkSection() {
   }, []);
 
   const works = [
+    {
+      image: temukerja,
+      title: "TemuKerja — Reducing Interaction Demands Across the Job-Search Journey",
+      description:
+        "An academic product design project exploring how a job portal could make finding, applying to, and tracking opportunities more manageable for novice job seekers.",
+      tags: ["Product Design", "User Research", "Usability Testing", "Undergraduate Thesis"],
+      link: "/temukerja",
+    },
     {
       image: multi1,
       title: "Multi Toys Website Redesign",
