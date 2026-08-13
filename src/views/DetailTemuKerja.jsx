@@ -6,7 +6,7 @@ import Link from "next/link";
 import { assetUrl } from "@/lib/assetUrl";
 
 import arrowLeft from "../assets/icons/arrow_left.svg";
-import arrowRight from "../assets/icons/arrow_right.svg";
+// import arrowRight from "../assets/icons/arrow_right.svg";
 import arrowUpRight from "../assets/icons/arrow_up_right.svg";
 import temukerjaLogo from "../assets/images/temukerja_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
@@ -23,7 +23,18 @@ import Meta from "../components/project/Meta.jsx";
 import Section from "../components/ui/DetailSection.jsx";
 import Subsection from "../components/ui/DetailSubsection.jsx";
 import Quote from "../components/ui/Quote.jsx";
-import ProjectNav from "../components/project/ProjectNav.jsx";
+// import ProjectNav from "../components/project/ProjectNav.jsx";
+import EvidenceNote from "../components/project/EvidenceNote.jsx";
+import CardGrid, {
+  CardGridBody,
+  CardGridEyebrow,
+  CardGridIndex,
+  CardGridItem,
+  CardGridList,
+  CardGridTitle,
+  CardGridValue,
+} from "../components/project/CardGrid.jsx";
+import ComparisonTable from "../components/project/ComparisonTable.jsx";
 
 import solution1 from "../assets/images/temukerja/solution1.webp";
 import solution2 from "../assets/images/temukerja/solution2.webp";
@@ -81,32 +92,6 @@ const comparisonMetrics = [
   ["Ease of learning", "6.40", "6.70"],
   ["Satisfaction", "6.05", "6.65"],
 ];
-
-function EvidenceList({ items }) {
-  return (
-    <ul className="flex flex-col gap-5 text-body-b7 md:text-body-b6 xl:text-body-b5 text-bw7">
-      {items.map((item) => (
-        <li key={item} className="flex gap-10">
-          <span aria-hidden="true">•</span>
-          <span>{item}</span>
-        </li>
-      ))}
-    </ul>
-  );
-}
-
-function MetricGrid({ items }) {
-  return (
-    <div className="grid grid-cols-2 gap-px bg-bw5 md:grid-cols-4">
-      {items.map(([value, label]) => (
-        <div key={label} className="flex min-h-[130px] flex-col justify-between gap-15 bg-bw0 p-15 md:p-20 xl:min-h-[170px] xl:p-25">
-          <p className="font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h3 text-bw8">{value}</p>
-          <p className="text-body-b7 md:text-body-b6 xl:text-body-b5 text-bw7">{label}</p>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 function SourceTitle({ title, href }) {
   return (
@@ -225,17 +210,19 @@ export default function DetailTemuKerja() {
           </p>
         </Section>
 
-        <div className="grid grid-cols-1 gap-px bg-bw5 md:grid-cols-3">
+        <CardGrid>
           {problems.map((problem) => (
-            <article key={problem.number} className="flex flex-col gap-15 bg-bw0 p-20 xl:p-30">
-              <p className="font-display text-heading-h4 text-bw6">{problem.number}</p>
-              <h3 className="font-display text-heading-h7 md:text-heading-h5 xl:text-heading-h4">{problem.title}</h3>
-              <p className="text-body-b7 md:text-body-b6 xl:text-body-b5">{problem.body}</p>
-              <EvidenceList items={problem.evidence} />
-              <p className="mt-auto border-l-3 border-bw6 pl-15 text-body-b7 italic md:text-body-b6 xl:text-body-b5">{problem.insight}</p>
-            </article>
+            <CardGridItem key={problem.number} variant="spacious">
+              <CardGridIndex>{problem.number}</CardGridIndex>
+              <CardGridTitle>{problem.title}</CardGridTitle>
+              <CardGridBody>{problem.body}</CardGridBody>
+              <CardGridList items={problem.evidence} />
+              <div className="mt-auto">
+                <Quote size={{ base: "b7", md: "b6", xl: "b4" }}>{problem.insight}</Quote>
+              </div>
+            </CardGridItem>
           ))}
-        </div>
+        </CardGrid>
 
         <Divider />
 
@@ -245,7 +232,7 @@ export default function DetailTemuKerja() {
           </p>
         </Section>
 
-        <div className="grid grid-cols-1 gap-30 md:gap-45">
+        <div className="grid grid-cols-1 gap-30 md:gap-60">
           <Subsection
             title={
               <SourceTitle
@@ -303,15 +290,15 @@ export default function DetailTemuKerja() {
           </p>
         </Section>
 
-        <div className="grid grid-cols-1 gap-px bg-bw5 md:grid-cols-2 xl:grid-cols-5">
+        <CardGrid columns="grid-cols-1 md:grid-cols-2 xl:grid-cols-5">
           {goals.map(([title, body], index) => (
-            <div key={title} className="flex flex-col gap-10 bg-bw0 p-15 xl:p-20">
-              <span className="text-body-b7 text-bw6">0{index + 1}</span>
-              <h3 className="font-display text-heading-h7">{title}</h3>
-              <p className="text-body-b7 md:text-body-b6">{body}</p>
-            </div>
+            <CardGridItem key={title} variant="compact">
+              <CardGridEyebrow>0{index + 1}</CardGridEyebrow>
+              <CardGridTitle>{title}</CardGridTitle>
+              <CardGridBody>{body}</CardGridBody>
+            </CardGridItem>
           ))}
-        </div>
+        </CardGrid>
 
         <Divider />
 
@@ -321,26 +308,30 @@ export default function DetailTemuKerja() {
           </p>
         </Section>
 
-        <div className="grid grid-cols-1 gap-15 md:grid-cols-3">
+        <CardGrid separated={false}>
           {[
             ["Cross-platform Job Search Assistant", "Could support users across several existing platforms.", "Dependent on external platform structures, permissions, available information, and technical policies."],
             ["Centralized Job Search Manager", "Could create a broader overview of opportunities and applications.", "Searching and applying would still happen elsewhere, limiting control over the interactions causing friction."],
-            ["Integrated Job Portal", "Connected exploration, application, and monitoring with control over hierarchy, data reuse, feedback, and progress.", "Selected as the strongest prototype environment for investigating all three problems—not as the only valid industry solution."],
+            ["Integrated Job Portal", "Connected exploration, application, and monitoring with control over hierarchy, data reuse, feedback, and progress.", "Selected as the strongest prototype environment for investigating all three problems"],
           ].map(([title, strength, tradeoff], index) => (
-            <article key={title} className={`flex flex-col gap-15 rounded-15 border p-20 xl:p-25 ${index === 2 ? "border-bw8 bg-bw3" : "border-bw5"}`}>
-              <p className="text-body-b7 text-bw6">Concept 0{index + 1}</p>
-              <h3 className="font-display text-heading-h7 md:text-heading-h5">{title}</h3>
+            <CardGridItem
+              key={title}
+              variant="outlined"
+              selected={index === 2}
+            >
+              <CardGridEyebrow>Concept 0{index + 1}</CardGridEyebrow>
+              <CardGridTitle>{title}</CardGridTitle>
               <div>
-                <p className="text-body-b7 text-bw6">Strength</p>
-                <p className="text-body-b7 md:text-body-b6 xl:text-body-b5">{strength}</p>
+                <CardGridEyebrow>Strength</CardGridEyebrow>
+                <CardGridBody>{strength}</CardGridBody>
               </div>
               <div>
-                <p className="text-body-b7 text-bw6">Trade-off</p>
-                <p className="text-body-b7 md:text-body-b6 xl:text-body-b5">{tradeoff}</p>
+                <CardGridEyebrow>Trade-off</CardGridEyebrow>
+                <CardGridBody>{tradeoff}</CardGridBody>
               </div>
-            </article>
+            </CardGridItem>
           ))}
-        </div>
+        </CardGrid>
 
         <Divider />
 
@@ -350,32 +341,52 @@ export default function DetailTemuKerja() {
           </p>
         </Section>
 
-        <Subsection title="01 — Making Vacancies Easier to Scan" image={solution1}>
+        <Subsection
+          title="01 — Making Vacancies Easier to Scan"
+          image={solution1}
+          insights={[
+            "Keyword search and faceted filters help narrow the opportunity set.",
+            "Structured summaries make essential vacancy information easier to scan.",
+            "A master-detail pattern keeps the result list visible while users investigate an opportunity.",
+            "Progressive disclosure keeps complete job and company information accessible when deeper evaluation is needed.",
+            "Saved vacancies preserve relevant opportunities for later review.",
+          ]}
+        >
           <p>
-            Users needed both speed and depth. The exploration experience combined keyword search, faceted filters, structured summaries, complete job and company information, progressive disclosure, and saved vacancies.
-          </p>
-          <p>
-            A master-detail pattern kept the result list visible while users investigated an opportunity, preserving their position. Progressive disclosure made essential details scannable first while keeping deeper information accessible when a vacancy deserved more attention.
+            Users needed both speed and depth. The exploration experience made essential information easier to scan while keeping deeper job and company details accessible without losing browsing context.
           </p>
           <Quote>Make relevant information easier to locate while reducing unnecessary navigation and comparison effort.</Quote>
         </Subsection>
 
-        <Subsection title="02 — Treating Repeated Applications as Repeated Behavior" image={solution2}>
+        <Subsection
+          title="02 — Treating Repeated Applications as Repeated Behavior"
+          image={solution2}
+          insights={[
+            "Stored profile data and documents reduce repeated input.",
+            "Populated information remains visible, editable, and connected to its source.",
+            "Users can choose documents, return to previous steps, and review the complete submission before committing.",
+            "Required-field indicators, validation, and understandable errors clarify what needs attention.",
+            "Confirmation prevents users from accidentally losing unsaved changes.",
+          ]}
+        >
           <p>
-            The flow reused stored profile data and documents while keeping the information visible, editable, reviewable, and connected to its source. Users could inspect populated data, change it, choose documents, return to previous steps, and review the complete submission before committing.
-          </p>
-          <p>
-            Required-field indicators, input validation, understandable errors, and confirmation before losing unsaved changes reduced effort without making important decisions invisible.
+            The application flow reduced repeated administrative work while keeping reused information and important submission decisions transparent and under the user&apos;s control.
           </p>
           <Quote>Reduce repeated administrative work while maintaining transparency and user control.</Quote>
         </Subsection>
 
-        <Subsection title="03 — Making Progress Visible After Submission" image={solution3}>
+        <Subsection
+          title="03 — Making Progress Visible After Submission"
+          image={solution3}
+          insights={[
+            "Current status and update timestamps make recent progress visible.",
+            "Progress history and notifications reduce the need for repeated checking.",
+            "Contextual next actions help users understand what they can do after submission.",
+            "The success state lets users monitor the application or return to exploring opportunities.",
+          ]}
+        >
           <p>
-            Monitoring became an extension of the application journey rather than a detached status page. Users could see current status, update timestamps, progress history, notifications, and contextual next actions.
-          </p>
-          <p>
-            The success state also answered “What should I do now?” by allowing users to monitor the submitted application or return to exploring other opportunities, supporting a continuous search–apply–monitor loop.
+            Monitoring became an extension of the application journey rather than a detached status page, supporting a continuous search–apply–monitor loop after submission.
           </p>
           <Quote>Replace unnecessary checking with clearer feedback and help users determine the next appropriate action.</Quote>
         </Subsection>
@@ -433,11 +444,18 @@ export default function DetailTemuKerja() {
           </p>
         </Subsection>
 
-        <MetricGrid items={finalMetrics} />
+        <CardGrid columns="grid-cols-2 md:grid-cols-4">
+          {finalMetrics.map(([value, label]) => (
+            <CardGridItem key={label} variant="metric">
+              <CardGridValue>{value}</CardGridValue>
+              <CardGridBody muted>{label}</CardGridBody>
+            </CardGridItem>
+          ))}
+        </CardGrid>
 
-        <p className="text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b5">
+        <EvidenceNote>
           Exploration and application both received an average SEQ of 7.0, while monitoring scored 6.4—consistent with the remaining indirect path in that activity.
-        </p>
+        </EvidenceNote>
 
         <Divider />
 
@@ -447,24 +465,23 @@ export default function DetailTemuKerja() {
           </p>
         </Section>
 
-        <div className="overflow-hidden rounded-15 border border-bw5">
-          <div className="grid grid-cols-[1.5fr_1fr_1fr] bg-bw3 px-15 py-10 text-body-b7 text-bw6 md:px-25 md:text-body-b6">
-            <span>Measure</span><span>Iteration 2</span><span>Iteration 3</span>
-          </div>
-          {comparisonMetrics.map(([label, before, after]) => (
-            <div key={label} className="grid grid-cols-[1.5fr_1fr_1fr] border-t border-bw5 px-15 py-15 text-body-b7 md:px-25 md:text-body-b5">
-              <span>{label}</span><span className="text-bw6">{before}</span><strong>{after}</strong>
-            </div>
-          ))}
-        </div>
+        <ComparisonTable
+          headers={["Measure", "Iteration 2", "Iteration 3"]}
+          rows={comparisonMetrics}
+          renderCell={(cell, columnIndex) => {
+            if (columnIndex === 1) return <span className="text-bw6">{cell}</span>;
+            if (columnIndex === 2) return <strong>{cell}</strong>;
+            return cell;
+          }}
+        />
 
         <Quote>
           The results suggest that the final refinements supported more direct, efficient, understandable, helpful, and satisfying interactions within the tested scenarios.
         </Quote>
 
-        <p className="text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b5">
+        <EvidenceNote>
           Participant familiarity and clarified task wording may also have contributed to some improvement, so the changes should not be interpreted as purely causal effects of the interface revisions.
-        </p>
+        </EvidenceNote>
 
         <Divider />
 
@@ -479,7 +496,7 @@ export default function DetailTemuKerja() {
 
         <Divider />
 
-        <Section title="What the Results Do—and Don’t—Prove">
+        <Section title="What the Results Do and Don’t Prove">
           <p>
             The final prototype performed strongly in formative usability testing, but the evidence describes interaction quality while using the prototype. The adapted NASA-TLX result reflects perceived task demands during interaction; it does not demonstrate reduced psychological stress associated with job searching as a whole.
           </p>
@@ -509,7 +526,25 @@ export default function DetailTemuKerja() {
 
         <Section title="Explore the Full Project Materials">
           <p>
-            Scan the QR code to access the supporting academic materials from this project.
+            Scan the QR code to access the supporting academic materials from this project, or{" "}
+            <a
+              href="https://linktr.ee/jasonjahja"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open TemuKerja supporting academic materials in a new tab"
+              className="group inline-flex w-fit flex-col align-bottom"
+            >
+              <span className="inline-flex items-center gap-5">
+                <span className="group-hover:italic">click here</span>
+                <img
+                  src={assetUrl(arrowUpRight)}
+                  alt=""
+                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </span>
+              <span className="h-px self-stretch bg-bw8" />
+            </a>
+            .
           </p>
           <div className="flex flex-col items-start gap-20 md:flex-row md:items-center md:gap-45">
             <div className="w-full max-w-[280px] shrink-0 bg-bw1 p-15 md:max-w-[320px] xl:max-w-[360px] xl:p-20">
@@ -537,10 +572,16 @@ export default function DetailTemuKerja() {
           </div>
         </Section>
 
-        <ProjectNav
+        <Divider />
+
+        {/* <ProjectNav
           arrowRight={arrowRight}
-          next={{ to: "/multi-toys-website", title: "Multi Toys Website Redesign" }}
-        />
+          previous={undefined}
+          next={{
+            to: "/multi-toys-b2c-ecommerce",
+            title: "MULTI Toys — Structuring Collectible Shopping Through Clearer Discovery and Purchase Cues",
+          }}
+        /> */}
       </div>
     </section>
   );

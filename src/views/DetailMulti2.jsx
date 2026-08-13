@@ -63,7 +63,7 @@ export default function ProjectDetail() {
 
             {/* Center Title */}
             <h1 className="mx-auto font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center max-w-[325px] md:max-w-[750px] xl:max-w-[950px]">
-                Multi Toys B2B Wholesale Platform
+                MULTI Toys B2B — Designing Wholesale Ordering for Bulk and Repeat Purchases
             </h1>
         </div>
 
@@ -264,15 +264,15 @@ export default function ProjectDetail() {
         {/* <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/multi-toys-wholesale",
+                to: "/multi-toys-b2b-wholesale",
                 title: "Multi Toys B2B Wholesale Platform"
             }}
         /> */}
         <ProjectNav
             arrowRight={arrowRight}
             next={{
-                to: "/makmur-intern",
-                title: "Makmur Design Systems & Responsive Experiences"
+                to: "/makmur-design-systems",
+                title: "Makmur — Building Consistency Across Design Systems and Responsive Product Experiences"
             }}
         />
       </div>

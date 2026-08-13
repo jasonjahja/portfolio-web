@@ -7,7 +7,7 @@ import { assetUrl } from "@/lib/assetUrl";
 
 // Assets
 import arrowLeft from "../assets/icons/arrow_left.svg";
-import arrowRight from "../assets/icons/arrow_right.svg";
+// import arrowRight from "../assets/icons/arrow_right.svg";
 import kjpLogo from "../assets/images/kjp_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
 import roleIcon from "../assets/icons/role_icon.svg";
@@ -25,7 +25,7 @@ import Section from "../components/ui/DetailSection.jsx";
 import Quote from "../components/ui/Quote.jsx";
 import VideoBlock from "../components/ui/VideoBlock.jsx";
 import DecisionBlock from "../components/project/DecisionBlock.jsx";
-import ProjectNav from "../components/project/ProjectNav.jsx";
+// import ProjectNav from "../components/project/ProjectNav.jsx";
 
 import { decisions } from "../data/kjpData.jsx"
 
@@ -221,13 +221,17 @@ export default function ProjectDetail() {
         </Section>
 
         {/* Next Project */}
-        <ProjectNav
+        {/* <ProjectNav
             arrowRight={arrowRight}
+            previous={{
+                to: "/centre-point-medan-wayfinding",
+                title: "Centre Point Medan — Designing Digital Wayfinding for Mall Navigation and Tenant Discovery"
+            }}
             next={{
                 to: "https://www.behance.net/gallery/235771253/Navika-Job-Portal-for-Sustainable-Careers",
                 title: "Navika, Job Discovery Product"
             }}
-        />
+        /> */}
       </div>
     </section>
   );
