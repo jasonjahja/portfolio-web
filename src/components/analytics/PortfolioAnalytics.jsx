@@ -2,23 +2,20 @@
 
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
-import { Analytics } from "@vercel/analytics/next";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { useReportWebVitals } from "next/web-vitals";
 
 import {
   getPortfolioPageContext,
-  shouldCollectAnalytics,
+  trackPageView,
   trackPortfolioEvent,
+  trackWebVital,
 } from "@/lib/analytics";
 
 const SCROLL_THRESHOLDS = [25, 50, 75, 90];
 const ENGAGED_SECONDS = 30;
 
-function analyticsBeforeSend(event) {
-  return (
-    shouldCollectAnalytics(window.location.href) &&
-    shouldCollectAnalytics(event.url)
-  ) ? event : null;
+function reportWebVital(metric) {
+  trackWebVital(metric);
 }
 
 function datasetProperties(element) {
@@ -162,12 +159,27 @@ function PortfolioBehaviorTracker() {
   return null;
 }
 
+function PortfolioPageViewTracker() {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    trackPageView();
+  }, [pathname]);
+
+  return null;
+}
+
+function PortfolioWebVitalsTracker() {
+  useReportWebVitals(reportWebVital);
+  return null;
+}
+
 export default function PortfolioAnalytics() {
   return (
     <>
+      <PortfolioPageViewTracker />
       <PortfolioBehaviorTracker />
-      <Analytics beforeSend={analyticsBeforeSend} />
-      <SpeedInsights beforeSend={analyticsBeforeSend} />
+      <PortfolioWebVitalsTracker />
     </>
   );
 }
