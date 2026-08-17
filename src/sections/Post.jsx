@@ -42,7 +42,7 @@ export default function PostSection() {
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-10"
         }`}>
-        <h2 className="font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h3">
+        <h2 data-analytics-section-view="posts" className="font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h3">
           Posts
         </h2>
 

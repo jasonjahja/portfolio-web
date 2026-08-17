@@ -55,6 +55,7 @@ export default function OverviewSection() {
   
         {/* Heading */}
         <h1
+          data-analytics-section-view="overview"
           className={`font-display text-heading-h3 md:text-heading-h2 xl:text-heading-h1 md:w-[400px] xl:w-[1600px] transition-all duration-700 ${
             isVisible
               ? "opacity-100 translate-x-0"
@@ -82,6 +83,9 @@ export default function OverviewSection() {
           {/* CTA */}
           <a
             href="#work"
+            data-analytics-event="navigation_click"
+            data-analytics-source="hero_cta"
+            data-analytics-section="work"
             className={`inline-flex flex-col items-start w-fit group transition-all duration-700 ${
               isVisible
                 ? "opacity-100 translate-x-0"

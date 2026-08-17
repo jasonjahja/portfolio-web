@@ -6,7 +6,7 @@ export default function CaseStudyPage({ children, currentSlug }) {
   return (
     <>
       {children}
-      <MoreProjects projects={getRelatedProjects(currentSlug)} />
+      <MoreProjects currentSlug={currentSlug} projects={getRelatedProjects(currentSlug)} />
       <Footer navigationBase="/" />
     </>
   );

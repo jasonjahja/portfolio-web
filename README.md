@@ -81,6 +81,22 @@ Project dapat langsung di-import sebagai project baru di Vercel. Tambahkan kedua
 
 Next.js menangani file-based routes secara native, sehingga project ini tidak memerlukan rewrite SPA dari `vercel.json` milik versi Vite.
 
+## Analytics
+
+Portfolio menggunakan Vercel Web Analytics dan Speed Insights. Pengumpulan data hanya aktif pada domain production `jasonjahja.site`/`www.jasonjahja.site`; localhost, preview deployment, dan route `/admin` dikecualikan.
+
+Custom events yang tersedia:
+
+- `home_section_view` dan `case_section_view`
+- `project_card_click` dan `continue_project_click`
+- `case_scroll_depth` pada 25%, 50%, 75%, dan 90%
+- `engaged_case_study` setelah 30 detik aktif dan minimal 25% scroll
+- `resume_click`, `social_click`, dan `outbound_click`
+- `navigation_click`, `project_navigation_click`, dan `back_home_click`
+- `mobile_menu_open` dan `mobile_menu_close`
+
+Aktifkan Web Analytics dan Speed Insights di dashboard project Vercel agar deployment production mulai mengirim data.
+
 ## Author
 
 Jason Jahja — Product Designer based in Jakarta, Indonesia.
