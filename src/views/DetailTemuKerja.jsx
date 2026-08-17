@@ -129,7 +129,13 @@ export default function DetailTemuKerja() {
         }`}
       >
         <div className="flex items-center">
-          <Link href="/" aria-label="Back to home" className="absolute left-25 cursor-pointer md:left-40 xl:left-120">
+          <Link
+            href="/"
+            aria-label="Back to home"
+            data-analytics-event="back_home_click"
+            data-analytics-source="case_study_header"
+            className="absolute left-25 cursor-pointer md:left-40 xl:left-120"
+          >
             <img src={assetUrl(arrowLeft)} alt="" className="h-20 md:h-30" />
           </Link>
           <h1 className="mx-auto max-w-[325px] text-center font-display text-heading-h6 md:max-w-[750px] md:text-heading-h4 xl:max-w-[950px] xl:text-heading-h2">
@@ -539,7 +545,7 @@ export default function DetailTemuKerja() {
                 <img
                   src={assetUrl(arrowUpRight)}
                   alt=""
-                  className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  className="h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                 />
               </span>
               <span className="h-px self-stretch bg-bw8" />

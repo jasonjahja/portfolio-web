@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import PortfolioAnalytics from "@/components/analytics/PortfolioAnalytics";
 import grain from "@/assets/images/grain.webp";
 import "./globals.css";
 
@@ -53,6 +54,7 @@ export default function RootLayout({ children }) {
         <div className="relative min-h-screen bg-bw0 text-bw8">
           <Navbar />
           {children}
+          <PortfolioAnalytics />
           <div
             aria-hidden="true"
             className="pointer-events-none fixed inset-0 z-2000 opacity-1"

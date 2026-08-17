@@ -47,7 +47,13 @@ export default function DetailMulti2Main() {
         style={{ transitionDelay: "0ms" }}
       >
         <div className="flex items-center">
-          <Link href="/" className="absolute left-25 cursor-pointer md:left-40 xl:left-120" aria-label="Back to home">
+          <Link
+            href="/"
+            className="absolute left-25 cursor-pointer md:left-40 xl:left-120"
+            aria-label="Back to home"
+            data-analytics-event="back_home_click"
+            data-analytics-source="case_study_header"
+          >
             <img src={assetUrl(arrowLeft)} alt="" className="h-20 md:h-30" />
           </Link>
           <h1 className="mx-auto max-w-[325px] text-center font-display text-heading-h6 md:max-w-[750px] md:text-heading-h4 xl:max-w-[950px] xl:text-heading-h2">

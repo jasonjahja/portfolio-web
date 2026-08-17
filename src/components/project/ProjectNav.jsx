@@ -18,6 +18,10 @@ function ProjectLink({ project, direction, arrow }) {
           }
         : { href: project.to })}
       className={`group flex min-w-0 flex-col ${isPrevious ? "items-start" : "items-end text-right"}`}
+      data-analytics-event="project_navigation_click"
+      data-analytics-direction={direction}
+      data-analytics-to-slug={project.to}
+      data-analytics-destination-type={isExternal ? "external" : "internal"}
     >
       <p className="font-sans text-body-b7 text-bw6 group-hover:italic md:text-body-b5 xl:text-body-b3">
         {isPrevious ? "Previous Project:" : "Next Project:"}

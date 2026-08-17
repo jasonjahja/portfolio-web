@@ -9,6 +9,9 @@ export default function WorkCard({
   description,
   tags,
   link,
+  slug,
+  position,
+  source,
   cta = "View Case",
   disabled = false,
 }) {
@@ -28,6 +31,11 @@ export default function WorkCard({
             href: link,
           })}
       className={`block ${disabled ? "pointer-events-none" : ""}`}
+      data-analytics-event="project_card_click"
+      data-analytics-project-slug={slug}
+      data-analytics-position={position}
+      data-analytics-source={source}
+      data-analytics-destination-type={isExternal ? "external" : "internal"}
     >
       <div className="flex flex-col md:flex-row gap-15 md:gap-25 items-center group">
       

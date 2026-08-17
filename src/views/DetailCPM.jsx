@@ -53,7 +53,12 @@ export default function ProjectDetail() {
         <div className="flex items-center">
 
             {/* Left Arrow */}
-            <Link href="/" className="absolute left-25 md:left-40 xl:left-120 cursor-pointer">
+            <Link
+              href="/"
+              data-analytics-event="back_home_click"
+              data-analytics-source="case_study_header"
+              className="absolute left-25 md:left-40 xl:left-120 cursor-pointer"
+            >
                 <img
                     src={assetUrl(arrowLeft)}
                     alt="back"

@@ -40,6 +40,9 @@ export default function Footer({ navigationBase = "" }) {
               <div className="flex-1 xl:flex-none flex flex-col gap-30 text-body-b5 md:text-body-b4 xl:text-body-b3 items-center md:items-start justify-between">
                 <a
                   href={`${navigationBase}#overview`}
+                  data-analytics-event="navigation_click"
+                  data-analytics-source="footer"
+                  data-analytics-section="overview"
                   className="relative hover:italic w-fit
                   after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
                   after:bg-bw8 after:origin-left after:scale-x-0
@@ -60,6 +63,9 @@ export default function Footer({ navigationBase = "" }) {
                 </a> */}
                 <a
                   href={`${navigationBase}#work`}
+                  data-analytics-event="navigation_click"
+                  data-analytics-source="footer"
+                  data-analytics-section="work"
                   className="relative hover:italic w-fit
                   after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
                   after:bg-bw8 after:origin-left after:scale-x-0
@@ -71,6 +77,9 @@ export default function Footer({ navigationBase = "" }) {
 
                 <a
                   href={`${navigationBase}#post`}
+                  data-analytics-event="navigation_click"
+                  data-analytics-source="footer"
+                  data-analytics-section="post"
                   className="relative hover:italic w-fit
                   after:absolute after:left-0 after:bottom-0 after:h-px after:w-full
                   after:bg-bw8 after:origin-left after:scale-x-0
@@ -83,6 +92,8 @@ export default function Footer({ navigationBase = "" }) {
                 {/* Resume */}
                 <a
                   href={resumeUrl}
+                  data-analytics-event="resume_click"
+                  data-analytics-source="footer"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex flex-col items-start w-fit group"
@@ -106,6 +117,9 @@ export default function Footer({ navigationBase = "" }) {
                   <a
                     key={index}
                     href={item.href}
+                    data-analytics-event="social_click"
+                    data-analytics-network={item.label.toLowerCase()}
+                    data-analytics-source="footer"
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noopener noreferrer" : undefined}
                     className="inline-flex flex-col items-start w-fit group"

@@ -41,7 +41,7 @@ export default function WorkSection() {
             ? "opacity-100 translate-x-0"
             : "opacity-0 -translate-x-10"
         }`}>
-        <h2 className="font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h3">
+        <h2 data-analytics-section-view="featured_projects" className="font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h3">
           Featured projects
         </h2>
 
@@ -80,7 +80,7 @@ export default function WorkSection() {
                 transitionDelay: `${300 + index * 120}ms`,
             }}
             >
-            <WorkCard {...item} />
+            <WorkCard {...item} position={index + 1} source="featured_projects" />
             </div>
         ))}
         </div>
