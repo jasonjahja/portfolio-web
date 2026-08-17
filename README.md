@@ -40,6 +40,8 @@ npm run lint   # ESLint dan Next.js rules
 | `/makmur-intern` | Makmur Product Design Internship |
 | `/cpm-wayfinding-system` | Centre Point Medan Wayfinding System |
 | `/kjp-website` | KJP Corporate Website |
+| `/admin` | Redirect ke portfolio analytics |
+| `/admin/analytics` | First-party portfolio analytics |
 | `/admin/resume` | Resume URL administration |
 
 ## Struktur
@@ -67,9 +69,11 @@ Salin `.env.example` menjadi `.env.local`:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
+SUPABASE_SERVICE_ROLE_KEY=YOUR_SUPABASE_SERVICE_ROLE_KEY
+ANALYTICS_ADMIN_EMAIL=jasonjahja@gmail.com
 ```
 
-Nama environment variable menggunakan prefix `NEXT_PUBLIC_` karena nilainya dibaca oleh Supabase client di browser.
+Variable dengan prefix `NEXT_PUBLIC_` dibaca oleh Supabase client di browser. `SUPABASE_SERVICE_ROLE_KEY` hanya digunakan oleh Route Handler di server; jangan pernah menambahkan prefix `NEXT_PUBLIC_` atau mengirim nilainya ke browser.
 
 Jalankan `supabase/setup.sql` melalui Supabase SQL Editor setelah mengganti `YOUR_ADMIN_EMAIL` dengan email akun admin. Jangan memasukkan secret key atau service-role key ke environment variable frontend.
 
@@ -83,7 +87,9 @@ Next.js menangani file-based routes secara native, sehingga project ini tidak me
 
 ## Analytics
 
-Portfolio menggunakan Vercel Web Analytics dan Speed Insights. Pengumpulan data hanya aktif pada domain production `jasonjahja.site`/`www.jasonjahja.site`; localhost, preview deployment, dan route `/admin` dikecualikan.
+Portfolio menggunakan first-party analytics yang disimpan di Supabase dan ditampilkan melalui `/admin/analytics`. Tidak ada IP, user-agent mentah, fingerprint, nama, atau email pengunjung yang disimpan. Visitor dihitung sebagai sesi anonim per tab browser.
+
+Pengumpulan data hanya aktif pada domain production `jasonjahja.site`/`www.jasonjahja.site`; localhost, preview deployment, bot umum, dan route `/admin` dikecualikan. Browser mengirim data ke `/api/analytics`, kemudian Route Handler memvalidasi event dan menyimpannya menggunakan service-role key yang hanya tersedia di server.
 
 Custom events yang tersedia:
 
@@ -95,7 +101,16 @@ Custom events yang tersedia:
 - `navigation_click`, `project_navigation_click`, dan `back_home_click`
 - `mobile_menu_open` dan `mobile_menu_close`
 
-Aktifkan Web Analytics dan Speed Insights di dashboard project Vercel agar deployment production mulai mengirim data.
+Core Web Vitals `TTFB`, `FCP`, `LCP`, `FID`, `CLS`, dan `INP` juga dikumpulkan menggunakan API Web Vitals bawaan Next.js.
+
+### Mengaktifkan analytics
+
+1. Jalankan seluruh isi `supabase/setup.sql` di Supabase SQL Editor.
+2. Tambahkan `SUPABASE_SERVICE_ROLE_KEY` ke environment production hosting. Key ini harus tetap server-only.
+3. Pastikan akun Supabase Auth untuk `ANALYTICS_ADMIN_EMAIL` sudah tersedia.
+4. Deploy ulang, kunjungi domain production, lalu buka `/admin/analytics`.
+
+Dashboard menyediakan pilihan 7/30/90 hari, period-over-period comparison, page dan project performance, section visibility, scroll depth, acquisition, device/browser/country, click breakdown, recent events, serta P75 Web Vitals per route.
 
 ## Author
 

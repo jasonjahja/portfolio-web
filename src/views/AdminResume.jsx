@@ -133,6 +133,10 @@ export default function AdminResume() {
 
         <div className="h-px w-full bg-bw5" />
 
+        <Link href="/admin/analytics" className="underline w-fit text-body-b5">
+          Buka analytics
+        </Link>
+
         {isLoading ? (
           <p className="text-body-b5 text-bw7">Memuat...</p>
         ) : !session ? (
