@@ -182,7 +182,7 @@ export default function DetailTemuKerja() {
           }}
         />
         <p className="text-center font-sans text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
-          Temporary project visual
+          Temukerja Thumbnail
         </p>
       </div>
 
