@@ -1,9 +1,8 @@
 import DetailMulti1Expanded from "@/views/DetailMulti1Expanded";
 import CaseStudyPage from "@/components/project/CaseStudyPage";
+import { createProjectMetadata } from "@/lib/siteMetadata";
 
-export const metadata = {
-  title: "Multi Toys E-commerce Case Study | Jason Jahja",
-};
+export const metadata = createProjectMetadata("multi-toys-b2c-ecommerce");
 
 export default function Page() {
   return (

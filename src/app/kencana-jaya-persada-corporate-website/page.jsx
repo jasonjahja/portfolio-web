@@ -1,9 +1,10 @@
 import DetailKJP from "@/views/DetailKJP";
 import CaseStudyPage from "@/components/project/CaseStudyPage";
+import { createProjectMetadata } from "@/lib/siteMetadata";
 
-export const metadata = {
-  title: "Kencana Jaya Persada Corporate Website | Jason Jahja",
-};
+export const metadata = createProjectMetadata(
+  "kencana-jaya-persada-corporate-website",
+);
 
 export default function Page() {
   return (
