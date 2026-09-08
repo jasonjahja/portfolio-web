@@ -5,8 +5,20 @@ import makmur from "../assets/images/makmur/hero.webp";
 import cpm from "../assets/images/cpm/hero.webp";
 import kjp from "../assets/images/kjp.webp";
 import navika from "../assets/images/navika.webp";
+// import hunch from "../assets/images/temukerja/hero.webp";
 
 export const projects = [
+  /* Hunch is a draft; keep it hidden until publication.
+  {
+    slug: "hunch",
+    image: hunch,
+    title: "Hunch — Designing a Food Discovery and Collection Experience",
+    description: "Hunch is a mobile food-discovery and collection experience that lets people identify the food they encounter, uncover what makes it unique, and grow their collection one Hunch at a time.",
+    tags: ["Product Design", "Brand Direction", "Usability Testing"],
+    link: "/hunch",
+    related: ["temukerja-job-portal", "makmur-design-systems", "multi-toys-b2c-ecommerce"],
+  },
+  */
   {
     slug: "temukerja-job-portal",
     image: temukerja,

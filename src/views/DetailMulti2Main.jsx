@@ -77,7 +77,7 @@ export default function DetailMulti2Main() {
           <Divider type="vertical" className="hidden md:block" />
           <Meta icon={roleIcon} label="Role" value="Product Designer (End-to-end)" />
           <Divider type="vertical" className="hidden md:block" />
-          <Meta className="flex-1 xl:gap-5" icon={durationIcon} label="Timeline" value="Sep 2025 - Oct 2025" />
+          <Meta className="flex-1 xl:gap-5" icon={durationIcon} label="Timeline" value="Oct 2025 - Nov 2025" />
         </div>
       </div>
 

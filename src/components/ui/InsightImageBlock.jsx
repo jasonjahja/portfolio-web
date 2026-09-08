@@ -5,9 +5,14 @@ export default function InsightImageBlock({
   title,
   showTitle = true,
   items = [],
+  id,
+  alt,
+  caption,
+  placeholderNote,
+  sizes = "(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(100vw - 80px), calc(100vw - 240px)",
 }) {
   return (
-    <div className="flex flex-col gap-10 md:gap-15 text-bw8">
+    <figure id={id} className="flex min-w-0 flex-col gap-10 scroll-mt-120 md:gap-15 text-bw8">
       
       <div className="flex flex-col gap-5 md:gap-10">
         {/* TITLE */}
@@ -20,12 +25,19 @@ export default function InsightImageBlock({
         {/* IMAGE */}
         <Image
             src={src}
-            alt={title || "insight"}
-            sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(100vw - 80px), calc(100vw - 240px)"
+            alt={alt ?? title ?? "insight"}
+            sizes={sizes}
             decoding="async"
             className="w-full object-cover border border-bw8 rounded-15"
         />
       </div>
+
+      {(caption || placeholderNote) && (
+        <figcaption className="flex flex-col gap-5 text-body-b6 text-bw7 md:text-body-b5">
+          {caption && <span className="font-semibold">{caption}</span>}
+          {placeholderNote && <span>Placeholder image. {placeholderNote}</span>}
+        </figcaption>
+      )}
 
       {/* INSIGHTS */}
       {items.length > 0 && (
@@ -57,6 +69,6 @@ export default function InsightImageBlock({
           ))}
         </div>
       )}
-    </div>
+    </figure>
   );
 }

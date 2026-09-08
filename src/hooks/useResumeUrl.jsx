@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const FALLBACK_RESUME_URL =
-  "https://drive.google.com/file/d/1wIniqDimrqYNiFFfpc5tNNQNyCVt-SNe/view?usp=sharing";
+  "https://drive.google.com/file/d/1u5lT9N2dtoKAljo6kFdE3lYIQ1xL1jR7/view";
 
 const RESUME_UPDATED_EVENT = "resume-url-updated";
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;

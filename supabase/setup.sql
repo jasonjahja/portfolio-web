@@ -7,7 +7,7 @@ create table if not exists public.site_settings (
 insert into public.site_settings (key, value)
 values (
   'resume_url',
-  'https://drive.google.com/file/d/1wIniqDimrqYNiFFfpc5tNNQNyCVt-SNe/view?usp=sharing'
+  'https://drive.google.com/file/d/1u5lT9N2dtoKAljo6kFdE3lYIQ1xL1jR7/view'
 )
 on conflict (key) do nothing;
 

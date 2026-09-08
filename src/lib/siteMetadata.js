@@ -1,6 +1,13 @@
 export const SITE_URL = "https://jasonjahja.site";
 
 export const PROJECT_METADATA = {
+  /* Hunch is a draft; keep it out of the sitemap until publication.
+  hunch: {
+    title: "Hunch — Designing a Food Discovery and Collection Experience | Jason Jahja",
+    description:
+      "Hunch is a mobile food-discovery and collection experience that lets people identify the food they encounter, uncover what makes it unique, and grow their collection one Hunch at a time.",
+  },
+  */
   "temukerja-job-portal": {
     title: "TemuKerja Job Portal Case Study | Jason Jahja",
     description:
