@@ -24,7 +24,7 @@ export const projects = [
     description: "An undergraduate thesis developed through user research and three rounds of formative usability testing with novice job seekers.",
     tags: ["UX Research", "Usability Testing", "Job Portal"],
     link: "/temukerja-job-portal",
-    related: ["multi-toys-b2c-ecommerce", "navika", "multi-toys-b2b-wholesale"],
+    related: ["hunch", "multi-toys-b2c-ecommerce", "navika"],
   },
   {
     slug: "multi-toys-b2c-ecommerce",
@@ -33,7 +33,7 @@ export const projects = [
     description: "A responsive e-commerce redesign spanning the homepage, catalog, product detail, cart, checkout, and supporting shopping flows.",
     tags: ["Redesign", "E-commerce", "Responsive Web"],
     link: "/multi-toys-b2c-ecommerce",
-    related: ["multi-toys-b2b-wholesale", "temukerja-job-portal", "centre-point-medan-wayfinding"],
+    related: ["multi-toys-b2b-wholesale", "temukerja-job-portal", "hunch"],
   },
   {
     slug: "multi-toys-b2b-wholesale",
@@ -51,7 +51,7 @@ export const projects = [
     description: "Product work across multiple web and desktop initiatives during my internship, from reusable components to responsive interface behavior.",
     tags: ["Design Systems", "Responsive UI", "Internship"],
     link: "/makmur-design-systems",
-    related: ["multi-toys-b2c-ecommerce", "multi-toys-b2b-wholesale", "centre-point-medan-wayfinding"],
+    related: ["hunch", "multi-toys-b2c-ecommerce", "multi-toys-b2b-wholesale"],
   },
   {
     slug: "centre-point-medan-wayfinding",

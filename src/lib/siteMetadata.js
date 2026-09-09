@@ -1,7 +1,15 @@
+import hunchHero from "@/assets/images/hunch/hero.webp";
+
 export const SITE_URL = "https://jasonjahja.site";
 
 export const PROJECT_METADATA = {
   hunch: {
+    image: {
+      url: hunchHero.src,
+      width: hunchHero.width,
+      height: hunchHero.height,
+      alt: "Hunch food-discovery and collection app overview",
+    },
     title: "Hunch — Designing a Food Discovery and Collection Experience | Jason Jahja",
     description:
       "Hunch is a mobile food-discovery and collection experience that lets people identify the food they encounter, uncover what makes it unique, and grow their collection one Hunch at a time.",
@@ -55,14 +63,14 @@ export function createProjectMetadata(slug) {
       description: project.description,
       url: path,
       siteName: "Jason Jahja Portfolio",
-      images: ["/preview.webp"],
+      images: [project.image ?? "/preview.webp"],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: project.title,
       description: project.description,
-      images: ["/preview.webp"],
+      images: [project.image ?? "/preview.webp"],
     },
   };
 }
