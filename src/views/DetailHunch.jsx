@@ -347,7 +347,7 @@ export default function DetailHunch() {
 
         <Section title="The interaction worked. The product message needed more clarity.">
           <p>
-            Testing showed that the core interaction was highly learnable, with participants consistently praising the guided tutorial for its clarity. The main opportunities were instead around product comprehension: making discovery and collection more explicit, strengthening Collection as the payoff, and keeping secondary information such as origin, location, and EXP from overshadowing Hunch’s core purpose. A small amount of residual confusion in the repeat flow also suggested room to refine instructional clarity.
+            Testing showed that the core interaction was highly learnable, with participants consistently praising the guided tutorial for its clarity. The main opportunity was to make the post-identification experience clearer, showing how saving a discovery contributes to the FoodDex and Collection while making collection and progression feel like a stronger payoff after each Hunch. Testing also revealed an affordance issue in the tutorial capture state, where the “No food nearby?” action blended into the surrounding camera frame and was not immediately perceived as tappable.
           </p>
         </Section>
       </div>
