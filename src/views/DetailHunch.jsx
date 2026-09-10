@@ -24,6 +24,7 @@ import ComparisonTable from "@/components/project/ComparisonTable";
 import imageHero from "@/assets/images/hunch/hero.webp";
 // import concept from "@/assets/images/hunch/hero.webp";
 // import flow from "@/assets/images/hunch/hero.webp";
+import prd from "@/assets/images/hunch/prd.png";
 import onboarding from "@/assets/images/hunch/onboarding.webp";
 import tutorial from "@/assets/images/hunch/tutorial.webp";
 import identification from "@/assets/images/hunch/capture.webp";
@@ -93,20 +94,21 @@ export default function DetailHunch() {
       <Divider />
 
       <Section title="Turning a simple idea into a complete product experience.">
-        {/* Image: Replace with an overview of the Hunch food-discovery and collection concept. */}
-        {/* <Subsection
-          image={concept}
-          insights={[
-            "Photograph food you encounter to identify what you have discovered.",
-            "Save discoveries to grow your FoodDex and personal collection.",
-          ]}
+        <Subsection
+          image={prd}
           imageProps={{
-            alt: "Temporary image for the Hunch product concept.",
             sizes: "(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(100vw - 425px), calc(100vw - 700px)",
           }}
-        > */}
+        >
           <p>Hunch is a mobile food-discovery and collection app, inspired by <strong>“Pokémon Go for food,”</strong> where users photograph what they encounter, identify it, and grow their collection one Hunch at a time.</p>
-        {/* </Subsection> */}
+        </Subsection>
+        {/* <p>Hunch is a mobile food-discovery and collection app, inspired by <strong>“Pokémon Go for food,”</strong> where users photograph what they encounter, identify it, and grow their collection one Hunch at a time.</p>
+        
+        <InsightImageBlock
+          src={prd}
+          alt="Excerpt from the Hunch PRD showing the first-use tutorial requirements."
+          sizes="(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(50vw - 53px), calc(50vw - 133px)"
+        /> */}
 
         <p>Starting from the product PRD, I shaped the experience end-to-end, structuring the information architecture and core flows, defining the interaction and visual language, building a reusable design system, prototyping key journeys, and preparing the experience for development.</p>
 
@@ -129,17 +131,12 @@ export default function DetailHunch() {
             sizes: "(max-width: 767px) calc(100vw - 50px), (max-width: 1279px) calc(100vw - 425px), calc(100vw - 700px)",
           }}
         > */}
-          <p>The initial brief defined the main features, but they still needed to work together as one coherent experience.</p>
-          {/* Image: Replace with the Index / Hunch / Collection / Profile architecture and the Discover → Hunch → Identify → Collect → Explore flow. */}
-
-          <p>I structured Hunch around a simple recurring loop:</p>
+          <p>The initial brief defined the main features, but they still needed to work together as one coherent experience. I structured Hunch around a simple recurring loop:</p>
           <Quote><p><strong>Discover → Hunch → Identify → Collect → Explore</strong></p></Quote>
 
         {/* </Subsection> */}
 
-        <p>This became the foundation for the product architecture, connecting onboarding, camera-based identification, the FoodDex, personal collections, progression, profile, and premium features.</p>
-
-        <p>For first-time users, the experience was designed to move from a lightweight introduction into an interactive first Hunch, allowing them to learn the product through use rather than through lengthy explanations.</p>
+        <p>This loop became the foundation for the product architecture, connecting onboarding, camera-based identification, FoodDex, collection, progression, profile, and premium features, while guiding first-time users from a lightweight introduction into their first Hunch.</p>
       </Section>
 
       {/* <Divider /> */}
