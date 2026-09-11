@@ -1,8 +1,7 @@
 "use client";
 
 import arrowDown from "../assets/icons/arrow_down.svg";
-// import hero1 from "../assets/images/mainHero.webp";
-import hero1 from "../assets/images/hero1.webp";
+import hero1 from "../assets/images/mainHero.webp";
 import Image from "next/image";
 import { assetUrl } from "@/lib/assetUrl";
 
@@ -145,7 +144,7 @@ export default function OverviewSection() {
         </div>
 
         {/* ===== IMAGE ===== */}
-        <div className="w-full h-[300px] md:h-auto xl:h-[600px] overflow-hidden">
+        <div className="w-full h-[300px] md:h-auto xl:h-[550px] overflow-hidden">
           <Image
             src={hero1}
             alt="Hero Image"
