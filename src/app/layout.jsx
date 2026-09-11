@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import PortfolioAnalytics from "@/components/analytics/PortfolioAnalytics";
 import grain from "@/assets/images/grain.webp";
+import homePreview from "@/assets/social/home.jpg";
 import "./globals.css";
 
 export const metadata = {
@@ -17,7 +18,7 @@ export const metadata = {
       "Explore UX case studies by Jason Jahja, focused on turning complex product challenges into clear, structured user experiences.",
     url: "/",
     siteName: "Jason Jahja Portfolio",
-    images: ["/preview.webp"],
+    images: [{ url: homePreview.src, width: homePreview.width, height: homePreview.height, type: "image/jpeg", alt: "Jason Jahja Portfolio" }],
     type: "website",
   },
   twitter: {
@@ -25,7 +26,7 @@ export const metadata = {
     title: "Jason Jahja — Product Designer",
     description:
       "Explore UX case studies by Jason Jahja, focused on turning complex product challenges into clear, structured user experiences.",
-    images: ["/preview.webp"],
+    images: [homePreview.src],
   },
   icons: {
     icon: [

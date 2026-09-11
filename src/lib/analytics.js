@@ -1,15 +1,8 @@
+import { CASE_STUDY_SLUGS } from "@/data/analyticsProjects";
+
 const PRODUCTION_HOSTNAMES = new Set([
   "jasonjahja.site",
   "www.jasonjahja.site",
-]);
-
-const CASE_STUDY_SLUGS = new Set([
-  "temukerja-job-portal",
-  "multi-toys-b2c-ecommerce",
-  "multi-toys-b2b-wholesale",
-  "makmur-design-systems",
-  "centre-point-medan-wayfinding",
-  "kencana-jaya-persada-corporate-website",
 ]);
 
 const SESSION_KEY = "portfolio-analytics-session";

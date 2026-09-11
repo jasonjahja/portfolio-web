@@ -1,13 +1,13 @@
-import hunchHero from "@/assets/images/hunch/hero.webp";
-import temukerjaHero from "@/assets/images/temukerja/hero.webp";
-import multiB2cHero from "@/assets/images/multi_b2c/hero.webp";
-import multiB2bHero from "@/assets/images/multi_b2b/hero.webp";
-import makmurHero from "@/assets/images/makmur/hero.webp";
-import cpmHero from "@/assets/images/cpm/hero.webp";
-import kjpHero from "@/assets/images/kjp.webp";
+import hunchHero from "@/assets/social/hunch.jpg";
+import temukerjaHero from "@/assets/social/temukerja.jpg";
+import multiB2cHero from "@/assets/social/multi-b2c.jpg";
+import multiB2bHero from "@/assets/social/multi-b2b.jpg";
+import makmurHero from "@/assets/social/makmur.jpg";
+import cpmHero from "@/assets/social/cpm.jpg";
+import kjpHero from "@/assets/social/kjp.jpg";
 
 function heroPreview(image, alt) {
-  return { url: image.src, width: image.width, height: image.height, alt };
+  return { url: image.src, width: image.width, height: image.height, type: "image/jpeg", alt };
 }
 
 export const SITE_URL = "https://jasonjahja.site";
@@ -74,14 +74,14 @@ export function createProjectMetadata(slug) {
       description: project.description,
       url: path,
       siteName: "Jason Jahja Portfolio",
-      images: [project.image ?? "/preview.webp"],
+      images: [project.image],
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
       title: project.title,
       description: project.description,
-      images: [project.image ?? "/preview.webp"],
+      images: [project.image],
     },
   };
 }

@@ -1,4 +1,5 @@
 import { getSupabaseAdmin } from "@/lib/supabaseAdmin";
+import { CASE_STUDY_SLUGS } from "@/data/analyticsProjects";
 
 export const runtime = "nodejs";
 
@@ -25,14 +26,6 @@ const EVENT_PROPERTIES = {
   mobile_menu_close: ["source"],
 };
 
-const CASE_STUDY_SLUGS = new Set([
-  "temukerja-job-portal",
-  "multi-toys-b2c-ecommerce",
-  "multi-toys-b2b-wholesale",
-  "makmur-design-systems",
-  "centre-point-medan-wayfinding",
-  "kencana-jaya-persada-corporate-website",
-]);
 const KNOWN_PROJECT_SLUGS = new Set([...CASE_STUDY_SLUGS, "navika"]);
 
 const WEB_VITAL_NAMES = new Set(["TTFB", "FCP", "LCP", "FID", "CLS", "INP"]);

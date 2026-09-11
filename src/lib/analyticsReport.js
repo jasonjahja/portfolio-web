@@ -1,13 +1,6 @@
 import "server-only";
 
-const PROJECTS = [
-  ["temukerja-job-portal", "TemuKerja"],
-  ["multi-toys-b2c-ecommerce", "MULTI Toys B2C"],
-  ["multi-toys-b2b-wholesale", "MULTI Toys B2B"],
-  ["makmur-design-systems", "Makmur"],
-  ["centre-point-medan-wayfinding", "Centre Point Medan"],
-  ["kencana-jaya-persada-corporate-website", "Kencana Jaya Persada"],
-];
+import { ANALYTICS_PROJECTS } from "@/data/analyticsProjects";
 
 const PAGE_SIZE = 1000;
 
@@ -153,7 +146,7 @@ function trafficBreakdowns(events) {
 }
 
 function projectBreakdown(events) {
-  return PROJECTS.map(([slug, name]) => {
+  return ANALYTICS_PROJECTS.map(([slug, name]) => {
     const related = events.filter((event) => event.project_slug === slug);
     const pageViews = related.filter((event) => event.event_name === "page_view");
     const completions = related.filter(
