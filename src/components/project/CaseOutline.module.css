@@ -1,0 +1,137 @@
+.page {
+  --outline-header-height: 63px;
+}
+
+.page :is(h2, h3, h4) {
+  scroll-margin-top: calc(var(--outline-header-height) + 24px);
+}
+
+/* Retain the scrollbar gutter while the modal locks background scrolling. */
+:global(html:has([data-case-outline])) {
+  scrollbar-gutter: stable;
+}
+
+.rail {
+  position: fixed;
+  z-index: 40;
+  right: 5px;
+  top: 50%;
+  display: flex;
+  width: 32px;
+  min-height: 44px;
+  max-height: calc(100dvh - 180px);
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 9px;
+  padding: 12px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: opacity 180ms, background-color 180ms, visibility 0s;
+}
+
+.rail[data-visible="false"] {
+  visibility: hidden;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 180ms, background-color 180ms, visibility 0s 180ms;
+}
+
+.rail:hover,
+.rail:focus-visible {
+  background: #f0f0f0;
+}
+
+.rail:focus-visible {
+  outline: 2px solid #333;
+  outline-offset: 2px;
+}
+
+.mark {
+  display: block;
+  flex: 0 1 2px;
+  min-height: 1px;
+  width: 17px;
+  background: #b8b8b8;
+  border-radius: 1px;
+  transition: width 180ms, background-color 180ms;
+}
+
+.mark[data-depth="1"] { width: 11px; }
+.mark[data-depth="2"] { width: 7px; }
+.mark[data-active="true"] { width: 22px; background: #222; }
+
+.dialog {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(440px, calc(100% - 28px));
+  height: 100dvh;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-left: 1px solid #d6d6d6;
+  background: #f9f9f9;
+  color: #333;
+  overflow: hidden;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  animation: enter 200ms ease-out;
+}
+
+.dialog::backdrop {
+  background: rgb(0 0 0 / 16%);
+}
+
+.contents {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #d6d6d6 transparent;
+}
+
+.link {
+  display: block;
+  padding: 11px 12px;
+  border-radius: 4px;
+  color: #707070;
+  transition: background-color 150ms, color 150ms;
+}
+
+.link:hover { background: #f0f0f0; color: #333; }
+.link[aria-current="location"] { background: #ededed; color: #222; box-shadow: inset 2px 0 #333; }
+.link:focus-visible { outline: 2px solid #333; outline-offset: -2px; }
+
+@keyframes enter {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@media (min-width: 768px) {
+  .rail { right: 10px; }
+}
+
+@media (min-width: 1280px) {
+  .page { --outline-header-height: 85px; }
+  .rail { right: 35px; width: 44px; gap: 11px; padding-inline: 8px; }
+  .mark { width: 23px; }
+  .mark[data-depth="1"] { width: 15px; }
+  .mark[data-depth="2"] { width: 9px; }
+  .mark[data-active="true"] { width: 28px; }
+}
+
+@media (max-height: 600px) {
+  .rail { gap: 5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rail, .mark, .link { transition: none; }
+  .dialog[open] { animation: none; }
+}

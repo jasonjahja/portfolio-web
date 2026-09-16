@@ -1,6 +1,8 @@
 "use client";
 
 import ProjectSummary from "@/components/project/ProjectSummary";
+import CaseOutline from "@/components/project/CaseOutline";
+import outlineStyles from "@/components/project/CaseOutline.module.css";
 
 import { useRef } from "react";
 import Image from "next/image";
@@ -40,7 +42,8 @@ export default function ProjectDetail() {
   const isExpanded = useScrollExpand(imgRef);
 
   return (
-    <section ref={sectionRef} className="flex flex-col items-center pt-[92px] md:pt-[107px] xl:pt-[144px] pb-30 md:pb-45 xl:pb-60 gap-25 xl:gap-45">
+    <>
+    <section ref={sectionRef} className={`${outlineStyles.page} flex flex-col items-center pt-[92px] md:pt-[107px] xl:pt-[144px] pb-30 md:pb-45 xl:pb-60 gap-25 xl:gap-45`}>
 
       <div className={`w-full px-25 md:px-40 xl:px-120 flex flex-col gap-30 transition-all duration-700 ${
             isVisible
@@ -243,5 +246,7 @@ export default function ProjectDetail() {
         /> */}
       </div>
     </section>
+    <CaseOutline contentRef={sectionRef} heroRef={imgRef} title="Kencana Jaya Persada" pageKey="kencana-jaya-persada" />
+    </>
   );
 }

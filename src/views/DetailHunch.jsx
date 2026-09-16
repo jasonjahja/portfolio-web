@@ -1,6 +1,8 @@
 "use client";
 
 import ProjectSummary from "@/components/project/ProjectSummary";
+import CaseOutline from "@/components/project/CaseOutline";
+import outlineStyles from "@/components/project/CaseOutline.module.css";
 
 import { useRef } from "react";
 import Image from "next/image";
@@ -47,7 +49,8 @@ export default function DetailHunch() {
   const isExpanded = useScrollExpand(imgRef);
 
   return (
-    <main ref={sectionRef} className="flex flex-col gap-25 pb-30 pt-[92px] text-bw8 md:pb-45 md:pt-[107px] xl:gap-45 xl:pb-60 xl:pt-[144px]">
+    <>
+    <main ref={sectionRef} className={`${outlineStyles.page} flex flex-col gap-25 pb-30 pt-[92px] text-bw8 md:pb-45 md:pt-[107px] xl:gap-45 xl:pb-60 xl:pt-[144px]`}>
       <header className={`flex flex-col gap-30 px-25 md:px-40 xl:px-120 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
         <div className="relative flex items-center justify-center">
           <Link
@@ -157,6 +160,7 @@ export default function DetailHunch() {
             {/* Image: Replace with the onboarding screens introducing Hunch as a food-discovery and collection app. */}
             <InsightImageBlock
               title="Introducing Hunch"
+              headingAs="h4"
               src={onboarding}
               alt="Temporary image for the Hunch app introduction."
               items={["A short introduction frames Hunch around discovering, identifying, and collecting food, giving users context before their first Hunch."]}
@@ -165,6 +169,7 @@ export default function DetailHunch() {
             {/* Image: Replace with the five-step usage tutorial, including Next and Skip Tutorial. */}
             <InsightImageBlock
               title="Guiding the First Hunch"
+              headingAs="h4"
               src={tutorial}
               alt="Temporary image for the Hunch usage tutorial."
               items={["A five-step tutorial explains the core interaction upfront, with clear guidance and the option to skip before starting a Hunch."]}
@@ -283,6 +288,7 @@ export default function DetailHunch() {
         <Section>
           <Subsection
             title="Building a system, not just a successful flow."
+            headingAs="h2"
             image={edgeStates}
             insights={[
               "Consistent result patterns make different outcomes easy to understand.",
@@ -376,5 +382,7 @@ export default function DetailHunch() {
       <Divider />
       </div>
     </main>
+    <CaseOutline contentRef={sectionRef} heroRef={imgRef} title="Hunch" pageKey="hunch" />
+    </>
   );
 }

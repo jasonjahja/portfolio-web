@@ -1,6 +1,8 @@
 "use client";
 
 import ProjectSummary from "@/components/project/ProjectSummary";
+import CaseOutline from "@/components/project/CaseOutline";
+import outlineStyles from "@/components/project/CaseOutline.module.css";
 
 import { useRef } from "react";
 import Image from "next/image";
@@ -84,7 +86,8 @@ export default function DetailOmnichannel() {
   const isExpanded = useScrollExpand(imgRef);
 
   return (
-    <main ref={sectionRef} className="flex flex-col gap-25 pb-30 pt-[92px] text-bw8 md:pb-45 md:pt-[107px] xl:gap-45 xl:pb-60 xl:pt-[144px]">
+    <>
+    <main ref={sectionRef} className={`${outlineStyles.page} flex flex-col gap-25 pb-30 pt-[92px] text-bw8 md:pb-45 md:pt-[107px] xl:gap-45 xl:pb-60 xl:pt-[144px]`}>
       <header className={`flex flex-col gap-30 px-25 md:px-40 xl:px-120 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
         <div className="relative flex items-center justify-center">
           <Link
@@ -263,5 +266,7 @@ export default function DetailOmnichannel() {
         <Divider />
       </div>
     </main>
+    <CaseOutline contentRef={sectionRef} heroRef={imgRef} title="Omnichannel Operations" pageKey="omnichannel" />
+    </>
   );
 }

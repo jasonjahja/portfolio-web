@@ -4,6 +4,7 @@ export default function InsightImageBlock({
   src,
   title,
   showTitle = true,
+  headingAs: Heading = "h3",
   items = [],
   id,
   alt,
@@ -17,9 +18,9 @@ export default function InsightImageBlock({
       <div className="flex flex-col gap-5 md:gap-10">
         {/* TITLE */}
         {showTitle && title && (
-            <h3 className="text-body-b5b md:text-body-b4b xl:text-body-b3b">
+            <Heading className="text-body-b5b md:text-body-b4b xl:text-body-b3b">
             {title}
-            </h3>
+            </Heading>
         )}
 
         {/* IMAGE */}

@@ -1,6 +1,8 @@
 "use client";
 
 import ProjectSummary from "@/components/project/ProjectSummary";
+import CaseOutline from "@/components/project/CaseOutline";
+import outlineStyles from "@/components/project/CaseOutline.module.css";
 
 import { useRef } from "react";
 import Image from "next/image";
@@ -73,7 +75,8 @@ export default function DetailMulti1Expanded() {
   const isExpanded = useScrollExpand(imgRef);
 
   return (
-    <section ref={sectionRef} className="flex flex-col items-center gap-25 pb-30 pt-[92px] md:pb-45 md:pt-[107px] xl:gap-45 xl:pb-60 xl:pt-[144px]">
+    <>
+    <section ref={sectionRef} className={`${outlineStyles.page} flex flex-col items-center gap-25 pb-30 pt-[92px] md:pb-45 md:pt-[107px] xl:gap-45 xl:pb-60 xl:pt-[144px]`}>
       <div
         className={`flex w-full flex-col gap-30 px-25 transition-all duration-700 md:px-40 xl:px-120 ${
           isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
@@ -446,5 +449,7 @@ export default function DetailMulti1Expanded() {
         /> */}
       </div>
     </section>
+    <CaseOutline contentRef={sectionRef} heroRef={imgRef} title="MULTI Toys B2C" pageKey="multi-toys-b2c" />
+    </>
   );
 }
