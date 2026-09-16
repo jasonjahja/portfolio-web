@@ -5,6 +5,7 @@ import multiB2bHero from "@/assets/social/multi-b2b.jpg";
 import makmurHero from "@/assets/social/makmur.jpg";
 import cpmHero from "@/assets/social/cpm.jpg";
 import kjpHero from "@/assets/social/kjp.jpg";
+import omnichannelHero from "@/assets/social/omnichannel.jpg";
 
 function heroPreview(image, alt) {
   return { url: image.src, width: image.width, height: image.height, type: "image/jpeg", alt };
@@ -13,6 +14,12 @@ function heroPreview(image, alt) {
 export const SITE_URL = "https://jasonjahja.site";
 
 export const PROJECT_METADATA = {
+  "omnichannel-operations": {
+    image: heroPreview(omnichannelHero, "Human intervention across automated omnichannel operations"),
+    title: "Omnichannel Operations — Ongoing Independent Study | Jason Jahja",
+    description:
+      "An ongoing independent UX study of human intervention in automated fulfillment, replenishment, and operational control, informed by two practitioner interviews.",
+  },
   hunch: {
     image: heroPreview(hunchHero, "Hunch food-discovery and collection app overview"),
     title: "Hunch — Designing a Food Discovery and Collection Experience | Jason Jahja",

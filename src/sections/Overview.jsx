@@ -1,7 +1,8 @@
 "use client";
 
 import arrowDown from "../assets/icons/arrow_down.svg";
-import hero1 from "../assets/images/mainHero.webp";
+// import hero1 from "../assets/images/mainHero.webp";
+import hero1 from "../assets/images/mainHero3.png";
 import Image from "next/image";
 import { assetUrl } from "@/lib/assetUrl";
 

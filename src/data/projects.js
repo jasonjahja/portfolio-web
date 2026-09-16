@@ -6,8 +6,18 @@ import cpm from "../assets/images/cpm/hero.webp";
 import kjp from "../assets/images/kjp.webp";
 import navika from "../assets/images/navika.webp";
 import hunch from "../assets/images/hunch/hero.webp";
+import omnichannel from "../assets/images/omnichannel/hero.webp";
 
 export const projects = [
+  {
+    slug: "omnichannel-operations",
+    image: omnichannel,
+    title: "Human Intervention in Automated Omnichannel Operations",
+    description: "An ongoing independent study of fulfillment, replenishment, and operational control across enterprise e-commerce systems. Two practitioner interviews completed.",
+    tags: ["UX Research", "Omnichannel Operations", "Ongoing Study"],
+    link: "/omnichannel-operations",
+    related: ["multi-toys-b2b-wholesale", "multi-toys-b2c-ecommerce", "temukerja-job-portal"],
+  },
   {
     slug: "hunch",
     image: hunch,

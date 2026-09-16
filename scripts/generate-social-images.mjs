@@ -9,6 +9,7 @@ await mkdir(output, { recursive: true });
 // Keep social previews compatible with LinkedIn's documented JPG/PNG/GIF formats.
 // Next's static imports give each generated JPEG a content-hashed public URL.
 const sources = {
+  omnichannel: "src/assets/images/omnichannel/hero.webp",
   hunch: "src/assets/images/hunch/hero.webp",
   temukerja: "src/assets/images/temukerja/hero.webp",
   "multi-b2c": "src/assets/images/multi_b2c/hero.webp",

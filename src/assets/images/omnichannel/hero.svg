@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#e9ede8"/>
+  <g font-family="Arial, sans-serif" fill="#293c35">
+    <text x="100" y="130" font-size="22" letter-spacing="4">ONGOING INDEPENDENT STUDY</text>
+    <text x="96" y="240" font-size="64">Human intervention in</text>
+    <text x="96" y="320" font-size="64">automated omnichannel operations.</text>
+    <g stroke="#72877b" stroke-width="2" fill="none">
+      <path d="M370 555H430 M690 555H750 M1010 555H1070"/>
+      <path d="M420 548L430 555L420 562 M740 548L750 555L740 562 M1060 548L1070 555L1060 562"/>
+      <path d="M560 620V715H1200V620 M880 620V715 M880 715V770" stroke-dasharray="7 7"/>
+    </g>
+    <g fill="#f9f9f9" stroke="#b7c4ba">
+      <rect x="110" y="490" width="260" height="130" rx="8"/>
+      <rect x="430" y="490" width="260" height="130" rx="8"/>
+      <rect x="750" y="490" width="260" height="130" rx="8"/>
+      <rect x="1070" y="490" width="360" height="130" rx="8"/>
+    </g>
+    <g text-anchor="middle" font-size="30">
+      <text x="240" y="550">Commerce</text>
+      <text x="560" y="550">OMS</text>
+      <text x="880" y="550">ERP / SAP</text>
+      <text x="1250" y="550">Fulfillment</text>
+    </g>
+    <g text-anchor="middle" font-size="19" fill="#5b7064">
+      <text x="240" y="583">Marketplace / D2C</text>
+      <text x="560" y="583">Order management</text>
+      <text x="880" y="583">Enterprise systems</text>
+      <text x="1250" y="583">Warehouse / store / partner</text>
+    </g>
+    <rect x="540" y="770" width="680" height="95" rx="8" fill="#293c35"/>
+    <text x="880" y="829" text-anchor="middle" fill="#f9f9f9" font-size="30">Operator judgment &amp; intervention</text>
+    <text x="100" y="935" font-size="21" fill="#5b7064">Fulfillment · Replenishment · Operational control</text>
+    <text x="1500" y="935" text-anchor="end" font-size="18" fill="#5b7064">Conceptual overview</text>
+  </g>
+</svg>

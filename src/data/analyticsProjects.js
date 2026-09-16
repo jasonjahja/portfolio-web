@@ -1,6 +1,7 @@
 // Shared by browser tracking, event ingestion, and the admin report.
 // Keep this catalog free of image imports so it can run in every environment.
 export const ANALYTICS_PROJECTS = [
+  ["omnichannel-operations", "Omnichannel Operations"],
   ["hunch", "Hunch"],
   ["temukerja-job-portal", "TemuKerja"],
   ["multi-toys-b2c-ecommerce", "MULTI Toys B2C"],

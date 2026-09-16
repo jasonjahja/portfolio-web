@@ -60,6 +60,10 @@ export default function DetailHunch() {
           <h1 className="mx-auto max-w-[950px] px-45 text-center font-display text-heading-h6 md:px-60 md:text-heading-h4 xl:text-heading-h2">Hunch — Designing a Food Discovery and Collection Experience</h1>
         </div>
         <Divider />
+        <p className="text-body-b6 md:text-body-b4 xl:text-body-b2">
+          A freelance product design engagement for an independent client, shaping Hunch from its initial product brief through product structure, visual direction, prototyping, and usability testing.
+        </p>
+        <Divider />
         <div className="flex flex-col gap-15 md:flex-row md:gap-30">
           <Meta icon={productIcon} label="Product" value="Mobile App (Food Discovery)" />
           <Divider type="vertical" className="hidden md:block" />
