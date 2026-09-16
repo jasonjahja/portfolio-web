@@ -1,5 +1,7 @@
 "use client";
 
+import ProjectSummary from "@/components/project/ProjectSummary";
+
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -164,7 +166,7 @@ export default function DetailTemuKerja() {
         </div>
       </div>
 
-      <div
+      <figure
         ref={imgRef}
         className={`flex w-full flex-col gap-10 overflow-hidden transition-[padding] duration-500 ease-out xl:gap-15 ${
           isExpanded ? "px-0" : "px-25 md:px-40 xl:px-120"
@@ -181,10 +183,12 @@ export default function DetailTemuKerja() {
             transitionDelay: "650ms",
           }}
         />
-        <p className="text-center font-sans text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
-          Temukerja Thumbnail
-        </p>
-      </div>
+        <figcaption className="text-center text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
+          A research-led job portal prototype connecting vacancy exploration, reusable applications, and progress tracking for novice job seekers.
+        </figcaption>
+      </figure>
+
+      <ProjectSummary projectSlug="temukerja-job-portal" />
 
       <div className="mx-25 flex flex-col gap-45 md:mx-40 md:gap-60 xl:mx-120">
         <Divider />

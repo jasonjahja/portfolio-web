@@ -1,5 +1,7 @@
 "use client";
 
+import ProjectSummary from "@/components/project/ProjectSummary";
+
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -90,9 +92,11 @@ export default function DetailHunch() {
           }}
         />
         <figcaption className="text-center text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
-          Hunch product overview
+          A mobile food-discovery experience connecting identification, collecting, and repeat exploration.
         </figcaption>
       </figure>
+
+      <ProjectSummary projectSlug="hunch" />
 
       <div className="mx-25 flex flex-col gap-45 md:mx-40 md:gap-60 xl:mx-120">
       <Divider />

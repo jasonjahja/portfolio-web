@@ -12,7 +12,7 @@ export const projects = [
   {
     slug: "omnichannel-operations",
     image: omnichannel,
-    title: "Human Intervention in Automated Omnichannel Operations",
+    title: "Omnichannel Operations & Fulfillment — Ongoing Independent Study",
     description: "An ongoing independent study of fulfillment, replenishment, and operational control across enterprise e-commerce systems. Two practitioner interviews completed.",
     tags: ["UX Research", "Omnichannel Operations", "Ongoing Study"],
     link: "/omnichannel-operations",

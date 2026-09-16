@@ -1,5 +1,7 @@
 "use client";
 
+import ProjectSummary from "@/components/project/ProjectSummary";
+
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -131,6 +133,8 @@ export default function DetailOmnichannel() {
           An ongoing study of fulfillment, replenishment, and operational control across enterprise e-commerce systems.
         </figcaption>
       </figure>
+
+      <ProjectSummary projectSlug="omnichannel-operations" />
 
       <div className="mx-25 flex flex-col gap-45 md:mx-40 md:gap-60 xl:mx-120">
         <Divider />

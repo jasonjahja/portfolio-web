@@ -1,5 +1,7 @@
 "use client";
 
+import ProjectSummary from "@/components/project/ProjectSummary";
+
 import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -115,7 +117,7 @@ export default function ProjectDetail() {
       </div>
 
       {/* IMAGE HERO SECTION */}
-      <div 
+      <figure
         ref={imgRef}
         className={`w-full overflow-hidden flex flex-col gap-10 xl:gap-15 transition-[padding] duration-500 ease-out
         ${isExpanded ? "px-0" : "px-25 md:px-40 xl:px-120"}`}
@@ -133,12 +135,14 @@ export default function ProjectDetail() {
             transitionDelay: "650ms",
             }}
         />
-        <p className="text-center text-sans text-body-b7 md:text-body-b6 xl:text-body-b4 text-bw6">
-          KJP's Website
-        </p>
-      </div>
+        <figcaption className="text-center text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
+          A corporate website project spanning content structure, interface design, and frontend implementation.
+        </figcaption>
+      </figure>
 
       {/* CONTENT */}
+      <ProjectSummary projectSlug="kencana-jaya-persada-corporate-website" />
+
       <div className="mx-25 md:mx-40 xl:mx-120 flex flex-col gap-25 md:gap-45">
 
         <Divider />
