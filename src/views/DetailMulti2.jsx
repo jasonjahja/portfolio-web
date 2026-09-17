@@ -2,11 +2,9 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { assetUrl } from "@/lib/assetUrl";
 
 // Assets
-import arrowLeft from "../assets/icons/arrow_left.svg";
 import arrowRight from "../assets/icons/arrow_right.svg";
 import multiLogo from "../assets/images/multi_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
@@ -52,17 +50,9 @@ export default function ProjectDetail() {
         {/* TOP BAR */}
         <div className="flex items-center">
 
-            {/* Left Arrow */}
-            <Link href="/" className="absolute left-25 md:left-40 xl:left-120 cursor-pointer">
-                <img
-                    src={assetUrl(arrowLeft)}
-                    alt="back"
-                    className="h-20 md:h-30"
-                />
-            </Link>
 
             {/* Center Title */}
-            <h1 className="mx-auto font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center max-w-[325px] md:max-w-[750px] xl:max-w-[950px]">
+            <h1 className="w-full font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center">
                 MULTI Toys B2B — Designing Wholesale Ordering for Bulk and Repeat Purchases
             </h1>
         </div>

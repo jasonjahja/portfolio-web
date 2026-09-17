@@ -6,10 +6,8 @@ import outlineStyles from "@/components/project/CaseOutline.module.css";
 
 import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { assetUrl } from "@/lib/assetUrl";
 
-import arrowLeft from "../assets/icons/arrow_left.svg";
 // import arrowRight from "../assets/icons/arrow_right.svg";
 import multiLogo from "../assets/images/multi_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
@@ -52,16 +50,7 @@ export default function DetailMulti2Main() {
         style={{ transitionDelay: "0ms" }}
       >
         <div className="flex items-center">
-          <Link
-            href="/"
-            className="absolute left-25 cursor-pointer md:left-40 xl:left-120"
-            aria-label="Back to home"
-            data-analytics-event="back_home_click"
-            data-analytics-source="case_study_header"
-          >
-            <img src={assetUrl(arrowLeft)} alt="" className="h-20 md:h-30" />
-          </Link>
-          <h1 className="mx-auto max-w-[325px] text-center font-display text-heading-h6 md:max-w-[750px] md:text-heading-h4 xl:max-w-[950px] xl:text-heading-h2">
+          <h1 className="w-full text-center font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2">
             MULTI Toys — Designing Wholesale Ordering for Bulk and Repeat Purchases
           </h1>
         </div>
@@ -103,7 +92,7 @@ export default function DetailMulti2Main() {
             transitionDelay: "650ms",
           }}
         />
-        <figcaption className="text-center text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
+        <figcaption className="mx-25 text-center text-body-b7 text-bw6 md:mx-40 md:text-body-b6 xl:mx-120 xl:text-body-b4">
           A wholesale platform design connecting catalog access, bulk ordering, and repeat purchasing.
         </figcaption>
       </figure>

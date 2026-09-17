@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
+import arrowLeft from "../assets/icons/arrow_left.svg";
 import arrowUpRight from "../assets/icons/arrow_up_right.svg";
 import hamburgerIcon from "../assets/icons/hamburger.svg";
 import closeIcon from "../assets/icons/close.svg";
@@ -13,12 +15,23 @@ import { assetUrl } from "@/lib/assetUrl";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+  const isDetailPage = pathname !== "/" && !pathname.startsWith("/admin");
   const resumeUrl = useResumeUrl();
 
   useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "auto";
+    if (!open) return;
+
+    const previousOverflow = document.body.style.overflow;
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", handleKeyDown);
     return () => {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", handleKeyDown);
     };
   }, [open]);
 
@@ -26,21 +39,40 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 w-full z-50 bg-bw0 border-b border-bw5 text-bw8">
         
-        <div className="mx-25 md:mx-40 xl:mx-120 my-15 xl:my-25 flex items-center justify-between">
+        <div className={`mx-25 md:mx-40 xl:mx-120 my-15 xl:my-25 items-center ${isDetailPage ? "grid grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]" : "flex justify-between"}`}>
+          {isDetailPage && (
+            <Link
+              href="/#overview"
+              onClick={() => setOpen(false)}
+              data-analytics-event="back_home_click"
+              data-analytics-source="navbar"
+              className="group inline-flex w-fit items-center gap-10 whitespace-nowrap font-display text-heading-h7 md:text-heading-h6 xl:gap-15 xl:text-heading-h6"
+            >
+              <img
+                src={assetUrl(arrowLeft)}
+                alt=""
+                className="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:-translate-x-0.5 xl:h-20 xl:w-20"
+              />
+              <span className="group-hover:italic">Back</span>
+            </Link>
+          )}
           
           {/* Logo / Name */}
           <Link
             href="/#overview"
+            onClick={() => setOpen(false)}
             data-analytics-event="navigation_click"
             data-analytics-source="navbar_logo"
             data-analytics-section="overview"
-            className="font-display text-heading-h6 xl:text-heading-h5"
+            className={`whitespace-nowrap font-display text-heading-h6 xl:text-heading-h5 ${
+              isDetailPage ? "justify-self-center" : ""
+            }`}
           >
             Jason Jahja.
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden xl:flex items-center gap-30 text-body-b3">
+          <nav aria-label="Main navigation" className={`${isDetailPage ? "hidden" : "hidden xl:flex"} items-center gap-30 text-body-b3`}>
             
             <Link
               href="/#overview"
@@ -147,13 +179,17 @@ export default function Navbar() {
 
           </nav>
           
-          {/* Mobile Hamburger */}
+          {/* Detail pages keep the menu button at every screen size. */}
           <button
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded={open}
+            aria-controls="navbar-menu"
             onClick={() => setOpen(true)}
             data-analytics-event="mobile_menu_open"
-            className="xl:hidden"
+            className={isDetailPage ? "justify-self-end" : "xl:hidden"}
           >
-            <img src={assetUrl(hamburgerIcon)} alt="Menu" className="w-30 cursor-pointer" />
+            <img src={assetUrl(hamburgerIcon)} alt="" className="h-30 w-30 cursor-pointer" />
           </button>
         </div>
       </header>
@@ -173,6 +209,9 @@ export default function Navbar() {
 
       {/* SIDEBAR */}
       <aside
+        id="navbar-menu"
+        aria-label="Navigation menu"
+        inert={!open}
         className={`
           fixed top-0 right-0 z-[1000]
           h-screen w-[280px] bg-bw0
@@ -184,6 +223,8 @@ export default function Navbar() {
         {/* Close */}
         <div className="flex justify-end mb-25 mr-10">
           <button
+            type="button"
+            aria-label="Close navigation menu"
             onClick={() => setOpen(false)}
             data-analytics-event="mobile_menu_close"
             data-analytics-source="close_button"

@@ -6,11 +6,9 @@ import outlineStyles from "@/components/project/CaseOutline.module.css";
 
 import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { assetUrl } from "@/lib/assetUrl";
 
 // Assets
-import arrowLeft from "../assets/icons/arrow_left.svg";
 // import arrowRight from "../assets/icons/arrow_right.svg";
 import kjpLogo from "../assets/images/kjp_logo.webp";
 import productIcon from "../assets/icons/product_icon.svg";
@@ -54,22 +52,9 @@ export default function ProjectDetail() {
         {/* TOP BAR */}
         <div className="flex items-center">
 
-            {/* Left Arrow */}
-            <Link
-              href="/"
-              data-analytics-event="back_home_click"
-              data-analytics-source="case_study_header"
-              className="absolute left-25 md:left-40 xl:left-120 cursor-pointer"
-            >
-                <img
-                    src={assetUrl(arrowLeft)}
-                    alt="back"
-                    className="h-20 md:h-30"
-                />
-            </Link>
 
             {/* Center Title */}
-            <h1 className="mx-auto font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center max-w-[325px] md:max-w-[750px] xl:max-w-[950px]">
+            <h1 className="w-full font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2 text-center">
                 PT. Kencana Jaya Persada Corporate Website (0–1)
             </h1>
         </div>
@@ -138,7 +123,7 @@ export default function ProjectDetail() {
             transitionDelay: "650ms",
             }}
         />
-        <figcaption className="text-center text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
+        <figcaption className="mx-25 text-center text-body-b7 text-bw6 md:mx-40 md:text-body-b6 xl:mx-120 xl:text-body-b4">
           A corporate website project spanning content structure, interface design, and frontend implementation.
         </figcaption>
       </figure>

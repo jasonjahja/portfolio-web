@@ -6,14 +6,11 @@ import outlineStyles from "@/components/project/CaseOutline.module.css";
 
 import { useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import useScrollExpand from "@/hooks/useScrollExpand";
 import useRevealOnScroll from "@/hooks/useRevealOnScroll";
-import arrowLeft from "@/assets/icons/arrow_left.svg";
 import productIcon from "@/assets/icons/product_icon.svg";
 import roleIcon from "@/assets/icons/role_icon.svg";
 import durationIcon from "@/assets/icons/duration_icon.svg";
-import { assetUrl } from "@/lib/assetUrl";
 import Divider from "@/components/ui/Divider";
 import Section from "@/components/ui/DetailSection";
 import Subsection from "@/components/ui/DetailSubsection";
@@ -53,16 +50,7 @@ export default function DetailHunch() {
     <main ref={sectionRef} className={`${outlineStyles.page} flex flex-col gap-25 pb-30 pt-[92px] text-bw8 md:pb-45 md:pt-[107px] xl:gap-45 xl:pb-60 xl:pt-[144px]`}>
       <header className={`flex flex-col gap-30 px-25 md:px-40 xl:px-120 transition-all duration-700 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
         <div className="relative flex items-center justify-center">
-          <Link
-            href="/"
-            aria-label="Back to home"
-            className="absolute left-0 flex h-[44px] w-[44px] items-center rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-bw8"
-            data-analytics-event="back_home_click"
-            data-analytics-source="case_study_header"
-          >
-            <img src={assetUrl(arrowLeft)} alt="" className="h-20 md:h-30" />
-          </Link>
-          <h1 className="mx-auto max-w-[950px] px-45 text-center font-display text-heading-h6 md:px-60 md:text-heading-h4 xl:text-heading-h2">Hunch — Designing a Food Discovery and Collection Experience</h1>
+          <h1 className="w-full text-center font-display text-heading-h6 md:text-heading-h4 xl:text-heading-h2">Hunch — Designing a Food Discovery and Collection Experience</h1>
         </div>
         <Divider />
         <p className="text-body-b6 md:text-body-b4 xl:text-body-b2">
@@ -94,7 +82,7 @@ export default function DetailHunch() {
             transitionDelay: "650ms",
           }}
         />
-        <figcaption className="text-center text-body-b7 text-bw6 md:text-body-b6 xl:text-body-b4">
+        <figcaption className="mx-25 text-center text-body-b7 text-bw6 md:mx-40 md:text-body-b6 xl:mx-120 xl:text-body-b4">
           A mobile food-discovery experience connecting identification, collecting, and repeat exploration.
         </figcaption>
       </figure>
