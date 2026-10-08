@@ -17,6 +17,7 @@ const sources = {
   makmur: "src/assets/images/makmur/hero.webp",
   cpm: "src/assets/images/cpm/hero.webp",
   kjp: "src/assets/images/kjp.webp",
+  "kjp-operations": "src/assets/images/KJP/hero.webp",
   home: "public/preview.webp",
 };
 

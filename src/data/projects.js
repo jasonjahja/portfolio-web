@@ -4,11 +4,21 @@ import multiB2b from "../assets/images/multi_b2b/hero.webp";
 import makmur from "../assets/images/makmur/hero.webp";
 import cpm from "../assets/images/cpm/hero.webp";
 import kjp from "../assets/images/kjp.webp";
+import kjpOperations from "../assets/images/KJP/hero.webp";
 import navika from "../assets/images/navika.webp";
 import hunch from "../assets/images/hunch/hero.webp";
 import omnichannel from "../assets/images/omnichannel/hero.webp";
 
 export const projects = [
+  {
+    slug: "kjp-business-operations",
+    image: kjpOperations,
+    title: "Digitizing KJP's Business Operations",
+    description: "A small, three-entity business group in Pekanbaru, Riau, operating across construction, trading, and equipment rental services.",
+    tags: ["ERP / Internal Business System", "Business Analyst / Digital Transformation Consultant", "Multi Web Interface"],
+    link: "/kjp-business-operations",
+    related: ["omnichannel-operations", "multi-toys-b2b-wholesale", "makmur-design-systems"],
+  },
   {
     slug: "omnichannel-operations",
     image: omnichannel,

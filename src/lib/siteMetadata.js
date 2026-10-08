@@ -5,6 +5,7 @@ import multiB2bHero from "@/assets/social/multi-b2b.jpg";
 import makmurHero from "@/assets/social/makmur.jpg";
 import cpmHero from "@/assets/social/cpm.jpg";
 import kjpHero from "@/assets/social/kjp.jpg";
+import kjpOperationsHero from "@/assets/social/kjp-operations.jpg";
 import omnichannelHero from "@/assets/social/omnichannel.jpg";
 
 function heroPreview(image, alt) {
@@ -14,6 +15,12 @@ function heroPreview(image, alt) {
 export const SITE_URL = "https://jasonjahja.site";
 
 export const PROJECT_METADATA = {
+  "kjp-business-operations": {
+    image: heroPreview(kjpOperationsHero, "Digitizing KJP's Business Operations"),
+    title: "Digitizing KJP's Business Operations | Jason Jahja",
+    description:
+      "A small, three-entity business group in Pekanbaru, Riau, operating across construction, trading, and equipment rental services.",
+  },
   "omnichannel-operations": {
     image: heroPreview(omnichannelHero, "Human intervention across automated omnichannel operations"),
     title: "Omnichannel Operations — Ongoing Independent Study | Jason Jahja",

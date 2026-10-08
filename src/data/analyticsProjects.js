@@ -1,6 +1,7 @@
 // Shared by browser tracking, event ingestion, and the admin report.
 // Keep this catalog free of image imports so it can run in every environment.
 export const ANALYTICS_PROJECTS = [
+  ["kjp-business-operations", "Digitizing KJP's Business Operations"],
   ["omnichannel-operations", "Omnichannel Operations"],
   ["hunch", "Hunch"],
   ["temukerja-job-portal", "TemuKerja"],
