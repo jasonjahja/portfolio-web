@@ -6,6 +6,17 @@ import mekari from "@/assets/images/KJP/mekari.webp";
 import accurate from "@/assets/images/KJP/accurate.webp";
 
 export const kjpOperationsTables = {
+  businessFindings: {
+    headers: ["Operational", "Finance / Administration"],
+    columns: "repeat(2, minmax(0, 1fr))",
+    rows: [
+      ["Customer and transaction records were fragmented across entities", "Supplier invoices and payment requests were managed separately"],
+      ["Dates and formulas depended on manual Excel input", "Outstanding payments required manual tracking"],
+      ["Partial supplier fulfilment had to be remembered manually", "Reporting required reconciling information from multiple sources"],
+      ["Inventory movement lacked a reliable single source of truth", "Records were vulnerable to missing or late updates"],
+      ["Changes in customer demand could leave excess stock requiring manual adjustment", "Entity-level visibility was inconsistent"],
+    ],
+  },
   requirements: {
     headers: ["Problem", "System requirement"],
     columns: "minmax(0, 1fr) minmax(0, 1.5fr)",

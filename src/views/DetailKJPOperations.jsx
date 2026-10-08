@@ -135,14 +135,15 @@ export default function DetailKJPOperations() {
               title="Business Flow"
               src={kjpOperationsImages.businessFlow}
               items={[
-                "Preorder: demand dikumpulkan selama seminggu.",
-                "Urgent request: procurement bisa mulai sebelum client PO keluar.",
-                "Supplier partial fulfilment: 100 ordered → 70 received → 30 pending/cancel.",
-                "Client revision: client turun dari 100 → 80 → sisa 20 masuk stock.",
-                "Online purchase juga bisa menjadi sumber procurement.",
+                "Preorder: Weekly demand is consolidated before procurement.",
+                "Urgent request: Procurement may begin before the client PO is issued.",
+                "Partial fulfillment: Undelivered quantities remain pending or are cancelled.",
+                "Quantity revision: Excess items become inventory when client demand decreases.",
+                "Online procurement: Items may also be purchased through online marketplaces.",
               ]}
             />
-            <p>KJP runs with a lean office team of fewer than 10 people, with most responsibilities falling into two main functions: Operations and Finance/Administration. I grouped the findings the same way to reflect how the business actually works.</p>
+            <p>KJP runs with a team of 29 people in total, with most responsibilities falling into two main functions: Operations and Finance/Administration. I grouped the findings the same way to reflect how the business actually works.</p>
+            <CaseTable table={kjpOperationsTables.businessFindings} label="Operational / Finance / Administration" />
           </Section>
 
           <Divider />
