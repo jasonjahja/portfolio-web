@@ -156,6 +156,11 @@ export default function DetailTemuKerja() {
           <Divider type="vertical" className="hidden md:block" />
           <Meta className="flex-1 gap-5" icon={durationIcon} label="Project Type" value="Undergraduate Thesis" />
         </div>
+
+        <p className="flex w-fit w-full items-center gap-10 rounded-8 border border-bw4 bg-bw3 px-15 py-10 text-body-b6 text-bw8 md:text-body-b5 xl:text-body-b4">
+          <span aria-hidden="true" className="h-[5px] w-[5px] shrink-0 rounded-full bg-bw7" />
+          <span>Paper accepted at IEEE ICoDSE 2026</span>
+        </p>
       </div>
 
       <figure
